@@ -1,168 +1,305 @@
-# Medusa Dashboard (medus-react)
+# medus-react
 
-Bu proje Medusa Admin Dashboard tabanlı bir React/Vite uygulamasıdır.
+Standalone Medusa Admin UI tabanlı React uygulaması.
+
+Bu proje **Medusa backend'e bağlı çalışmaz**. Uygulama, Medusa'nın admin UI bileşenlerini kullanır ve veri akışını local mock katmanı ile sağlar.
+
+## İçindekiler
+
+- [Genel Bakış](#genel-bakış)
+- [Teknolojiler](#teknolojiler)
+- [Gereksinimler](#gereksinimler)
+- [Hızlı Başlangıç](#hızlı-başlangıç)
+- [Konfigürasyon](#konfigürasyon)
+- [Kullanım](#kullanım)
+- [ASP.NET Core SPA Proxy](#aspnet-core-spa-proxy)
+- [Mock Veri ve Kimlik Doğrulama](#mock-veri-ve-kimlik-doğrulama)
+- [Dil Desteği (i18n)](#dil-desteği-i18n)
+- [Scriptler](#scriptler)
+- [Proje Yapısı](#proje-yapısı)
+- [Sorun Giderme](#sorun-giderme)
+
+## Genel Bakış
+
+- Standalone admin web app (Vite + React + TypeScript)
+- Medusa admin görünüm/bileşen yapısı korunur
+- Backend bağımlılığı olmadan mock API ile çalışır
+- Çoklu dil desteği (i18next)
+- Dark/Light tema desteği
+- React Query Devtools (sadece development)
+
+## Teknolojiler
+
+- React 18
+- TypeScript
+- Vite 5
+- React Router 6
+- TanStack Query
+- Medusa UI (`@medusajs/ui`, `@medusajs/icons`)
+- TailwindCSS
+- i18next + react-i18next
 
 ## Gereksinimler
 
 - Node.js 18+
-- Yarn (önerilen, proje `yarn@3.2.1` kullanıyor)
+- Paket yöneticisi:
+  - `yarn@3.2.1` (önerilen)
+  - veya `npm`
+- Development HTTPS sertifikası için:
+  - `.NET SDK` (Vite config, `dotnet dev-certs` ile sertifika üretir)
 
-## Kurulum
+## Hızlı Başlangıç
+
+### 1) Kurulum
 
 ```bash
 yarn install
 ```
 
-Alternatif (Yarn yoksa):
+veya
 
 ```bash
 npm install
 ```
 
-## Geliştirme Ortamı
+### 2) Development
 
 ```bash
 yarn dev
 ```
 
-Uygulama varsayılan olarak Vite ile açılır.
-
-## Build / Preview
+veya
 
 ```bash
-yarn build
-yarn build:preview
-yarn preview
+npm run dev
 ```
 
-## Backend Ayarları Nerede?
+Varsayılan development adresi:
+- `https://localhost:5175`
 
-Backend ve diğer runtime ayarları `vite.config.ts` içindedir:
+### 3) Login (Mock)
 
-- Dosya: `vite.config.ts`
-- Önemli env değişkenleri:
-  - `VITE_BACKEND_URL`
-  - `VITE_MEDUSA_BACKEND_URL`
-  - `VITE_MEDUSA_ADMIN_BACKEND_URL`
-  - `VITE_MEDUSA_STOREFRONT_URL`
-  - `VITE_MEDUSA_AUTH_TYPE` (`session` / `jwt`)
-  - `VITE_MEDUSA_JWT_TOKEN_STORAGE_KEY`
-  - `VITE_MEDUSA_MOCK_AUTH`
-  - `VITE_MEDUSA_MOCK_API`
-  - `VITE_MEDUSA_MOCK_EMAIL`
-  - `VITE_MEDUSA_MOCK_PASSWORD`
+Varsayılan mock kullanıcı:
+- E-posta: `admin@medusa.local`
+- Şifre: `Admin123!`
 
-Backend URL çözümleme sırası:
+## Konfigürasyon
 
-1. `VITE_BACKEND_URL`
-2. `VITE_MEDUSA_BACKEND_URL`
-3. `VITE_MEDUSA_ADMIN_BACKEND_URL`
-4. fallback: `http://localhost:9000`
+Ana config dosyası:
+- `vite.config.ts`
 
-Storefront fallback: `http://localhost:8000`
+Bu projede backend URL / storefront URL gibi Medusa bağlantı değişkenleri kullanılmaz.
+
+### Kullanılan ortam değişkenleri
+
+- `VITE_DEV_SERVER_PORT`
+  - Vite portu (ör. `5175`)
+- `DEV_SERVER_PORT`
+  - `VITE_DEV_SERVER_PORT` için process-level alternatif
+- `VITE_ASPNET_CERT_NAME`
+  - ASP.NET dev cert dosya adı (default: `medus-react.client`)
+- `ASPNETCORE_HTTPS_PORT`
+  - Vite proxy hedefi için öncelikli ASP.NET HTTPS portu
+- `ASPNETCORE_URLS`
+  - Proxy hedefi için alternatif kaynak
+- `VITE_MOCK_AUTH`
+  - `true/false` (mock login akışı)
+- `VITE_MOCK_EMAIL`
+  - mock login e-posta override
+- `VITE_MOCK_PASSWORD`
+  - mock login şifre override
+
+Geriye dönük (legacy) alias'lar da tanımlı:
+- `VITE_MEDUSA_MOCK_AUTH`
+- `VITE_MEDUSA_MOCK_API`
+- `VITE_MEDUSA_MOCK_EMAIL`
+- `VITE_MEDUSA_MOCK_PASSWORD`
+
+Notlar:
+- Mock auth default davranışı: env verilmezse aktif (`true`).
+- Mock API katmanı uygulamada aktif kullanımdadır (`src/lib/client/client.ts` içinden `createMockApiFetch`).
 
 ### Örnek `.env`
 
 ```env
-VITE_BACKEND_URL=http://localhost:9000
-VITE_MEDUSA_STOREFRONT_URL=http://localhost:8000
-VITE_MEDUSA_AUTH_TYPE=session
-VITE_MEDUSA_MOCK_AUTH=false
-VITE_MEDUSA_MOCK_API=false
+VITE_DEV_SERVER_PORT=5175
+VITE_MOCK_AUTH=true
+VITE_MOCK_EMAIL=admin@medusa.local
+VITE_MOCK_PASSWORD=Admin123!
+VITE_ASPNET_CERT_NAME=medus-react.client
 ```
 
-Not:
+## Kullanım
 
-- Mock modları açıksa gerçek backend'e gitmeden sahte auth/api ile çalışır.
-- Login testinde mock açıksa varsayılan kullanıcı:
-  - `admin@medusa.local`
-  - `Admin123!`
+1. Uygulamayı başlatın (`yarn dev`).
+2. Login ekranında mock kullanıcı ile giriş yapın.
+3. Sol menüden domain sayfalarına geçin:
+   - Products
+   - Categories
+   - Collections
+   - Customers
+   - Customer Groups
+   - Inventory
+   - Orders
+   - Promotions
+   - Price Lists
+4. Liste ekranlarında arama, filtreleme, sıralama ve detay/edit akışlarını test edin.
+5. Sağ üstteki tema butonuyla dark/light geçişini kullanın.
+6. Development modda sağ altta React Query Devtools ile query/mutation akışlarını inceleyin.
+
+Not:
+- Veri kalıcılığı memory tabanlı mock katmandadır; sayfa yenilemede veya server restart'ta başlangıç verisine dönülür.
+
+## ASP.NET Core SPA Proxy
+
+Bu proje ASP.NET Core API ile birlikte çalıştırılacak şekilde hazırlanmıştır.
+
+Vite proxy ayarı:
+- `^/api` istekleri ASP.NET backend'e yönlenir.
+- Hedef çözüm sırası:
+  1. `ASPNETCORE_HTTPS_PORT` -> `https://localhost:<port>`
+  2. `ASPNETCORE_URLS` içindeki ilk URL
+  3. fallback: `https://localhost:7245`
+
+Önemli:
+- `/admin/*` istekleri bu projede mock API tarafından karşılanır.
+- `/api/*` isteklerini kendi ASP.NET endpoint'leriniz için kullanabilirsiniz (ör. NSwag ile üretilen client).
+
+## Mock Veri ve Kimlik Doğrulama
+
+Mock API dosyası:
+- `src/lib/mock-api.ts`
+
+Mock auth dosyası:
+- `src/lib/mock-auth.ts`
+
+### Mock kapsamı
+
+Özel handler'lar mevcut:
+- Products
+- Categories
+- Collections
+- Customers
+- Customer Groups
+- Inventory
+- Orders
+- Promotions
+- Price Lists
+
+Ek listeler:
+- Store / Stores
+- Sales Channels
+- Product Types
+- Product Tags
+- Current User (`/admin/users/me`)
+
+Desteklenmeyen endpoint'ler için generic fallback response üretilir (list/object/delete pattern).
 
 ## Dil Desteği (i18n)
 
-### i18n nereden initialize ediliyor?
+### Nerede yönetiliyor?
 
-- `src/components/utilities/i18n/i18n.tsx`
-- Bu bileşen `src/providers/providers.tsx` içinde yüklenir.
+- i18n init: `src/components/utilities/i18n/i18n.tsx`
+- i18n config: `src/i18n/config.ts`
+- Dil listesi: `src/i18n/languages.ts`
+- Çeviri kaynakları: `src/i18n/translations/*.json`
+- Kaynak index: `src/i18n/translations/index.ts`
+- Provider: `src/providers/i18n-provider/i18n-provider.tsx`
 
-### i18n temel ayarları nerede?
+### Yeni dil ekleme
 
-- `src/i18n/config.ts`
-  - `fallbackLng: "en"`
-  - dil algılama cookie/localStorage/header ile yapılır.
+1. `src/i18n/translations/<lang>.json` oluştur.
+2. `src/i18n/translations/index.ts` içine import + export ekle.
+3. `src/i18n/languages.ts` içine dil kaydını ekle:
+   - `code`
+   - `display_name`
+   - `ltr`
+   - `date_locale`
+4. Uygulamayı yeniden başlatıp test et.
 
-### Dil listesi nerede?
+### Mevcut dili güncelleme
 
-- `src/i18n/languages.ts`
-- Dil seçici ve LTR/RTL yönü buradaki listeye göre çalışır.
-
-### Çeviri kaynakları nerede?
-
-- `src/i18n/translations/*.json`
-- Toplu export: `src/i18n/translations/index.ts`
-
-## Yeni Dil Nasıl Eklenir?
-
-1. `src/i18n/translations/<kod>.json` oluştur.
-2. `src/i18n/translations/index.ts` içine import ve export ekle.
-3. `src/i18n/languages.ts` içine dili ekle (`code`, `display_name`, `ltr`, `date_locale`).
-4. Gerekirse profil dil seçici ekranından test et:
-   - `src/routes/profile/profile-edit/components/edit-profile-form/edit-profile-form.tsx`
-
-Örnek: `az` dili eklemek için dosya + index mapping + `languages.ts` kaydı gerekir.
-
-## Var Olan Dili Nasıl Güncellerim?
-
-1. İlgili JSON dosyasını düzenle:
-   - örn: `src/i18n/translations/tr.json`
-2. Çeviri şeması/doğrulama çalıştır:
+1. İlgili JSON dosyasını düzenle.
+2. Şema üret:
 
 ```bash
 yarn i18n:schema
-yarn i18n:validate
 ```
 
-3. Uygulamayı yeniden başlat ve ilgili ekranlarda metinleri doğrula.
+3. Dosya doğrulama (tek dosya):
 
-## Çoklu Dil Kullanımı (Kod İçinde)
-
-Bileşenlerde:
-
-```tsx
-import { useTranslation } from "react-i18next"
-
-const { t } = useTranslation()
-
-return <span>{t("orders.domain")}</span>
+```bash
+node scripts/i18n/validate-translation.js tr.json
 ```
 
-Anahtarlar ilgili dil JSON dosyalarında aynı yapıda olmalıdır.
+## Scriptler
 
-## Hızlı Sorun Giderme
+- `yarn dev` / `npm run dev`
+  - Development server
+- `yarn build` / `npm run build`
+  - Production build
+- `yarn preview` / `npm run preview`
+  - Build preview
+- `yarn test` / `npm run test`
+  - Testleri çalıştırır
+- `yarn lint` / `npm run lint`
+  - ESLint
+- `yarn i18n:schema`
+  - i18n JSON schema üretir
+- `yarn i18n:validate`
+  - i18n doğrulama scripti (dosya argümanı ile kullanılmalı)
+  - örnek: `yarn i18n:validate tr.json`
+- `yarn generate:static`
+  - currency statik verisini üretir
 
-### Login oluyor ama yönlenmiyor / sessiz kalıyor
+## Proje Yapısı
 
-- Mock auth açık mı kontrol et (`VITE_MEDUSA_MOCK_AUTH`).
-- Backend URL doğru mu kontrol et (`VITE_BACKEND_URL`).
-- Network sekmesinde `/auth` ve `/admin/users/me` çağrılarını kontrol et.
+```text
+src/
+  components/        # UI bileşenleri (forms, inputs, layout, modals, table...)
+  routes/            # Sayfa ve route modülleri
+  hooks/             # React Query tabanlı API hook'ları
+  lib/
+    client/          # SDK/client adapter
+    mock-api.ts      # Mock backend davranışı
+    mock-auth.ts     # Mock login oturumu
+  providers/         # App provider zinciri (Query, Theme, i18n, vb.)
+  i18n/              # Dil config + çeviri dosyaları
+  dashboard-app/     # Route/map ve extension kompozisyonu
+```
 
-### Çok sayıda `/admin/*` 404 hatası
+## Sorun Giderme
 
-- Frontend yanlış origin'e istek atıyor olabilir.
-- `.env` içinde backend URL'i net tanımla ve dev server'ı yeniden başlat.
+### 1) `Outdated Optimize Dep` / 504
 
-### Dil değişmiyor
+Vite cache'i temizleyin:
 
-- `languages.ts` içine dil eklendi mi?
-- `translations/index.ts` mapping eklendi mi?
-- Çeviri anahtarları tüm dillerde mevcut mu?
+```bash
+rm -rf node_modules/.vite
+```
 
-## Önemli Dosyalar
+Sonra dev server'ı yeniden başlatın.
 
-- `vite.config.ts` -> env ve runtime define ayarları
-- `src/lib/client/client.ts` -> Medusa SDK client
-- `src/components/utilities/i18n/i18n.tsx` -> i18n init
-- `src/i18n/config.ts` -> i18n options
-- `src/i18n/languages.ts` -> desteklenen diller
-- `src/i18n/translations/` -> çeviri dosyaları
-- `src/providers/providers.tsx` -> provider zinciri
+### 2) `Failed to fetch dynamically imported module`
+
+- Çoğunlukla dev server restart sırasında veya port değişiminde görülür.
+- Çözüm:
+  - Dev server'ı kapatıp yeniden açın.
+  - Tarayıcıyı hard refresh yapın.
+  - Gerekirse `node_modules/.vite` temizleyin.
+
+### 3) Login olmuyor
+
+- `VITE_MOCK_AUTH=true` olduğundan emin olun.
+- Mock credential kullanın (`admin@medusa.local` / `Admin123!`).
+- `localStorage` temizleyip tekrar deneyin.
+
+### 4) HTTPS sertifika hatası
+
+- `dotnet dev-certs https --trust` çalıştırın.
+- Gerekirse `VITE_ASPNET_CERT_NAME` ile farklı cert adı kullanın.
+
+### 5) Çok sayıda `/admin/*` 404 hatası
+
+- Bu proje mock API ile çalışır; `src/lib/client/client.ts` içindeki mock fetch akışının değiştirilmediğini doğrulayın.
+- Gerçek backend'e geçiş yapacaksanız client katmanını ayrıca uyarlamanız gerekir.
