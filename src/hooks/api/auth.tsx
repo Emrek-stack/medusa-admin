@@ -2,6 +2,11 @@ import { FetchError } from "@medusajs/js-sdk"
 import { HttpTypes } from "@medusajs/types"
 import { UseMutationOptions, useMutation } from "@tanstack/react-query"
 import { sdk } from "../../lib/client"
+import {
+  isMockAuthEnabled,
+  signInWithMockAuth,
+  signOutMockAuth,
+} from "../../lib/mock-auth"
 
 export const useSignInWithEmailPass = (
   options?: UseMutationOptions<
@@ -14,7 +19,13 @@ export const useSignInWithEmailPass = (
   >
 ) => {
   return useMutation({
-    mutationFn: (payload) => sdk.auth.login("user", "emailpass", payload),
+    mutationFn: (payload) => {
+      if (isMockAuthEnabled) {
+        return signInWithMockAuth(payload)
+      }
+
+      return sdk.auth.login("user", "emailpass", payload)
+    },
     onSuccess: async (data, variables, context) => {
       options?.onSuccess?.(data, variables, context)
     },
@@ -55,7 +66,13 @@ export const useResetPasswordForEmailPass = (
 
 export const useLogout = (options?: UseMutationOptions<void, FetchError>) => {
   return useMutation({
-    mutationFn: () => sdk.auth.logout(),
+    mutationFn: () => {
+      if (isMockAuthEnabled) {
+        return signOutMockAuth()
+      }
+
+      return sdk.auth.logout()
+    },
     ...options,
   })
 }

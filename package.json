@@ -3,11 +3,11 @@
   "version": "2.13.3",
   "scripts": {
     "generate:static": "node ./scripts/generate-currencies.js && prettier --write ./src/lib/currencies.ts",
-    "dev": "../../../node_modules/.bin/vite",
-    "build": "yarn run -T tsup && node ./scripts/generate-types.js",
-    "build:preview": "../../../node_modules/.bin/vite build",
-    "preview": "../../../node_modules/.bin/vite preview",
-    "test": "../../../node_modules/.bin/vitest --run",
+    "dev": "vite --config vite.config.mts",
+    "build": "tsup && node ./scripts/generate-types.js",
+    "build:preview": "vite build --config vite.config.mts",
+    "preview": "vite preview --config vite.config.mts",
+    "test": "vitest --run",
     "i18n:validate": "node ./scripts/i18n/validate-translation.js",
     "i18n:schema": "node ./scripts/i18n/generate-schema.js",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
@@ -83,7 +83,18 @@
     "@medusajs/admin-shared": "2.13.3",
     "@medusajs/admin-vite-plugin": "2.13.3",
     "@medusajs/types": "2.13.3",
-    "@medusajs/ui-preset": "2.13.3"
+    "@medusajs/ui-preset": "2.13.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^8.57.1",
+    "postcss": "^8.5.8",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.4.19",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vite-plugin-inspect": "^0.8.9",
+    "vitest": "^3.2.4"
   },
   "packageManager": "yarn@3.2.1"
 }

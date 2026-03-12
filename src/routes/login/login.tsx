@@ -9,6 +9,11 @@ import { Form } from "../../components/common/form"
 import AvatarBox from "../../components/common/logo-box/avatar-box"
 import { useSignInWithEmailPass } from "../../hooks/api"
 import { isFetchError } from "../../lib/is-fetch-error"
+import {
+  isMockAuthEnabled,
+  mockAuthEmail,
+  mockAuthPassword,
+} from "../../lib/mock-auth"
 import { useExtension } from "../../providers/extension-provider"
 import { CloudAuthLogin } from "./components/cloud-auth-login"
 
@@ -82,6 +87,13 @@ export const Login = () => {
           </Text>
         </div>
         <div className="flex w-full flex-col gap-y-3">
+          {isMockAuthEnabled && (
+            <Alert className="bg-ui-bg-base p-2" variant="warning">
+              <Text size="small">
+                Mock login: {mockAuthEmail} / {mockAuthPassword}
+              </Text>
+            </Alert>
+          )}
           {getWidgets("login.before").map((Component, i) => {
             return <Component key={i} />
           })}

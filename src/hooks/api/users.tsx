@@ -8,6 +8,11 @@ import {
   useQuery,
 } from "@tanstack/react-query"
 import { sdk } from "../../lib/client"
+import {
+  getMockAuthUser,
+  isMockAuthEnabled,
+  isMockAuthenticated,
+} from "../../lib/mock-auth"
 import { queryClient } from "../../lib/query-client"
 import { queryKeysFactory } from "../../lib/query-key-factory"
 
@@ -27,7 +32,19 @@ export const useMe = (
   >
 ) => {
   const { data, ...rest } = useQuery({
-    queryFn: () => sdk.admin.user.me(query),
+    queryFn: () => {
+      if (isMockAuthEnabled) {
+        if (!isMockAuthenticated()) {
+          return {} as HttpTypes.AdminUserResponse
+        }
+
+        return {
+          user: getMockAuthUser(),
+        } as HttpTypes.AdminUserResponse
+      }
+
+      return sdk.admin.user.me(query)
+    },
     queryKey: usersQueryKeys.me(),
     ...options,
   })

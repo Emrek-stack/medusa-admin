@@ -9,8 +9,22 @@ export default defineConfig(({ mode }) => {
 
   const BASE = env.VITE_MEDUSA_BASE || "/"
   const BACKEND_URL = env.VITE_MEDUSA_BACKEND_URL || "http://localhost:9000"
-  const STOREFRONT_URL =
-    env.VITE_MEDUSA_STOREFRONT_URL || "http://localhost:8000"
+  const STOREFRONT_URL = env.VITE_MEDUSA_STOREFRONT_URL || undefined
+  const AUTH_TYPE = env.VITE_MEDUSA_AUTH_TYPE || undefined
+  const JWT_TOKEN_STORAGE_KEY =
+    env.VITE_MEDUSA_JWT_TOKEN_STORAGE_KEY || undefined
+  const MAX_UPLOAD_FILE_SIZE = env.VITE_MEDUSA_MAX_UPLOAD_FILE_SIZE
+    ? Number(env.VITE_MEDUSA_MAX_UPLOAD_FILE_SIZE)
+    : undefined
+  const MOCK_AUTH_ENABLED = env.VITE_MEDUSA_MOCK_AUTH
+    ? env.VITE_MEDUSA_MOCK_AUTH === "true"
+    : mode === "development"
+  const MOCK_API_ENABLED = env.VITE_MEDUSA_MOCK_API
+    ? env.VITE_MEDUSA_MOCK_API === "true"
+    : mode === "development"
+  const MOCK_AUTH_EMAIL = env.VITE_MEDUSA_MOCK_EMAIL || "admin@medusa.local"
+  const MOCK_AUTH_PASSWORD =
+    env.VITE_MEDUSA_MOCK_PASSWORD || "Admin123!"
 
   /**
    * Add this to your .env file to specify the project to load admin extensions from.
@@ -29,7 +43,21 @@ export default defineConfig(({ mode }) => {
     define: {
       __BASE__: JSON.stringify(BASE),
       __BACKEND_URL__: JSON.stringify(BACKEND_URL),
-      __STOREFRONT_URL__: JSON.stringify(STOREFRONT_URL),
+      __STOREFRONT_URL__: STOREFRONT_URL
+        ? JSON.stringify(STOREFRONT_URL)
+        : "undefined",
+      __AUTH_TYPE__: AUTH_TYPE ? JSON.stringify(AUTH_TYPE) : "undefined",
+      __JWT_TOKEN_STORAGE_KEY__: JWT_TOKEN_STORAGE_KEY
+        ? JSON.stringify(JWT_TOKEN_STORAGE_KEY)
+        : "undefined",
+      __MAX_UPLOAD_FILE_SIZE__:
+        typeof MAX_UPLOAD_FILE_SIZE === "number"
+          ? JSON.stringify(MAX_UPLOAD_FILE_SIZE)
+          : "undefined",
+      __MOCK_AUTH_ENABLED__: JSON.stringify(MOCK_AUTH_ENABLED),
+      __MOCK_API_ENABLED__: JSON.stringify(MOCK_API_ENABLED),
+      __MOCK_AUTH_EMAIL__: JSON.stringify(MOCK_AUTH_EMAIL),
+      __MOCK_AUTH_PASSWORD__: JSON.stringify(MOCK_AUTH_PASSWORD),
     },
     server: {
       open: true,
