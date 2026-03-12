@@ -14,6 +14,7 @@ import {
   RouteFocusModal,
   useRouteModal,
 } from "../../../../../components/modals"
+import { VisuallyHidden } from "../../../../../components/utilities/visually-hidden"
 import { useUpdateProduct } from "../../../../../hooks/api/products"
 import { useSalesChannels } from "../../../../../hooks/api/sales-channels"
 
@@ -107,7 +108,14 @@ export const EditSalesChannelsForm = ({
   return (
     <RouteFocusModal.Form form={form}>
       <div className="flex h-full flex-col overflow-hidden">
-        <RouteFocusModal.Header />
+        <RouteFocusModal.Header>
+          <RouteFocusModal.Title asChild>
+            <VisuallyHidden>{t("product.sales_channels.label")}</VisuallyHidden>
+          </RouteFocusModal.Title>
+          <RouteFocusModal.Description asChild>
+            <VisuallyHidden>{t("product.sales_channels.hint")}</VisuallyHidden>
+          </RouteFocusModal.Description>
+        </RouteFocusModal.Header>
         <RouteFocusModal.Body className="flex-1 overflow-hidden">
           <DataTable
             data={sales_channels}

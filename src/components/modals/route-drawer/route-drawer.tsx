@@ -1,6 +1,7 @@
 import { Drawer, clx } from "@medusajs/ui"
 import { PropsWithChildren, useEffect, useState } from "react"
 import { Path, useNavigate } from "react-router-dom"
+import { VisuallyHidden } from "../../utilities/visually-hidden"
 import { useStateAwareTo } from "../hooks/use-state-aware-to"
 import { RouteModalForm } from "../route-modal-form"
 import { RouteModalProvider } from "../route-modal-provider/route-provider"
@@ -50,6 +51,12 @@ const Root = ({ prev = "..", children }: RouteDrawerProps) => {
               "!bg-ui-bg-disabled !inset-y-5 !right-5": stackedModalOpen,
             })}
           >
+            <Drawer.Title asChild>
+              <VisuallyHidden>Modal</VisuallyHidden>
+            </Drawer.Title>
+            <Drawer.Description asChild>
+              <VisuallyHidden>Modal content</VisuallyHidden>
+            </Drawer.Description>
             {children}
           </Drawer.Content>
         </StackedModalProvider>

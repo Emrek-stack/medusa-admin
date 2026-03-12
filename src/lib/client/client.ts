@@ -1,6 +1,6 @@
 import { createMockApiFetch } from "../mock-api"
 
-export const backendUrl = __BACKEND_URL__ ?? "/"
+export const backendUrl = "/"
 const mockFetch = createMockApiFetch()
 
 const getOrigin = () => {

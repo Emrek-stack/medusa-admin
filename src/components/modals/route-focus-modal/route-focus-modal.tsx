@@ -1,6 +1,7 @@
 import { FocusModal, clx } from "@medusajs/ui"
 import { PropsWithChildren, useEffect, useState } from "react"
 import { Path, useNavigate } from "react-router-dom"
+import { VisuallyHidden } from "../../utilities/visually-hidden"
 import { useStateAwareTo } from "../hooks/use-state-aware-to"
 import { RouteModalForm } from "../route-modal-form"
 import { useRouteModal } from "../route-modal-provider"
@@ -71,7 +72,7 @@ const Content = ({ stackedModalOpen, children }: ContentProps) => {
       onEscapeKeyDown={
         shouldPreventClose
           ? (e) => {
-              e.preventDefault()
+            e.preventDefault()
             }
           : undefined
       }
@@ -79,6 +80,12 @@ const Content = ({ stackedModalOpen, children }: ContentProps) => {
         "!bg-ui-bg-disabled !inset-x-5 !inset-y-3": stackedModalOpen,
       })}
     >
+      <FocusModal.Title asChild>
+        <VisuallyHidden>Modal</VisuallyHidden>
+      </FocusModal.Title>
+      <FocusModal.Description asChild>
+        <VisuallyHidden>Modal content</VisuallyHidden>
+      </FocusModal.Description>
       {children}
     </FocusModal.Content>
   )

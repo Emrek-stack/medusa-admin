@@ -29,7 +29,7 @@ export const Providers = ({ api, children }: ProvidersProps) => {
             {import.meta.env.DEV && isMounted ? (
               <ReactQueryDevtools
                 initialIsOpen={false}
-                buttonPosition="bottom-left"
+                buttonPosition="bottom-right"
               />
             ) : null}
             <ThemeProvider>
