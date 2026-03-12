@@ -1,6 +1,7 @@
 import { Toaster, TooltipProvider } from "@medusajs/ui"
 import { QueryClientProvider } from "@tanstack/react-query"
-import type { PropsWithChildren } from "react"
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { type PropsWithChildren, useEffect, useState } from "react"
 import { HelmetProvider } from "react-helmet-async"
 import { I18n } from "../components/utilities/i18n"
 import { DashboardApp } from "../dashboard-app"
@@ -14,11 +15,23 @@ type ProvidersProps = PropsWithChildren<{
 }>
 
 export const Providers = ({ api, children }: ProvidersProps) => {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
   return (
     <TooltipProvider>
       <ExtensionProvider api={api}>
         <HelmetProvider>
           <QueryClientProvider client={queryClient}>
+            {import.meta.env.DEV && isMounted ? (
+              <ReactQueryDevtools
+                initialIsOpen={false}
+                buttonPosition="bottom-left"
+              />
+            ) : null}
             <ThemeProvider>
               <FeatureFlagProvider>
                 <I18n />
