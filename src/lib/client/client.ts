@@ -1,5 +1,5 @@
 import Medusa from "@medusajs/js-sdk"
-import { createMockApiFetch, isMockApiEnabled } from "../mock-api"
+import { createMockApiFetch } from "../mock-api"
 
 export const backendUrl = __BACKEND_URL__ ?? "/"
 const authType = __AUTH_TYPE__ ?? "session"
@@ -13,9 +13,7 @@ export const sdk = new Medusa({
   },
 })
 
-if (isMockApiEnabled) {
-  sdk.client.fetch_ = createMockApiFetch()
-}
+sdk.client.fetch_ = createMockApiFetch()
 
 // useful when you want to call the BE from the console and try things out quickly
 if (typeof window !== "undefined") {
