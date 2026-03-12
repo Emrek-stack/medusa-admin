@@ -1,4 +1,3 @@
-import inject from "@medusajs/admin-vite-plugin"
 import react from "@vitejs/plugin-react"
 import path from "node:path"
 import { defineConfig, loadEnv } from "vite"
@@ -31,20 +30,8 @@ export default defineConfig(({ mode }) => {
   const MOCK_AUTH_EMAIL = env.VITE_MEDUSA_MOCK_EMAIL || "admin@medusa.local"
   const MOCK_AUTH_PASSWORD = env.VITE_MEDUSA_MOCK_PASSWORD || "Admin123!"
 
-  /**
-   * Add this to your .env file to specify the project to load admin extensions from.
-   */
-  const MEDUSA_PROJECT = env.VITE_MEDUSA_PROJECT || null
-  const sources = MEDUSA_PROJECT ? [MEDUSA_PROJECT] : []
-
   return {
-    plugins: [
-      inspect(),
-      react(),
-      inject({
-        sources,
-      }),
-    ],
+    plugins: [inspect(), react()],
     define: {
       __BASE__: JSON.stringify(BASE),
       __BACKEND_URL__: JSON.stringify(BACKEND_URL),

@@ -1,12 +1,14 @@
 import { DashboardApp } from "./dashboard-app"
 import { DashboardPlugin } from "./dashboard-app/types"
 
-import displayModule from "virtual:medusa/displays"
-import formModule from "virtual:medusa/forms"
-import i18nModule from "virtual:medusa/i18n"
-import menuItemModule from "virtual:medusa/menu-items"
-import routeModule from "virtual:medusa/routes"
-import widgetModule from "virtual:medusa/widgets"
+import {
+  displayModule,
+  formModule,
+  i18nModule,
+  menuItemModule,
+  routeModule,
+  widgetModule,
+} from "./extensions/local-modules"
 
 import "./index.css"
 

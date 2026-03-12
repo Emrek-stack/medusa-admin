@@ -78,7 +78,6 @@
     "zod": "3.25.76"
   },
   "devDependencies": {
-    "@medusajs/admin-vite-plugin": "2.13.3",
     "@medusajs/types": "2.13.3",
     "@medusajs/ui-preset": "2.13.3",
     "@vitejs/plugin-react": "^4.7.0",
