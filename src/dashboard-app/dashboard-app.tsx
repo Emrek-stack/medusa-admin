@@ -488,11 +488,19 @@ export class DashboardApp {
 
     const router = createBrowserRouter(routes, {
       basename: __BASE__ || "/",
+      future: {
+        v7_startTransition: true,
+      },
     })
 
     return (
       <Providers api={this.api}>
-        <RouterProvider router={router} />
+        <RouterProvider
+          router={router}
+          future={{
+            v7_startTransition: true,
+          }}
+        />
       </Providers>
     )
   }

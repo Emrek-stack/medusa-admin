@@ -41,34 +41,45 @@ export const Login = () => {
   const { mutateAsync, isPending } = useSignInWithEmailPass()
 
   const handleSubmit = form.handleSubmit(async ({ email, password }) => {
-    await mutateAsync(
-      {
-        email,
-        password,
-      },
-      {
-        onError: (error) => {
-          if (isFetchError(error)) {
-            if (error.status === 401) {
-              form.setError("email", {
-                type: "manual",
-                message: error.message,
-              })
+    try {
+      await mutateAsync(
+        {
+          email,
+          password,
+        },
+        {
+          onError: (error) => {
+            if (isFetchError(error)) {
+              if (error.status === 401) {
+                form.setError("email", {
+                  type: "manual",
+                  message: error.message,
+                })
 
-              return
+                return
+              }
             }
-          }
 
-          form.setError("root.serverError", {
-            type: "manual",
-            message: error.message,
-          })
-        },
-        onSuccess: () => {
-          navigate(from, { replace: true })
-        },
+            form.setError("root.serverError", {
+              type: "manual",
+              message: error.message,
+            })
+          },
+          onSuccess: () => {
+            navigate(from, { replace: true })
+          },
+        }
+      )
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Login failed"
+
+      if (!form.formState.errors.root?.serverError) {
+        form.setError("root.serverError", {
+          type: "manual",
+          message,
+        })
       }
-    )
+    }
   })
 
   const serverError = form.formState.errors?.root?.serverError?.message
