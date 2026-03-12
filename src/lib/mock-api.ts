@@ -358,6 +358,388 @@ let mockCustomerGroups = [
   },
 ]
 
+const MOCK_STOCK_LOCATIONS = [
+  { id: "sl_istanbul", name: "Istanbul Warehouse" },
+  { id: "sl_ankara", name: "Ankara Warehouse" },
+  { id: "sl_izmir", name: "Izmir Warehouse" },
+]
+
+let mockInventoryItems = [
+  {
+    id: "iitem_tee_white",
+    title: "Oversized Tee Inventory",
+    sku: "TEE-M-WHT",
+    hs_code: "6109.10",
+    mid_code: "TR1001",
+    material: "Cotton",
+    weight: 240,
+    length: 30,
+    height: 2,
+    width: 22,
+    origin_country: "tr",
+    metadata: {},
+    variants: [mockProducts[0].variants[1]],
+    location_levels: [
+      {
+        location_id: "sl_istanbul",
+        stocked_quantity: 120,
+        reserved_quantity: 18,
+      },
+      {
+        location_id: "sl_ankara",
+        stocked_quantity: 65,
+        reserved_quantity: 7,
+      },
+    ],
+    created_at: now,
+    updated_at: now,
+  },
+  {
+    id: "iitem_tote_default",
+    title: "Canvas Tote Inventory",
+    sku: "TOT-001",
+    hs_code: "4202.92",
+    mid_code: "TR1002",
+    material: "Canvas",
+    weight: 320,
+    length: 35,
+    height: 3,
+    width: 40,
+    origin_country: "tr",
+    metadata: {},
+    variants: [mockProducts[1].variants[0]],
+    location_levels: [
+      {
+        location_id: "sl_istanbul",
+        stocked_quantity: 82,
+        reserved_quantity: 11,
+      },
+      {
+        location_id: "sl_izmir",
+        stocked_quantity: 47,
+        reserved_quantity: 3,
+      },
+    ],
+    created_at: now,
+    updated_at: now,
+  },
+  {
+    id: "iitem_vase_default",
+    title: "Ceramic Vase Inventory",
+    sku: "VAS-001",
+    hs_code: "6913.90",
+    mid_code: "TR1003",
+    material: "Ceramic",
+    weight: 900,
+    length: 14,
+    height: 24,
+    width: 14,
+    origin_country: "tr",
+    metadata: {},
+    variants: [mockProducts[2].variants[0]],
+    location_levels: [
+      {
+        location_id: "sl_ankara",
+        stocked_quantity: 39,
+        reserved_quantity: 2,
+      },
+    ],
+    created_at: now,
+    updated_at: now,
+  },
+]
+
+let mockOrders = [
+  {
+    id: "order_01",
+    status: "completed",
+    created_at: now,
+    updated_at: now,
+    email: "ayse.yilmaz@example.com",
+    display_id: 1001,
+    custom_display_id: "ORD-1001",
+    payment_status: "captured",
+    fulfillment_status: "fulfilled",
+    total: 48900,
+    currency_code: "try",
+    customer: {
+      id: "cus_01J1A1A1A1A1A1A1A1A1A1A1A1",
+      first_name: "Ayse",
+      last_name: "Yilmaz",
+      email: "ayse.yilmaz@example.com",
+    },
+    sales_channel: MOCK_SALES_CHANNELS[0],
+    shipping_address: {
+      country_code: "tr",
+      city: "Istanbul",
+      address_1: "Maslak Mah. Buyukdere Cad. No:120",
+    },
+    billing_address: {
+      country_code: "tr",
+      city: "Istanbul",
+      address_1: "Maslak Mah. Buyukdere Cad. No:120",
+    },
+    items: [
+      {
+        id: "orditem_01",
+        created_at: now,
+        quantity: 2,
+        title: "Oversized Tee",
+        subtitle: "Organic cotton",
+        unit_price: 14950,
+        total: 29900,
+        variant: mockProducts[0].variants[1],
+      },
+      {
+        id: "orditem_02",
+        created_at: now,
+        quantity: 1,
+        title: "Canvas Tote",
+        subtitle: "Everyday carry",
+        unit_price: 19000,
+        total: 19000,
+        variant: mockProducts[1].variants[0],
+      },
+    ],
+    payment_collections: [
+      {
+        id: "paycol_01",
+        amount: 48900,
+        authorized_amount: 48900,
+        captured_amount: 48900,
+        refunded_amount: 0,
+        payments: [],
+      },
+    ],
+    promotions: [],
+    shipping_methods: [],
+    credit_lines: [],
+    fulfillments: [],
+    metadata: {},
+    order_change: null,
+  },
+  {
+    id: "order_02",
+    status: "pending",
+    created_at: now,
+    updated_at: now,
+    email: "emre.kaya@example.com",
+    display_id: 1002,
+    custom_display_id: "ORD-1002",
+    payment_status: "awaiting",
+    fulfillment_status: "not_fulfilled",
+    total: 14950,
+    currency_code: "try",
+    customer: {
+      id: "cus_01J1B2B2B2B2B2B2B2B2B2B2B2",
+      first_name: "Emre",
+      last_name: "Kaya",
+      email: "emre.kaya@example.com",
+    },
+    sales_channel: MOCK_SALES_CHANNELS[1],
+    shipping_address: {
+      country_code: "tr",
+      city: "Ankara",
+      address_1: "Ataturk Cd. No:45",
+    },
+    billing_address: {
+      country_code: "tr",
+      city: "Ankara",
+      address_1: "Ataturk Cd. No:45",
+    },
+    items: [
+      {
+        id: "orditem_03",
+        created_at: now,
+        quantity: 1,
+        title: "Oversized Tee",
+        subtitle: "Organic cotton",
+        unit_price: 14950,
+        total: 14950,
+        variant: mockProducts[0].variants[0],
+      },
+    ],
+    payment_collections: [
+      {
+        id: "paycol_02",
+        amount: 14950,
+        authorized_amount: 14950,
+        captured_amount: 0,
+        refunded_amount: 0,
+        payments: [],
+      },
+    ],
+    promotions: [],
+    shipping_methods: [],
+    credit_lines: [],
+    fulfillments: [],
+    metadata: {},
+    order_change: null,
+  },
+]
+
+let mockPromotions = [
+  {
+    id: "promo_summer15",
+    code: "SUMMER15",
+    type: "standard",
+    is_automatic: false,
+    status: "active",
+    application_method: {
+      type: "percentage",
+      value: 15,
+      allocation: "across",
+      target_type: "items",
+      currency_code: null,
+    },
+    is_tax_inclusive: false,
+    campaign: {
+      id: "camp_summer",
+      name: "Summer Campaign",
+      starts_at: now,
+      ends_at: null,
+      budget: null,
+    },
+    created_at: now,
+    updated_at: now,
+  },
+  {
+    id: "promo_bundle20",
+    code: "BUNDLE20",
+    type: "buyget",
+    is_automatic: true,
+    status: "active",
+    application_method: {
+      type: "fixed",
+      value: 2000,
+      allocation: "each",
+      target_type: "items",
+      currency_code: "try",
+    },
+    is_tax_inclusive: true,
+    campaign: {
+      id: "camp_bundle",
+      name: "Bundle Campaign",
+      starts_at: now,
+      ends_at: null,
+      budget: { limit: 1000000, used: 250000 },
+    },
+    created_at: now,
+    updated_at: now,
+  },
+]
+
+const mockPromotionRules: Record<string, Record<string, any[]>> = {
+  promo_summer15: {
+    rules: [
+      {
+        id: "prule_01",
+        attribute: "customer_group_id",
+        attribute_label: "Customer Group",
+        operator: "in",
+        operator_label: "is in",
+        values: [{ value: "cusgrp_vip", label: "VIP Customers" }],
+        field_type: "text",
+      },
+    ],
+    "target-rules": [
+      {
+        id: "prule_02",
+        attribute: "product_collection_id",
+        attribute_label: "Collection",
+        operator: "in",
+        operator_label: "is in",
+        values: [{ value: "col_summer", label: "Summer 2026" }],
+        field_type: "text",
+      },
+    ],
+    "buy-rules": [],
+  },
+  promo_bundle20: {
+    rules: [],
+    "target-rules": [
+      {
+        id: "prule_03",
+        attribute: "product_id",
+        attribute_label: "Product",
+        operator: "in",
+        operator_label: "is in",
+        values: [{ value: "prod_canvas_tote", label: "Canvas Tote" }],
+        field_type: "text",
+      },
+    ],
+    "buy-rules": [
+      {
+        id: "prule_04",
+        attribute: "product_id",
+        attribute_label: "Product",
+        operator: "in",
+        operator_label: "is in",
+        values: [{ value: "prod_oversized_tee", label: "Oversized Tee" }],
+        field_type: "text",
+      },
+    ],
+  },
+}
+
+let mockPriceLists = [
+  {
+    id: "pl_default_sale",
+    title: "Summer Sale 2026",
+    description: "Seasonal campaign pricing",
+    type: "sale",
+    status: "active",
+    starts_at: now,
+    ends_at: null,
+    created_at: now,
+    updated_at: now,
+  },
+  {
+    id: "pl_b2b_override",
+    title: "B2B Override",
+    description: "Special B2B customer pricing",
+    type: "override",
+    status: "draft",
+    starts_at: null,
+    ends_at: null,
+    created_at: now,
+    updated_at: now,
+  },
+]
+
+const mockPriceListPrices: Record<string, any[]> = {
+  pl_default_sale: [
+    {
+      id: "plprice_01",
+      amount: 12950,
+      currency_code: "try",
+      variant_id: "variant_tee_s",
+      rules: {},
+    },
+    {
+      id: "plprice_02",
+      amount: 16900,
+      currency_code: "try",
+      variant_id: "variant_tote_default",
+      rules: {},
+    },
+  ],
+  pl_b2b_override: [
+    {
+      id: "plprice_03",
+      amount: 9900,
+      currency_code: "try",
+      variant_id: "variant_tee_m",
+      rules: {},
+    },
+  ],
+}
+
+const mockPriceListProducts: Record<string, string[]> = {
+  pl_default_sale: ["prod_oversized_tee", "prod_canvas_tote"],
+  pl_b2b_override: ["prod_oversized_tee"],
+}
+
 const RESERVED_SEGMENTS = new Set([
   "me",
   "search",
@@ -523,6 +905,39 @@ const includesCI = (value: string | undefined | null, term: string) => {
   }
 
   return value.toLowerCase().includes(term)
+}
+
+const getQueryArray = (url: URL, key: string) => {
+  const direct = url.searchParams.getAll(key)
+  const bracket = url.searchParams.getAll(`${key}[]`)
+  const values = [...direct, ...bracket].filter(Boolean)
+
+  if (values.length) {
+    return values
+  }
+
+  const single = url.searchParams.get(key)
+  if (!single) {
+    return []
+  }
+
+  if (single.includes(",")) {
+    return single
+      .split(",")
+      .map((v) => v.trim())
+      .filter(Boolean)
+  }
+
+  try {
+    if (single.startsWith("[")) {
+      const parsed = JSON.parse(single)
+      return normalizeIdList(parsed)
+    }
+  } catch {
+    // noop
+  }
+
+  return [single]
 }
 
 const normalizeIdList = (value: unknown): string[] => {
@@ -718,6 +1133,41 @@ const withCollectionProducts = (collection: any) => {
   }
 }
 
+const withInventoryTotals = (item: any) => {
+  const stocked_quantity = (item.location_levels || []).reduce(
+    (acc: number, level: any) => acc + (level.stocked_quantity || 0),
+    0
+  )
+  const reserved_quantity = (item.location_levels || []).reduce(
+    (acc: number, level: any) => acc + (level.reserved_quantity || 0),
+    0
+  )
+
+  return {
+    ...item,
+    stocked_quantity,
+    reserved_quantity,
+  }
+}
+
+const toInventoryLevels = (item: any) => {
+  return (item.location_levels || []).map((level: any) => {
+    const location =
+      MOCK_STOCK_LOCATIONS.find((loc) => loc.id === level.location_id) || null
+
+    return {
+      id: `${item.id}_${level.location_id}`,
+      inventory_item_id: item.id,
+      location_id: level.location_id,
+      stocked_quantity: level.stocked_quantity || 0,
+      reserved_quantity: level.reserved_quantity || 0,
+      available_quantity:
+        (level.stocked_quantity || 0) - (level.reserved_quantity || 0),
+      stock_locations: location ? [location] : [],
+    }
+  })
+}
+
 const handleProducts = (url: URL, method: string, init?: FetchArgs) => {
   const pathname = url.pathname.replace(/\/+$/, "")
   const productMatch = pathname.match(/^\/admin\/products\/([^/]+)$/)
@@ -742,6 +1192,15 @@ const handleProducts = (url: URL, method: string, init?: FetchArgs) => {
     const status = url.searchParams.get("status")
     if (status) {
       items = items.filter((p) => p.status === status)
+    }
+
+    const priceListIds = getQueryArray(url, "price_list_id")
+    if (priceListIds.length) {
+      items = items.filter((product) =>
+        priceListIds.some((priceListId) =>
+          (mockPriceListProducts[priceListId] || []).includes(product.id)
+        )
+      )
     }
 
     const paged = paginate(items, url)
@@ -856,6 +1315,761 @@ const handleProducts = (url: URL, method: string, init?: FetchArgs) => {
     return {
       variant: variant || null,
     }
+  }
+
+  return null
+}
+
+const handleInventory = (url: URL, method: string, init?: FetchArgs) => {
+  const pathname = url.pathname.replace(/\/+$/, "")
+  const itemMatch = pathname.match(/^\/admin\/inventory-items\/([^/]+)$/)
+  const levelsMatch = pathname.match(
+    /^\/admin\/inventory-items\/([^/]+)\/location-levels$/
+  )
+  const levelMatch = pathname.match(
+    /^\/admin\/inventory-items\/([^/]+)\/location-levels\/([^/]+)$/
+  )
+  const batchItemLevelsMatch = pathname.match(
+    /^\/admin\/inventory-items\/([^/]+)\/location-levels\/batch$/
+  )
+  const batchItemsLevelsMatch = pathname.match(
+    /^\/admin\/inventory-items\/location-levels\/batch$/
+  )
+
+  if (pathname === "/admin/inventory-items" && method === "GET") {
+    let items = [...mockInventoryItems]
+    const q = url.searchParams.get("q")?.trim().toLowerCase()
+
+    if (q) {
+      items = items.filter(
+        (item) => includesCI(item.title, q) || includesCI(item.sku, q)
+      )
+    }
+
+    items = sortItems(
+      items.map(withInventoryTotals),
+      url.searchParams.get("order") || undefined
+    )
+
+    const paged = paginate(items, url)
+
+    return {
+      inventory_items: paged.items,
+      count: paged.count,
+      offset: paged.offset,
+      limit: paged.limit,
+    }
+  }
+
+  if (pathname === "/admin/inventory-items" && method === "POST") {
+    const body = parseBody(init?.body) as Record<string, any>
+    const timestamp = new Date().toISOString()
+    const created = {
+      id: `iitem_${Date.now()}`,
+      title: (body.title as string) || "New Inventory Item",
+      sku: (body.sku as string) || "",
+      hs_code: (body.hs_code as string) || "",
+      mid_code: (body.mid_code as string) || "",
+      material: (body.material as string) || "",
+      weight: (body.weight as number) || null,
+      length: (body.length as number) || null,
+      height: (body.height as number) || null,
+      width: (body.width as number) || null,
+      origin_country: (body.origin_country as string) || "tr",
+      metadata: (body.metadata as Record<string, unknown>) || {},
+      variants: [],
+      location_levels: [],
+      created_at: timestamp,
+      updated_at: timestamp,
+    }
+
+    mockInventoryItems = [created, ...mockInventoryItems]
+    return { inventory_item: withInventoryTotals(created) }
+  }
+
+  if (itemMatch && method === "GET") {
+    const item = mockInventoryItems.find((i) => i.id === itemMatch[1])
+    return { inventory_item: withInventoryTotals(item || mockInventoryItems[0]) }
+  }
+
+  if (itemMatch && (method === "POST" || method === "PUT")) {
+    const id = itemMatch[1]
+    const body = parseBody(init?.body) as Record<string, any>
+    const timestamp = new Date().toISOString()
+
+    mockInventoryItems = mockInventoryItems.map((item) =>
+      item.id === id ? { ...item, ...body, updated_at: timestamp } : item
+    )
+
+    const updated = mockInventoryItems.find((i) => i.id === id)
+    return { inventory_item: withInventoryTotals(updated || mockInventoryItems[0]) }
+  }
+
+  if (itemMatch && method === "DELETE") {
+    const id = itemMatch[1]
+    mockInventoryItems = mockInventoryItems.filter((i) => i.id !== id)
+    return { id, object: "inventory_item", deleted: true }
+  }
+
+  if (levelsMatch && method === "GET") {
+    const item = mockInventoryItems.find((i) => i.id === levelsMatch[1])
+    const levels = item ? toInventoryLevels(item) : []
+    const paged = paginate(levels, url)
+
+    return {
+      inventory_levels: paged.items,
+      count: paged.count,
+      offset: paged.offset,
+      limit: paged.limit,
+    }
+  }
+
+  if (levelMatch && (method === "POST" || method === "PUT")) {
+    const itemId = levelMatch[1]
+    const locationId = levelMatch[2]
+    const body = parseBody(init?.body) as Record<string, any>
+    const stocked = Number(body.stocked_quantity ?? body.stocked ?? 0)
+    const reserved = Number(body.reserved_quantity ?? body.reserved ?? 0)
+
+    mockInventoryItems = mockInventoryItems.map((item) => {
+      if (item.id !== itemId) {
+        return item
+      }
+
+      const exists = (item.location_levels || []).some(
+        (l: any) => l.location_id === locationId
+      )
+
+      const updatedLevels = exists
+        ? item.location_levels.map((level: any) =>
+            level.location_id === locationId
+              ? {
+                  ...level,
+                  stocked_quantity: Number.isFinite(stocked)
+                    ? stocked
+                    : level.stocked_quantity,
+                  reserved_quantity: Number.isFinite(reserved)
+                    ? reserved
+                    : level.reserved_quantity,
+                }
+              : level
+          )
+        : [
+            ...item.location_levels,
+            {
+              location_id: locationId,
+              stocked_quantity: Number.isFinite(stocked) ? stocked : 0,
+              reserved_quantity: Number.isFinite(reserved) ? reserved : 0,
+            },
+          ]
+
+      return {
+        ...item,
+        location_levels: updatedLevels,
+        updated_at: new Date().toISOString(),
+      }
+    })
+
+    const updated = mockInventoryItems.find((i) => i.id === itemId)
+    return { inventory_item: withInventoryTotals(updated || mockInventoryItems[0]) }
+  }
+
+  if (levelMatch && method === "DELETE") {
+    const itemId = levelMatch[1]
+    const locationId = levelMatch[2]
+
+    mockInventoryItems = mockInventoryItems.map((item) => {
+      if (item.id !== itemId) {
+        return item
+      }
+
+      return {
+        ...item,
+        location_levels: item.location_levels.filter(
+          (level: any) => level.location_id !== locationId
+        ),
+        updated_at: new Date().toISOString(),
+      }
+    })
+
+    return { id: `${itemId}_${locationId}`, object: "inventory_level", deleted: true }
+  }
+
+  if (batchItemLevelsMatch && method === "POST") {
+    const itemId = batchItemLevelsMatch[1]
+    const body = parseBody(init?.body) as Record<string, any>
+    const create = Array.isArray(body.create) ? body.create : []
+    const update = Array.isArray(body.update) ? body.update : []
+    const del = normalizeIdList(body.delete)
+
+    mockInventoryItems = mockInventoryItems.map((item) => {
+      if (item.id !== itemId) {
+        return item
+      }
+
+      let levels = [...item.location_levels]
+
+      for (const locationId of del) {
+        levels = levels.filter((level: any) => level.location_id !== locationId)
+      }
+
+      for (const entry of [...create, ...update]) {
+        if (!entry || typeof entry !== "object") {
+          continue
+        }
+        const locationId = (entry as any).location_id
+        if (!locationId) {
+          continue
+        }
+        const stocked = Number((entry as any).stocked_quantity ?? 0)
+        const reserved = Number((entry as any).reserved_quantity ?? 0)
+        const idx = levels.findIndex((l: any) => l.location_id === locationId)
+        if (idx >= 0) {
+          levels[idx] = {
+            ...levels[idx],
+            stocked_quantity: Number.isFinite(stocked)
+              ? stocked
+              : levels[idx].stocked_quantity,
+            reserved_quantity: Number.isFinite(reserved)
+              ? reserved
+              : levels[idx].reserved_quantity,
+          }
+        } else {
+          levels.push({
+            location_id: locationId,
+            stocked_quantity: Number.isFinite(stocked) ? stocked : 0,
+            reserved_quantity: Number.isFinite(reserved) ? reserved : 0,
+          })
+        }
+      }
+
+      return {
+        ...item,
+        location_levels: levels,
+        updated_at: new Date().toISOString(),
+      }
+    })
+
+    const updated = mockInventoryItems.find((i) => i.id === itemId)
+    return { inventory_item: withInventoryTotals(updated || mockInventoryItems[0]) }
+  }
+
+  if (batchItemsLevelsMatch && method === "POST") {
+    const body = parseBody(init?.body) as Record<string, any>
+    const updates = Array.isArray(body.inventory_items) ? body.inventory_items : []
+
+    for (const entry of updates) {
+      if (!entry || typeof entry !== "object") {
+        continue
+      }
+
+      const itemId = (entry as any).inventory_item_id
+      const locationId = (entry as any).location_id
+      if (!itemId || !locationId) {
+        continue
+      }
+
+      const stocked = Number((entry as any).stocked_quantity ?? 0)
+      const reserved = Number((entry as any).reserved_quantity ?? 0)
+
+      mockInventoryItems = mockInventoryItems.map((item) => {
+        if (item.id !== itemId) {
+          return item
+        }
+
+        const idx = item.location_levels.findIndex(
+          (lvl: any) => lvl.location_id === locationId
+        )
+
+        const levels = [...item.location_levels]
+        if (idx >= 0) {
+          levels[idx] = {
+            ...levels[idx],
+            stocked_quantity: Number.isFinite(stocked)
+              ? stocked
+              : levels[idx].stocked_quantity,
+            reserved_quantity: Number.isFinite(reserved)
+              ? reserved
+              : levels[idx].reserved_quantity,
+          }
+        } else {
+          levels.push({
+            location_id: locationId,
+            stocked_quantity: Number.isFinite(stocked) ? stocked : 0,
+            reserved_quantity: Number.isFinite(reserved) ? reserved : 0,
+          })
+        }
+
+        return {
+          ...item,
+          location_levels: levels,
+          updated_at: new Date().toISOString(),
+        }
+      })
+    }
+
+    return { updated: true }
+  }
+
+  return null
+}
+
+const handleOrders = (url: URL, method: string, init?: FetchArgs) => {
+  const pathname = url.pathname.replace(/\/+$/, "")
+  const orderMatch = pathname.match(/^\/admin\/orders\/([^/]+)$/)
+  const previewMatch = pathname.match(/^\/admin\/orders\/([^/]+)\/preview$/)
+  const changesMatch = pathname.match(/^\/admin\/orders\/([^/]+)\/changes$/)
+  const lineItemsMatch = pathname.match(/^\/admin\/orders\/([^/]+)\/line-items$/)
+  const shippingOptionsMatch = pathname.match(
+    /^\/admin\/orders\/([^/]+)\/shipping-options$/
+  )
+  const nestedOrderActionMatch = pathname.match(/^\/admin\/orders\/([^/]+)\/.+$/)
+
+  if (pathname === "/admin/orders" && method === "GET") {
+    let items = [...mockOrders]
+    const q = url.searchParams.get("q")?.trim().toLowerCase()
+    const customerId = url.searchParams.get("customer_id")
+
+    if (q) {
+      items = items.filter(
+        (order) =>
+          includesCI(order.email, q) ||
+          includesCI(order.custom_display_id, q) ||
+          includesCI(`${order.display_id}`, q)
+      )
+    }
+
+    if (customerId) {
+      items = items.filter((order) => order.customer?.id === customerId)
+    }
+
+    items = sortItems(items, url.searchParams.get("order") || "-created_at")
+
+    const paged = paginate(items, url)
+
+    return {
+      orders: paged.items,
+      count: paged.count,
+      offset: paged.offset,
+      limit: paged.limit,
+    }
+  }
+
+  if (orderMatch && method === "GET") {
+    const order = mockOrders.find((o) => o.id === orderMatch[1])
+    return { order: order || mockOrders[0] }
+  }
+
+  if (orderMatch && (method === "POST" || method === "PUT")) {
+    const id = orderMatch[1]
+    const body = parseBody(init?.body) as Record<string, any>
+    mockOrders = mockOrders.map((order) =>
+      order.id === id
+        ? { ...order, ...body, updated_at: new Date().toISOString() }
+        : order
+    )
+    const updated = mockOrders.find((o) => o.id === id) || mockOrders[0]
+    return { order: updated }
+  }
+
+  if (previewMatch && method === "GET") {
+    const order = mockOrders.find((o) => o.id === previewMatch[1]) || mockOrders[0]
+    return { order }
+  }
+
+  if (changesMatch && method === "GET") {
+    return { order_changes: [], count: 0, offset: 0, limit: 20 }
+  }
+
+  if (lineItemsMatch && method === "GET") {
+    const order = mockOrders.find((o) => o.id === lineItemsMatch[1]) || mockOrders[0]
+    const items = order.items || []
+    const paged = paginate(items, url)
+    return {
+      order_items: paged.items,
+      count: paged.count,
+      offset: paged.offset,
+      limit: paged.limit,
+    }
+  }
+
+  if (shippingOptionsMatch && method === "GET") {
+    return {
+      shipping_options: [
+        {
+          id: "so_standard",
+          name: "Standard Shipping",
+          price_type: "flat",
+          amount: 4900,
+        },
+        {
+          id: "so_express",
+          name: "Express Shipping",
+          price_type: "flat",
+          amount: 9900,
+        },
+      ],
+    }
+  }
+
+  if (pathname === "/admin/orders/export" && method === "POST") {
+    return { transaction_id: `export_${Date.now()}` }
+  }
+
+  if (nestedOrderActionMatch && method === "POST") {
+    const order = mockOrders.find((o) => o.id === nestedOrderActionMatch[1]) || mockOrders[0]
+    return { order }
+  }
+
+  return null
+}
+
+const handlePromotions = (url: URL, method: string, init?: FetchArgs) => {
+  const pathname = url.pathname.replace(/\/+$/, "")
+  const promotionMatch = pathname.match(/^\/admin\/promotions\/([^/]+)$/)
+  const rulesByPathMatch = pathname.match(
+    /^\/admin\/promotions\/([^/]+)\/(rules|target-rules|buy-rules)$/
+  )
+  const rulesGenericMatch = pathname.match(
+    /^\/admin\/promotions\/([^/]+)\/rules(?:\/batch)?$/
+  )
+  const rulesBatchTypedMatch = pathname.match(
+    /^\/admin\/promotions\/([^/]+)\/(rules|target-rules|buy-rules)\/batch$/
+  )
+
+  if (pathname === "/admin/promotions" && method === "GET") {
+    let items = [...mockPromotions]
+    const q = url.searchParams.get("q")?.trim().toLowerCase()
+    const campaignId = url.searchParams.get("campaign_id")
+
+    if (q) {
+      items = items.filter((promo) => includesCI(promo.code, q))
+    }
+
+    if (campaignId) {
+      items = items.filter((promo) => promo.campaign?.id === campaignId)
+    }
+
+    items = sortItems(items, url.searchParams.get("order") || "-created_at")
+
+    const paged = paginate(items, url)
+    return {
+      promotions: paged.items,
+      count: paged.count,
+      offset: paged.offset,
+      limit: paged.limit,
+    }
+  }
+
+  if (pathname === "/admin/promotions" && method === "POST") {
+    const body = parseBody(init?.body) as Record<string, any>
+    const timestamp = new Date().toISOString()
+    const created = {
+      id: `promo_${Date.now()}`,
+      code: (body.code as string) || `PROMO${Date.now()}`,
+      type: (body.type as string) || "standard",
+      is_automatic: Boolean(body.is_automatic),
+      status: (body.status as string) || "draft",
+      application_method: (body.application_method as Record<string, unknown>) || {
+        type: "percentage",
+        value: 10,
+        allocation: "across",
+        target_type: "items",
+      },
+      is_tax_inclusive: Boolean(body.is_tax_inclusive),
+      campaign: (body.campaign as Record<string, unknown>) || null,
+      created_at: timestamp,
+      updated_at: timestamp,
+    }
+    mockPromotions = [created, ...mockPromotions]
+    mockPromotionRules[created.id] = { rules: [], "target-rules": [], "buy-rules": [] }
+    return { promotion: created }
+  }
+
+  if (promotionMatch && method === "GET") {
+    const promotion = mockPromotions.find((p) => p.id === promotionMatch[1])
+    return { promotion: promotion || mockPromotions[0] }
+  }
+
+  if (promotionMatch && (method === "POST" || method === "PUT")) {
+    const id = promotionMatch[1]
+    const body = parseBody(init?.body) as Record<string, any>
+    mockPromotions = mockPromotions.map((promotion) =>
+      promotion.id === id
+        ? { ...promotion, ...body, updated_at: new Date().toISOString() }
+        : promotion
+    )
+    const updated = mockPromotions.find((p) => p.id === id) || mockPromotions[0]
+    return { promotion: updated }
+  }
+
+  if (promotionMatch && method === "DELETE") {
+    const id = promotionMatch[1]
+    mockPromotions = mockPromotions.filter((p) => p.id !== id)
+    delete mockPromotionRules[id]
+    return { id, object: "promotion", deleted: true }
+  }
+
+  const resolveRuleType = (fallback = "rules") => {
+    return (
+      url.searchParams.get("rule_type") ||
+      url.searchParams.get("type") ||
+      fallback
+    )
+  }
+
+  if (rulesByPathMatch && method === "GET") {
+    const promotionId = rulesByPathMatch[1]
+    const ruleType = rulesByPathMatch[2]
+    return {
+      rules: mockPromotionRules[promotionId]?.[ruleType] || [],
+      count: (mockPromotionRules[promotionId]?.[ruleType] || []).length,
+      offset: 0,
+      limit: 50,
+    }
+  }
+
+  if (rulesGenericMatch && method === "GET") {
+    const promotionId = rulesGenericMatch[1]
+    const ruleType = resolveRuleType()
+    return {
+      rules: mockPromotionRules[promotionId]?.[ruleType] || [],
+      count: (mockPromotionRules[promotionId]?.[ruleType] || []).length,
+      offset: 0,
+      limit: 50,
+    }
+  }
+
+  if ((rulesGenericMatch || rulesBatchTypedMatch) && method === "POST") {
+    const promotionId =
+      (rulesGenericMatch && rulesGenericMatch[1]) ||
+      (rulesBatchTypedMatch && rulesBatchTypedMatch[1]) ||
+      ""
+    const explicitType =
+      (rulesBatchTypedMatch && rulesBatchTypedMatch[2]) || undefined
+    const ruleType = explicitType || resolveRuleType()
+    const body = parseBody(init?.body) as Record<string, any>
+    const add = Array.isArray(body.add) ? body.add : []
+    const remove = normalizeIdList(body.remove)
+    const update = Array.isArray(body.update) ? body.update : []
+    const current = mockPromotionRules[promotionId]?.[ruleType] || []
+
+    let next = [...current]
+    if (add.length) {
+      const normalized = add.map((entry: any, index: number) => ({
+        id: entry.id || `prule_${Date.now()}_${index}`,
+        attribute: entry.attribute || "product_id",
+        attribute_label: entry.attribute_label || "Product",
+        operator: entry.operator || "in",
+        operator_label: entry.operator_label || "is in",
+        values: entry.values || [],
+        field_type: entry.field_type || "text",
+      }))
+      next = [...next, ...normalized]
+    }
+    if (remove.length) {
+      next = next.filter((rule: any) => !remove.includes(rule.id))
+    }
+    if (update.length) {
+      next = next.map((rule: any) => {
+        const patch = update.find((u: any) => u.id === rule.id)
+        return patch ? { ...rule, ...patch } : rule
+      })
+    }
+
+    mockPromotionRules[promotionId] = {
+      ...(mockPromotionRules[promotionId] || {
+        rules: [],
+        "target-rules": [],
+        "buy-rules": [],
+      }),
+      [ruleType]: next,
+    }
+
+    const promotion = mockPromotions.find((p) => p.id === promotionId) || mockPromotions[0]
+    return { promotion }
+  }
+
+  if (pathname === "/admin/promotions/rule-attributes" && method === "GET") {
+    return {
+      attributes: [
+        { value: "product_id", label: "Product" },
+        { value: "product_collection_id", label: "Collection" },
+        { value: "customer_group_id", label: "Customer Group" },
+      ],
+    }
+  }
+
+  if (pathname === "/admin/promotions/rule-values" && method === "GET") {
+    const attribute = url.searchParams.get("rule_attribute")
+
+    if (attribute === "product_id") {
+      return {
+        values: mockProducts.map((p) => ({ value: p.id, label: p.title })),
+      }
+    }
+
+    if (attribute === "product_collection_id") {
+      return {
+        values: mockCollections.map((c) => ({ value: c.id, label: c.title })),
+      }
+    }
+
+    if (attribute === "customer_group_id") {
+      return {
+        values: mockCustomerGroups.map((g) => ({ value: g.id, label: g.name })),
+      }
+    }
+
+    return { values: [] }
+  }
+
+  return null
+}
+
+const handlePriceLists = (url: URL, method: string, init?: FetchArgs) => {
+  const pathname = url.pathname.replace(/\/+$/, "")
+  const priceListMatch = pathname.match(/^\/admin\/price-lists\/([^/]+)$/)
+  const pricesMatch = pathname.match(/^\/admin\/price-lists\/([^/]+)\/prices$/)
+  const batchPricesMatch = pathname.match(
+    /^\/admin\/price-lists\/([^/]+)\/prices\/batch$/
+  )
+  const linkProductsMatch = pathname.match(
+    /^\/admin\/price-lists\/([^/]+)\/products$/
+  )
+
+  if (pathname === "/admin/price-lists" && method === "GET") {
+    let items = [...mockPriceLists]
+    const q = url.searchParams.get("q")?.trim().toLowerCase()
+
+    if (q) {
+      items = items.filter((priceList) => includesCI(priceList.title, q))
+    }
+
+    items = sortItems(items, url.searchParams.get("order") || "-created_at")
+    const paged = paginate(items, url)
+
+    return {
+      price_lists: paged.items,
+      count: paged.count,
+      offset: paged.offset,
+      limit: paged.limit,
+    }
+  }
+
+  if (pathname === "/admin/price-lists" && method === "POST") {
+    const body = parseBody(init?.body) as Record<string, any>
+    const timestamp = new Date().toISOString()
+    const created = {
+      id: `pl_${Date.now()}`,
+      title: (body.title as string) || "New Price List",
+      description: (body.description as string) || "",
+      type: (body.type as string) || "sale",
+      status: (body.status as string) || "draft",
+      starts_at: (body.starts_at as string) || null,
+      ends_at: (body.ends_at as string) || null,
+      created_at: timestamp,
+      updated_at: timestamp,
+    }
+    mockPriceLists = [created, ...mockPriceLists]
+    mockPriceListPrices[created.id] = []
+    mockPriceListProducts[created.id] = []
+    return { price_list: created }
+  }
+
+  if (priceListMatch && method === "GET") {
+    const priceList = mockPriceLists.find((pl) => pl.id === priceListMatch[1])
+    return { price_list: priceList || mockPriceLists[0] }
+  }
+
+  if (priceListMatch && (method === "POST" || method === "PUT")) {
+    const id = priceListMatch[1]
+    const body = parseBody(init?.body) as Record<string, any>
+    mockPriceLists = mockPriceLists.map((priceList) =>
+      priceList.id === id
+        ? { ...priceList, ...body, updated_at: new Date().toISOString() }
+        : priceList
+    )
+    const updated = mockPriceLists.find((pl) => pl.id === id) || mockPriceLists[0]
+    return { price_list: updated }
+  }
+
+  if (priceListMatch && method === "DELETE") {
+    const id = priceListMatch[1]
+    mockPriceLists = mockPriceLists.filter((pl) => pl.id !== id)
+    delete mockPriceListPrices[id]
+    delete mockPriceListProducts[id]
+    return { id, object: "price_list", deleted: true }
+  }
+
+  if (pricesMatch && method === "GET") {
+    const id = pricesMatch[1]
+    const prices = mockPriceListPrices[id] || []
+    const paged = paginate(prices, url)
+    return {
+      price_list_prices: paged.items,
+      count: paged.count,
+      offset: paged.offset,
+      limit: paged.limit,
+    }
+  }
+
+  if (batchPricesMatch && method === "POST") {
+    const id = batchPricesMatch[1]
+    const body = parseBody(init?.body) as Record<string, any>
+    const create = Array.isArray(body.create) ? body.create : []
+    const remove = normalizeIdList(body.delete || body.remove)
+    const update = Array.isArray(body.update) ? body.update : []
+
+    let prices = [...(mockPriceListPrices[id] || [])]
+    if (remove.length) {
+      prices = prices.filter((price: any) => !remove.includes(price.id))
+    }
+    if (update.length) {
+      prices = prices.map((price: any) => {
+        const patch = update.find((p: any) => p.id === price.id)
+        return patch ? { ...price, ...patch } : price
+      })
+    }
+    if (create.length) {
+      prices = [
+        ...prices,
+        ...create.map((entry: any, index: number) => ({
+          id: entry.id || `plprice_${Date.now()}_${index}`,
+          amount: Number(entry.amount || 0),
+          currency_code: entry.currency_code || "try",
+          variant_id: entry.variant_id || null,
+          rules: entry.rules || {},
+        })),
+      ]
+    }
+
+    mockPriceListPrices[id] = prices
+
+    return {
+      created: create.length,
+      updated: update.length,
+      deleted: remove.length,
+    }
+  }
+
+  if (linkProductsMatch && method === "POST") {
+    const id = linkProductsMatch[1]
+    const body = parseBody(init?.body) as Record<string, any>
+    const add = normalizeIdList(body.add)
+    const remove = normalizeIdList(body.remove)
+    const current = new Set(mockPriceListProducts[id] || [])
+
+    for (const pid of add) {
+      current.add(pid)
+    }
+    for (const pid of remove) {
+      current.delete(pid)
+    }
+
+    mockPriceListProducts[id] = Array.from(current)
+    const priceList = mockPriceLists.find((pl) => pl.id === id) || mockPriceLists[0]
+    return { price_list: priceList }
   }
 
   return null
@@ -1587,6 +2801,26 @@ export const createMockApiFetch = () => {
     const customerGroupResponse = handleCustomerGroups(url, method, init)
     if (customerGroupResponse) {
       return customerGroupResponse
+    }
+
+    const inventoryResponse = handleInventory(url, method, init)
+    if (inventoryResponse) {
+      return inventoryResponse
+    }
+
+    const orderResponse = handleOrders(url, method, init)
+    if (orderResponse) {
+      return orderResponse
+    }
+
+    const promotionResponse = handlePromotions(url, method, init)
+    if (promotionResponse) {
+      return promotionResponse
+    }
+
+    const priceListResponse = handlePriceLists(url, method, init)
+    if (priceListResponse) {
+      return priceListResponse
     }
 
     const scopedSegments = stripScopeSegment(
