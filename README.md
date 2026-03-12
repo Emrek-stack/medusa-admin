@@ -37,9 +37,9 @@ yarn preview
 
 ## Backend Ayarları Nerede?
 
-Backend ve diğer runtime ayarları `vite.config.mts` içindedir:
+Backend ve diğer runtime ayarları `vite.config.ts` içindedir:
 
-- Dosya: `vite.config.mts`
+- Dosya: `vite.config.ts`
 - Önemli env değişkenleri:
   - `VITE_BACKEND_URL`
   - `VITE_MEDUSA_BACKEND_URL`
@@ -159,7 +159,7 @@ Anahtarlar ilgili dil JSON dosyalarında aynı yapıda olmalıdır.
 
 ## Önemli Dosyalar
 
-- `vite.config.mts` -> env ve runtime define ayarları
+- `vite.config.ts` -> env ve runtime define ayarları
 - `src/lib/client/client.ts` -> Medusa SDK client
 - `src/components/utilities/i18n/i18n.tsx` -> i18n init
 - `src/i18n/config.ts` -> i18n options

@@ -1,4 +1,9 @@
-import { SidebarLeft, TriangleRightMini, XMark } from "@medusajs/icons"
+import {
+  CircleHalfSolid,
+  SidebarLeft,
+  TriangleRightMini,
+  XMark,
+} from "@medusajs/icons"
 import { IconButton, clx } from "@medusajs/ui"
 import { AnimatePresence } from "motion/react"
 import { Dialog as RadixDialog } from "radix-ui"
@@ -15,6 +20,7 @@ import {
 import { KeybindProvider } from "../../../providers/keybind-provider"
 import { useGlobalShortcuts } from "../../../providers/keybind-provider/hooks"
 import { useSidebar } from "../../../providers/sidebar-provider"
+import { useTheme } from "../../../providers/theme-provider"
 import { ProgressBar } from "../../common/progress-bar"
 import { Notifications } from "../notifications"
 
@@ -199,9 +205,36 @@ const Topbar = () => {
         <Breadcrumbs />
       </div>
       <div className="flex items-center justify-end gap-x-3">
+        <ThemeToggle />
         <Notifications />
       </div>
     </div>
+  )
+}
+
+const ThemeToggle = () => {
+  const { t } = useTranslation()
+  const { theme, setTheme } = useTheme()
+
+  const isDark =
+    theme === "dark" ||
+    (theme === "system" &&
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+
+  const nextTheme = isDark ? "light" : "dark"
+
+  return (
+    <IconButton
+      variant="transparent"
+      size="small"
+      onClick={() => setTheme(nextTheme)}
+      aria-label={t("app.menus.user.theme.label")}
+      title={t("app.menus.user.theme.label")}
+      className="text-ui-fg-muted"
+    >
+      <CircleHalfSolid />
+    </IconButton>
   )
 }
 
