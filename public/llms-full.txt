@@ -1,0 +1,60 @@
+# medus-react LLM Instructions (Frontend UI-Only)
+
+This repository is a standalone admin web app focused on frontend UI.
+
+## 1) Mission
+Implement and improve UI/UX only. Keep work inside frontend boundaries.
+
+## 2) Allowed Work
+- React component development
+- Page and route composition
+- Layout and navigation updates
+- Styling (Tailwind/CSS), spacing, typography, colors
+- Dark/light theme behavior
+- Accessibility improvements (labels, keyboard, focus)
+- i18n string usage and locale-aware UI updates
+- Mock data and frontend adapters needed to render UI
+
+## 3) Disallowed Work
+- Backend services, API server contracts, auth server logic
+- Database setup, migrations, schemas, seed pipelines
+- Queue/event infra, cloud/deployment, CI/CD ops changes
+- Any Medusa backend integration requirement
+
+## 4) Code Areas to Prioritize
+- `src/components/**`
+- `src/routes/**`
+- `src/providers/**`
+- `src/i18n/**`
+- `src/lib/**` (frontend utilities and mocks)
+- `public/**` for static frontend assets/docs
+
+## 5) UX Quality Requirements
+For each changed screen/flow, cover:
+- Loading state
+- Error state
+- Empty state
+- Success state
+
+Also ensure:
+- Accessible interactive controls
+- Consistent spacing/typography with existing patterns
+- Mobile + desktop layout sanity
+
+## 6) Technical Constraints
+- Prefer existing component patterns before creating new abstractions.
+- Keep changes minimal and scoped.
+- Do not introduce backend dependencies.
+- Keep user-visible text translatable when project pattern supports it.
+
+## 7) Build & Verification
+Before considering work done:
+1. Run `npm run build`.
+2. Resolve UI-related TypeScript/build errors in touched areas.
+3. Confirm no backend/API/DB/infra files were modified.
+
+## 8) Response Behavior for LLM Agents
+When asked to implement features:
+- Propose frontend-only approach.
+- If request implies backend work, redirect to mock/frontend alternative.
+- Keep output actionable with file-level changes.

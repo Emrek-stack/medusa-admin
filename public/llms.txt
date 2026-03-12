@@ -1,0 +1,28 @@
+# medus-react (UI-Only)
+
+This project is a standalone admin frontend.
+
+## Scope
+Only perform visual/UI development:
+- React components and pages
+- Routing and layout
+- Styling, theme, design tokens
+- i18n text/labels
+- frontend-only mock data for UI rendering
+
+## Do Not Do
+- Backend/API server implementation
+- Database schema/migrations
+- Infrastructure/devops changes
+- Medusa backend integration work
+
+## Preferred Paths
+- `src/components/**`
+- `src/routes/**`
+- `src/providers/**`
+- `src/i18n/**`
+- `src/lib/**` (frontend helpers + mock data)
+
+## Validation
+- `npm run build` must pass.
+- Ensure loading/error/empty/success states for changed UI.
