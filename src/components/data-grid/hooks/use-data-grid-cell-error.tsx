@@ -2,8 +2,8 @@ import { CellContext } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { FieldError, FieldErrors, get } from "react-hook-form"
 
-import { useDataGridContext } from "../context"
-import { DataGridCellContext, DataGridRowError } from "../types"
+import { useDataGridContext } from "src/components/data-grid/context"
+import { DataGridCellContext, DataGridRowError } from "src/components/data-grid/types"
 
 type UseDataGridCellErrorOptions<TData, TValue> = {
   context: CellContext<TData, TValue>

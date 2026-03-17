@@ -1,4 +1,4 @@
-import { INavItem } from "../../components/layout/nav-item"
+import { INavItem } from "src/components/layout/nav-item"
 
 /**
  * Sort menu items by rank in ascending order.

@@ -3,8 +3,8 @@ import { DropdownMenu, IconButton, clx } from "@medusajs/ui"
 import { EllipsisHorizontal } from "@medusajs/icons"
 import { PropsWithChildren, ReactNode } from "react"
 import { Link } from "react-router-dom"
-import { ConditionalTooltip } from "../conditional-tooltip"
-import { useDocumentDirection } from "../../../hooks/use-document-direction"
+import { ConditionalTooltip } from "src/components/common/conditional-tooltip"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 export type Action = {
   icon: ReactNode

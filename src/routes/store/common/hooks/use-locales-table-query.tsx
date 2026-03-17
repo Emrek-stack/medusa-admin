@@ -1,4 +1,4 @@
-import { useQueryParams } from "../../../../hooks/use-query-params"
+import { useQueryParams } from "src/hooks/use-query-params"
 
 export const useLocalesTableQuery = ({
   pageSize = 10,

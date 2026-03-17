@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest"
-import { sortMenuItemsByRank } from "../utils/sort-menu-items-by-rank"
-import { INavItem } from "../../components/layout/nav-item"
+import { sortMenuItemsByRank } from "src/dashboard-app/utils/sort-menu-items-by-rank"
+import { INavItem } from "src/components/layout/nav-item"
 
 describe("sortMenuItemsByRank", () => {
   it("should sort items by rank in ascending order", () => {

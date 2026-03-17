@@ -1,5 +1,5 @@
 import { FindParams, HttpTypes } from "@medusajs/types"
-import { useQueryParams } from "../../use-query-params"
+import { useQueryParams } from "src/hooks/use-query-params"
 
 type UseRegionTableQueryProps = {
   prefix?: string

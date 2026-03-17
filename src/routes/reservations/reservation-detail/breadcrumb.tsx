@@ -1,7 +1,7 @@
 import { HttpTypes } from "@medusajs/types"
 import { UIMatch } from "react-router-dom"
 
-import { useReservationItem } from "../../../hooks/api"
+import { useReservationItem } from "src/hooks/api"
 
 type ReservationDetailBreadcrumbProps =
   UIMatch<HttpTypes.AdminReservationResponse>

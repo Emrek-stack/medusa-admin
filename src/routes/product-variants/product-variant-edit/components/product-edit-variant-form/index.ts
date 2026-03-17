@@ -1,1 +1,1 @@
-export * from "./product-edit-variant-form"
+export * from "src/routes/product-variants/product-variant-edit/components/product-edit-variant-form/product-edit-variant-form"

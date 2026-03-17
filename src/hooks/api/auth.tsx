@@ -1,12 +1,12 @@
 import { FetchError } from "@medusajs/js-sdk"
 import { HttpTypes } from "@medusajs/types"
 import { UseMutationOptions, useMutation } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
+import { sdk } from "src/lib/client"
 import {
   isMockAuthEnabled,
   signInWithMockAuth,
   signOutMockAuth,
-} from "../../lib/mock-auth"
+} from "src/lib/mock-auth"
 
 export const useSignInWithEmailPass = (
   options?: UseMutationOptions<

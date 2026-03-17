@@ -10,12 +10,12 @@ import { IconButton, Input, Text, Tooltip } from "@medusajs/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { Form } from "../../../../../components/common/form"
-import { Thumbnail } from "../../../../../components/common/thumbnail"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { MoneyAmountCell } from "../../../../../components/table/table-cells/common/money-amount-cell"
-import { useReturnReasons } from "../../../../../hooks/api/return-reasons"
+import { ActionMenu } from "src/components/common/action-menu"
+import { Form } from "src/components/common/form"
+import { Thumbnail } from "src/components/common/thumbnail"
+import { Combobox } from "src/components/inputs/combobox"
+import { MoneyAmountCell } from "src/components/table/table-cells/common/money-amount-cell"
+import { useReturnReasons } from "src/hooks/api/return-reasons"
 
 type ExchangeInboundItemProps = {
   item: AdminOrderLineItem

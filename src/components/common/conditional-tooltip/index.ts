@@ -1,1 +1,1 @@
-export * from "./conditional-tooltip"
+export * from "src/components/common/conditional-tooltip/conditional-tooltip"

@@ -4,12 +4,12 @@ import { useTranslation } from "react-i18next"
 
 import { toast } from "@medusajs/ui"
 
-import { RouteFocusModal } from "../../../components/modals"
-import { ReturnCreateForm } from "./components/return-create-form"
+import { RouteFocusModal } from "src/components/modals"
+import { ReturnCreateForm } from "src/routes/orders/order-create-return/components/return-create-form"
 
-import { useOrder, useOrderPreview } from "../../../hooks/api/orders"
-import { useInitiateReturn, useReturn } from "../../../hooks/api/returns"
-import { DEFAULT_FIELDS } from "../order-detail/constants"
+import { useOrder, useOrderPreview } from "src/hooks/api/orders"
+import { useInitiateReturn, useReturn } from "src/hooks/api/returns"
+import { DEFAULT_FIELDS } from "src/routes/orders/order-detail/constants"
 
 let IS_REQUEST_RUNNING = false
 

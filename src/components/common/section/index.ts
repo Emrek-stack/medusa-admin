@@ -1,1 +1,1 @@
-export * from "./section-row"
+export * from "src/components/common/section/section-row"

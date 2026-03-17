@@ -1,9 +1,9 @@
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { ordersQueryKeys } from "../../../hooks/api/orders"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
-import { DEFAULT_FIELDS } from "./constants"
+import { ordersQueryKeys } from "src/hooks/api/orders"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { DEFAULT_FIELDS } from "src/routes/orders/order-detail/constants"
 
 const orderDetailQuery = (id: string) => ({
   queryKey: ordersQueryKeys.detail(id),

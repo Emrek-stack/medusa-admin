@@ -1,19 +1,19 @@
 import { useLoaderData, useParams } from "react-router-dom"
 
-import { useProductVariant } from "../../../hooks/api/products"
+import { useProductVariant } from "src/hooks/api/products"
 
-import { TwoColumnPageSkeleton } from "../../../components/common/skeleton"
-import { TwoColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
-import { VariantGeneralSection } from "./components/variant-general-section"
+import { TwoColumnPageSkeleton } from "src/components/common/skeleton"
+import { TwoColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
+import { VariantGeneralSection } from "src/routes/product-variants/product-variant-detail/components/variant-general-section"
 import {
   InventorySectionPlaceholder,
   VariantInventorySection,
-} from "./components/variant-inventory-section"
-import { VariantMediaSection } from "./components/variant-media-section"
-import { VariantPricesSection } from "./components/variant-prices-section"
-import { VARIANT_DETAIL_FIELDS } from "./constants"
-import { variantLoader } from "./loader"
+} from "src/routes/product-variants/product-variant-detail/components/variant-inventory-section"
+import { VariantMediaSection } from "src/routes/product-variants/product-variant-detail/components/variant-media-section"
+import { VariantPricesSection } from "src/routes/product-variants/product-variant-detail/components/variant-prices-section"
+import { VARIANT_DETAIL_FIELDS } from "src/routes/product-variants/product-variant-detail/constants"
+import { variantLoader } from "src/routes/product-variants/product-variant-detail/loader"
 
 export const ProductVariantDetail = () => {
   const initialData = useLoaderData() as Awaited<

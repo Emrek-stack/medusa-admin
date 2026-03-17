@@ -8,11 +8,11 @@ import { useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { useEffect } from "react"
 
-import { Form } from "../../../../../../components/common/form"
-import { Combobox } from "../../../../../../components/inputs/combobox"
-import { useStore } from "../../../../../../hooks/api"
-import { useComboboxData } from "../../../../../../hooks/use-combobox-data"
-import { sdk } from "../../../../../../lib/client"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
+import { useStore } from "src/hooks/api"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { sdk } from "src/lib/client"
 
 type RuleValueFormFieldType = {
   form: any

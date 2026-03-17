@@ -1,7 +1,7 @@
 import { AdminProductCategoryResponse } from "@medusajs/types"
 import { TFunction } from "i18next"
 
-import { CategoryTreeItem } from "./types"
+import { CategoryTreeItem } from "src/routes/categories/common/types"
 
 export function getIsActiveProps(
   isActive: boolean,

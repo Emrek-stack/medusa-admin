@@ -1,1 +1,1 @@
-export * from "./chip-input"
+export * from "src/components/inputs/chip-input/chip-input"

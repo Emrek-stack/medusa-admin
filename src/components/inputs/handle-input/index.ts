@@ -1,1 +1,1 @@
-export * from "./handle-input"
+export * from "src/components/inputs/handle-input/handle-input"

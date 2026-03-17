@@ -4,11 +4,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { useSearchParams } from "react-router-dom"
 
 import { useTranslation } from "react-i18next"
-import { DataTableFilterContext, useDataTableFilterContext } from "./context"
-import { DateFilter } from "./date-filter"
-import { NumberFilter } from "./number-filter"
-import { SelectFilter } from "./select-filter"
-import { StringFilter } from "./string-filter"
+import { DataTableFilterContext, useDataTableFilterContext } from "src/components/table/data-table/data-table-filter/context"
+import { DateFilter } from "src/components/table/data-table/data-table-filter/date-filter"
+import { NumberFilter } from "src/components/table/data-table/data-table-filter/number-filter"
+import { SelectFilter } from "src/components/table/data-table/data-table-filter/select-filter"
+import { StringFilter } from "src/components/table/data-table/data-table-filter/string-filter"
 
 type Option = {
   label: string

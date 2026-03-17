@@ -3,11 +3,11 @@ import { useFieldArray, UseFormReturn, useWatch } from "react-hook-form"
 import { XMarkMini } from "@medusajs/icons"
 import { useTranslation } from "react-i18next"
 
-import { ProductCreateSchemaType } from "../../../../types"
-import { Form } from "../../../../../../../components/common/form"
-import { Combobox } from "../../../../../../../components/inputs/combobox"
-import { useComboboxData } from "../../../../../../../hooks/use-combobox-data"
-import { sdk } from "../../../../../../../lib/client"
+import { ProductCreateSchemaType } from "src/routes/products/product-create/types"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { sdk } from "src/lib/client"
 
 type InventoryItemRowProps = {
   form: UseFormReturn<ProductCreateSchemaType>

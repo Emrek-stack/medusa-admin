@@ -11,13 +11,13 @@ import { useMemo } from "react"
 import { useNavigate } from "react-router-dom"
 import { FetchError } from "@medusajs/js-sdk"
 
-import { PlaceholderCell } from "../../../components/table/table-cells/common/placeholder-cell"
-import { getFormattedAddress } from "../../../lib/addresses"
-import { FulfillmentSetType } from "../common/constants"
-import { queryClient } from "../../../lib/query-client"
-import { stockLocationsQueryKeys } from "../../../hooks/api/stock-locations"
-import { ListSummary } from "../../../components/common/list-summary"
-import { sdk } from "../../../lib/client"
+import { PlaceholderCell } from "src/components/table/table-cells/common/placeholder-cell"
+import { getFormattedAddress } from "src/lib/addresses"
+import { FulfillmentSetType } from "src/routes/locations/common/constants"
+import { queryClient } from "src/lib/query-client"
+import { stockLocationsQueryKeys } from "src/hooks/api/stock-locations"
+import { ListSummary } from "src/components/common/list-summary"
+import { sdk } from "src/lib/client"
 
 const columnHelper = createDataTableColumnHelper<HttpTypes.AdminStockLocation>()
 

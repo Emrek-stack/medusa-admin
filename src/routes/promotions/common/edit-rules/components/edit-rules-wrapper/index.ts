@@ -1,1 +1,1 @@
-export * from "./edit-rules-wrapper"
+export * from "src/routes/promotions/common/edit-rules/components/edit-rules-wrapper/edit-rules-wrapper"

@@ -3,8 +3,8 @@ import { toast, usePrompt } from "@medusajs/ui"
 
 import { HttpTypes } from "@medusajs/types"
 import { useTranslation } from "react-i18next"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { useDeleteReservationItem } from "../../../../../hooks/api/reservations"
+import { ActionMenu } from "src/components/common/action-menu"
+import { useDeleteReservationItem } from "src/hooks/api/reservations"
 
 export const ReservationActions = ({
   reservation,

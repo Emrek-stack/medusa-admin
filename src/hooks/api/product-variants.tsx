@@ -5,11 +5,11 @@ import {
   UseQueryOptions,
 } from "@tanstack/react-query"
 import { InfiniteData } from "@tanstack/query-core"
-import { sdk } from "../../lib/client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
+import { sdk } from "src/lib/client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
 import { FetchError } from "@medusajs/js-sdk"
 import { HttpTypes } from "@medusajs/types"
-import { useInfiniteList } from "../use-infinite-list"
+import { useInfiniteList } from "src/hooks/use-infinite-list"
 
 const PRODUCT_VARIANT_QUERY_KEY = "product_variant" as const
 export const productVariantQueryKeys = queryKeysFactory(

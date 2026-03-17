@@ -14,26 +14,26 @@ import {
 import { useTranslation } from "react-i18next"
 
 import { AdminOrderLineItem } from "@medusajs/types"
-import { By } from "../../../../../components/common/user-link"
+import { By } from "src/components/common/user-link"
 import {
   useCancelOrderTransfer,
   useCustomer,
   useOrder,
   useOrderChanges,
   useOrderLineItems,
-} from "../../../../../hooks/api"
-import { useCancelClaim, useClaims } from "../../../../../hooks/api/claims"
+} from "src/hooks/api"
+import { useCancelClaim, useClaims } from "src/hooks/api/claims"
 import {
   useCancelExchange,
   useExchanges,
-} from "../../../../../hooks/api/exchanges"
-import { useCancelReturn, useReturns } from "../../../../../hooks/api/returns"
-import { useDate } from "../../../../../hooks/use-date"
-import { getFormattedAddress } from "../../../../../lib/addresses"
-import { getStylizedAmount } from "../../../../../lib/money-amount-helpers"
-import { getPaymentsFromOrder } from "../../../../../lib/orders"
-import ActivityItems from "./activity-items"
-import ChangeDetailsTooltip from "./change-details-tooltip"
+} from "src/hooks/api/exchanges"
+import { useCancelReturn, useReturns } from "src/hooks/api/returns"
+import { useDate } from "src/hooks/use-date"
+import { getFormattedAddress } from "src/lib/addresses"
+import { getStylizedAmount } from "src/lib/money-amount-helpers"
+import { getPaymentsFromOrder } from "src/lib/orders"
+import ActivityItems from "src/routes/orders/order-detail/components/order-activity-section/activity-items"
+import ChangeDetailsTooltip from "src/routes/orders/order-detail/components/order-activity-section/change-details-tooltip"
 
 type OrderTimelineProps = {
   order: AdminOrder

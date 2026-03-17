@@ -1,1 +1,1 @@
-export * from "./product-type-general-section"
+export * from "src/routes/product-types/product-type-detail/components/product-type-general-section/product-type-general-section"

@@ -1,1 +1,1 @@
-export * from "./data-table"
+export * from "src/components/data-table/data-table"

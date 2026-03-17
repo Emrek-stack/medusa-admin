@@ -1,1 +1,1 @@
-export { TranslationList as Component } from "./translation-list"
+export { TranslationList as Component } from "src/routes/translations/translation-list/translation-list"

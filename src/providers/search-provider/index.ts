@@ -1,2 +1,2 @@
-export { SearchProvider } from "./search-provider"
-export { useSearch } from "./use-search"
+export { SearchProvider } from "src/providers/search-provider/search-provider"
+export { useSearch } from "src/providers/search-provider/use-search"

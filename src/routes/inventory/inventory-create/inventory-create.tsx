@@ -1,6 +1,6 @@
-import { RouteFocusModal } from "../../../components/modals"
-import { useStockLocations } from "../../../hooks/api"
-import { InventoryCreateForm } from "./components/inventory-create-form"
+import { RouteFocusModal } from "src/components/modals"
+import { useStockLocations } from "src/hooks/api"
+import { InventoryCreateForm } from "src/routes/inventory/inventory-create/components/inventory-create-form"
 
 export function InventoryCreate() {
   const { isPending, stock_locations, isError, error } = useStockLocations({

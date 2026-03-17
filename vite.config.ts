@@ -87,6 +87,7 @@ export default defineConfig(({ mode, command }) => {
     },
     resolve: {
       alias: {
+        src: path.resolve(__dirname, "./src"),
         "@medusajs/js-sdk": path.resolve(
           __dirname,
           "./src/shims/medusa-js-sdk.ts"

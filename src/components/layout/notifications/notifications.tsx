@@ -9,10 +9,10 @@ import { formatDistance } from "date-fns"
 import { TFunction } from "i18next"
 import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { notificationQueryKeys, useNotifications } from "../../../hooks/api"
-import { sdk } from "../../../lib/client"
-import { FilePreview } from "../../common/file-preview"
-import { InfiniteList } from "../../common/infinite-list"
+import { notificationQueryKeys, useNotifications } from "src/hooks/api"
+import { sdk } from "src/lib/client"
+import { FilePreview } from "src/components/common/file-preview"
+import { InfiniteList } from "src/components/common/infinite-list"
 
 interface NotificationData {
   title: string

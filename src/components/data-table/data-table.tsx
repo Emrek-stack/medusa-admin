@@ -18,10 +18,10 @@ import React, { ReactNode, useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { Link, useNavigate, useSearchParams } from "react-router-dom"
 
-import { useQueryParams } from "../../hooks/use-query-params"
-import { ActionMenu } from "../common/action-menu"
-import { ViewPills } from "../table/view-selector"
-import { useFeatureFlag } from "../../providers/feature-flag-provider"
+import { useQueryParams } from "src/hooks/use-query-params"
+import { ActionMenu } from "src/components/common/action-menu"
+import { ViewPills } from "src/components/table/view-selector"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 // Types for column visibility and ordering
 type VisibilityState = Record<string, boolean>

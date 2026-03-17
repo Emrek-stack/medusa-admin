@@ -8,9 +8,9 @@ import {
   clx,
 } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
-import { getTransactionState, getTransactionStateColor } from "../../../utils"
+import { getTransactionState, getTransactionStateColor } from "src/routes/workflow-executions/utils"
 import { HttpTypes } from "@medusajs/types"
-import { TransactionState, TransactionStepState } from "../../../types"
+import { TransactionState, TransactionStepState } from "src/routes/workflow-executions/types"
 
 type WorkflowExecutionGeneralSectionProps = {
   execution: HttpTypes.AdminWorkflowExecution

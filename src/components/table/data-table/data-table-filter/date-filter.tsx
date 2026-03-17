@@ -6,11 +6,11 @@ import { useMemo, useState } from "react"
 
 import { t } from "i18next"
 import { useTranslation } from "react-i18next"
-import { useDate } from "../../../../hooks/use-date"
-import { useSelectedParams } from "../hooks"
-import { useDataTableFilterContext } from "./context"
-import FilterChip from "./filter-chip"
-import { IFilter } from "./types"
+import { useDate } from "src/hooks/use-date"
+import { useSelectedParams } from "src/components/table/data-table/hooks"
+import { useDataTableFilterContext } from "src/components/table/data-table/data-table-filter/context"
+import FilterChip from "src/components/table/data-table/data-table-filter/filter-chip"
+import { IFilter } from "src/components/table/data-table/data-table-filter/types"
 
 type DateFilterProps = IFilter
 

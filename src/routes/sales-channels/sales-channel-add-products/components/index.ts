@@ -1,1 +1,1 @@
-export * from "./add-products-to-sales-channel-form"
+export * from "src/routes/sales-channels/sales-channel-add-products/components/add-products-to-sales-channel-form"

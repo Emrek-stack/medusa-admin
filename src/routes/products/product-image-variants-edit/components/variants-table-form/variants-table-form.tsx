@@ -13,15 +13,15 @@ import * as zod from "zod"
 
 import { AdminProduct } from "@medusajs/types"
 
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useDataTable } from "../../../../../hooks/use-data-table"
+import { _DataTable } from "src/components/table/data-table"
+import { useDataTable } from "src/hooks/use-data-table"
 import {
   useBatchImageVariants,
   useProductVariants,
-} from "../../../../../hooks/api"
-import { useProductVariantTableQuery } from "../../../../../hooks/table/query/use-product-variant-table-query"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
+} from "src/hooks/api"
+import { useProductVariantTableQuery } from "src/hooks/table/query/use-product-variant-table-query"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
 
 const PAGE_SIZE = 20
 

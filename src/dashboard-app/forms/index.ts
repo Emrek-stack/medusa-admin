@@ -1,2 +1,2 @@
-export * from "./form-extension-zone"
-export * from "./hooks"
+export * from "src/dashboard-app/forms/form-extension-zone"
+export * from "src/dashboard-app/forms/hooks"

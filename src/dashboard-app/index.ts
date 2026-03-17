@@ -1,7 +1,7 @@
-export * from "./dashboard-app"
-export * from "./forms"
-export * from "./links/utils"
-export * from "./routes/utils"
+export * from "src/dashboard-app/dashboard-app"
+export * from "src/dashboard-app/forms"
+export * from "src/dashboard-app/links/utils"
+export * from "src/dashboard-app/routes/utils"
 
 export {
   type DisplayModule,
@@ -9,4 +9,4 @@ export {
   type MenuItemModule,
   type RouteModule,
   type WidgetModule,
-} from "./types"
+} from "src/dashboard-app/types"

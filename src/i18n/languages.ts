@@ -31,7 +31,7 @@ import {
   zhCN,
   zhTW,
 } from "date-fns/locale"
-import { Language } from "./types"
+import { Language } from "src/i18n/types"
 
 export const languages: Language[] = [
   {

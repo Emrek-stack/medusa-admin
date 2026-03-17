@@ -7,14 +7,14 @@ import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { usePriceListLinkProducts } from "../../../../../hooks/api/price-lists"
-import { useProducts } from "../../../../../hooks/api/products"
-import { useProductTableColumns } from "../../../../../hooks/table/columns/use-product-table-columns"
-import { useProductTableFilters } from "../../../../../hooks/table/filters/use-product-table-filters"
-import { useProductTableQuery } from "../../../../../hooks/table/query/use-product-table-query"
-import { useDataTable } from "../../../../../hooks/use-data-table"
+import { ActionMenu } from "src/components/common/action-menu"
+import { _DataTable } from "src/components/table/data-table"
+import { usePriceListLinkProducts } from "src/hooks/api/price-lists"
+import { useProducts } from "src/hooks/api/products"
+import { useProductTableColumns } from "src/hooks/table/columns/use-product-table-columns"
+import { useProductTableFilters } from "src/hooks/table/filters/use-product-table-filters"
+import { useProductTableQuery } from "src/hooks/table/query/use-product-table-query"
+import { useDataTable } from "src/hooks/use-data-table"
 
 type PriceListProductSectionProps = {
   priceList: HttpTypes.AdminPriceList

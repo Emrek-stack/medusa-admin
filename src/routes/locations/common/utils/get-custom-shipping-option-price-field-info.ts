@@ -1,4 +1,4 @@
-import { ConditionalShippingOptionPriceAccessor } from "../types"
+import { ConditionalShippingOptionPriceAccessor } from "src/routes/locations/common/types"
 
 export const getCustomShippingOptionPriceFieldName = (
   field: string,

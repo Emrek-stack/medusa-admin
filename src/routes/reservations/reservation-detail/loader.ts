@@ -1,7 +1,7 @@
 import { LoaderFunctionArgs } from "react-router-dom"
-import { reservationItemsQueryKeys } from "../../../hooks/api/reservations"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { reservationItemsQueryKeys } from "src/hooks/api/reservations"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const reservationDetailQuery = (id: string) => ({
   queryKey: reservationItemsQueryKeys.detail(id),

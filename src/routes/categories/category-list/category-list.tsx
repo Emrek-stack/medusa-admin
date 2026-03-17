@@ -1,6 +1,6 @@
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
-import { CategoryListTable } from "./components/category-list-table"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
+import { CategoryListTable } from "src/routes/categories/category-list/components/category-list-table"
 
 export const CategoryList = () => {
   const { getWidgets } = useExtension()

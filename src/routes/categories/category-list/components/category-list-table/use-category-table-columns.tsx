@@ -5,16 +5,16 @@ import { createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
-import { StatusCell } from "../../../../../components/table/table-cells/common/status-cell"
+import { StatusCell } from "src/components/table/table-cells/common/status-cell"
 import {
   TextCell,
   TextHeader,
-} from "../../../../../components/table/table-cells/common/text-cell"
+} from "src/components/table/table-cells/common/text-cell"
 import {
   getCategoryPath,
   getIsActiveProps,
   getIsInternalProps,
-} from "../../../common/utils"
+} from "src/routes/categories/common/utils"
 
 const columnHelper =
   createColumnHelper<AdminProductCategoryResponse["product_category"]>()

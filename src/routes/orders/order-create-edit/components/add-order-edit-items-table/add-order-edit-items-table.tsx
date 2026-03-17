@@ -2,12 +2,12 @@ import { OnChangeFn, RowSelectionState } from "@tanstack/react-table"
 import { useState } from "react"
 
 import { useTranslation } from "react-i18next"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useVariants } from "../../../../../hooks/api"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { useOrderEditItemsTableColumns } from "./use-order-edit-item-table-columns"
-import { useOrderEditItemTableFilters } from "./use-order-edit-item-table-filters"
-import { useOrderEditItemTableQuery } from "./use-order-edit-item-table-query"
+import { _DataTable } from "src/components/table/data-table"
+import { useVariants } from "src/hooks/api"
+import { useDataTable } from "src/hooks/use-data-table"
+import { useOrderEditItemsTableColumns } from "src/routes/orders/order-create-edit/components/add-order-edit-items-table/use-order-edit-item-table-columns"
+import { useOrderEditItemTableFilters } from "src/routes/orders/order-create-edit/components/add-order-edit-items-table/use-order-edit-item-table-filters"
+import { useOrderEditItemTableQuery } from "src/routes/orders/order-create-edit/components/add-order-edit-items-table/use-order-edit-item-table-query"
 
 const PAGE_SIZE = 50
 const PREFIX = "rit"

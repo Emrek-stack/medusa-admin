@@ -23,34 +23,34 @@ import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { NoRecords } from "../../../../../components/common/empty-table-content"
-import { IconAvatar } from "../../../../../components/common/icon-avatar"
-import { LinkButton } from "../../../../../components/common/link-button"
-import { ListSummary } from "../../../../../components/common/list-summary"
+import { ActionMenu } from "src/components/common/action-menu"
+import { NoRecords } from "src/components/common/empty-table-content"
+import { IconAvatar } from "src/components/common/icon-avatar"
+import { LinkButton } from "src/components/common/link-button"
+import { ListSummary } from "src/components/common/list-summary"
 import {
   useDeleteFulfillmentServiceZone,
   useDeleteFulfillmentSet,
-} from "../../../../../hooks/api/fulfillment-sets"
-import { useDeleteShippingOption } from "../../../../../hooks/api/shipping-options"
+} from "src/hooks/api/fulfillment-sets"
+import { useDeleteShippingOption } from "src/hooks/api/shipping-options"
 import {
   useCreateStockLocationFulfillmentSet,
   useDeleteStockLocation,
-} from "../../../../../hooks/api/stock-locations"
-import { getFormattedAddress } from "../../../../../lib/addresses"
+} from "src/hooks/api/stock-locations"
+import { getFormattedAddress } from "src/lib/addresses"
 import {
   StaticCountry,
   countries as staticCountries,
-} from "../../../../../lib/data/countries"
-import { formatProvider } from "../../../../../lib/format-provider"
+} from "src/lib/data/countries"
+import { formatProvider } from "src/lib/format-provider"
 import {
   isOptionEnabledInStore,
   isReturnOption,
-} from "../../../../../lib/shipping-options"
+} from "src/lib/shipping-options"
 import {
   FulfillmentSetType,
   ShippingOptionPriceType,
-} from "../../../common/constants"
+} from "src/routes/locations/common/constants"
 
 type LocationGeneralSectionProps = {
   location: HttpTypes.AdminStockLocation

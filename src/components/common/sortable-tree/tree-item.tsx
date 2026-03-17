@@ -8,7 +8,7 @@ import {
   TriangleRightMini,
 } from "@medusajs/icons"
 import { Badge, clx, IconButton } from "@medusajs/ui"
-import { HandleProps } from "./types"
+import { HandleProps } from "src/components/common/sortable-tree/types"
 
 export interface TreeItemProps
   extends Omit<HTMLAttributes<HTMLLIElement>, "id"> {

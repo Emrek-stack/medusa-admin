@@ -13,12 +13,12 @@ import {
   RouteObject,
   RouterProvider,
 } from "react-router-dom"
-import { INavItem } from "../components/layout/nav-item"
-import { Providers } from "../providers"
-import coreTranslations from "../i18n/translations"
-import { getRouteMap } from "./routes/get-route.map"
-import { createRouteMap, getRouteExtensions } from "./routes/utils"
-import { sortMenuItemsByRank } from "./utils/sort-menu-items-by-rank"
+import { INavItem } from "src/components/layout/nav-item"
+import { Providers } from "src/providers"
+import coreTranslations from "src/i18n/translations"
+import { getRouteMap } from "src/dashboard-app/routes/get-route.map"
+import { createRouteMap, getRouteExtensions } from "src/dashboard-app/routes/utils"
+import { sortMenuItemsByRank } from "src/dashboard-app/utils/sort-menu-items-by-rank"
 import {
   ConfigExtension,
   ConfigField,
@@ -37,7 +37,7 @@ import {
   MenuMap,
   WidgetMap,
   ZoneStructure,
-} from "./types"
+} from "src/dashboard-app/types"
 
 type DashboardAppProps = {
   plugins: DashboardPlugin[]

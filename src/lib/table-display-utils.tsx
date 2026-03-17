@@ -2,8 +2,8 @@ import React from "react"
 import { Badge, StatusBadge, Tooltip } from "@medusajs/ui"
 import { HttpTypes } from "@medusajs/types"
 import ReactCountryFlag from "react-country-flag"
-import { getCountryByIso2 } from "./data/countries"
-import { getStylizedAmount } from "./money-amount-helpers"
+import { getCountryByIso2 } from "src/lib/data/countries"
+import { getStylizedAmount } from "src/lib/money-amount-helpers"
 
 // Helper function to get nested value from object using dot notation
 const getNestedValue = (obj: any, path: string) => {

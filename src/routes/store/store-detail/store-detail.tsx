@@ -1,15 +1,15 @@
 import { useLoaderData } from "react-router-dom"
 
-import { useStore } from "../../../hooks/api/store"
-import { StoreGeneralSection } from "./components/store-general-section"
-import { storeLoader } from "./loader"
+import { useStore } from "src/hooks/api/store"
+import { StoreGeneralSection } from "src/routes/store/store-detail/components/store-general-section"
+import { storeLoader } from "src/routes/store/store-detail/loader"
 
-import { SingleColumnPageSkeleton } from "../../../components/common/skeleton"
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
-import { StoreCurrencySection } from "./components/store-currency-section"
-import { StoreLocaleSection } from "./components/store-locale-section"
-import { useFeatureFlag } from "../../../providers/feature-flag-provider"
+import { SingleColumnPageSkeleton } from "src/components/common/skeleton"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
+import { StoreCurrencySection } from "src/routes/store/store-detail/components/store-currency-section"
+import { StoreLocaleSection } from "src/routes/store/store-detail/components/store-locale-section"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 export const StoreDetail = () => {
   const initialData = useLoaderData() as Awaited<ReturnType<typeof storeLoader>>

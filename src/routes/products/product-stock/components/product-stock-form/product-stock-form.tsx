@@ -5,25 +5,25 @@ import { useEffect, useMemo, useRef, useState } from "react"
 import { DefaultValues, useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { DataGrid } from "../../../../../components/data-grid"
+import { DataGrid } from "src/components/data-grid"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useBatchInventoryItemsLocationLevels } from "../../../../../hooks/api"
-import { castNumber } from "../../../../../lib/cast-number"
-import { useProductStockColumns } from "../../hooks/use-product-stock-columns"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useBatchInventoryItemsLocationLevels } from "src/hooks/api"
+import { castNumber } from "src/lib/cast-number"
+import { useProductStockColumns } from "src/routes/products/product-stock/hooks/use-product-stock-columns"
 import {
   ProductStockInventoryItemSchema,
   ProductStockLocationSchema,
   ProductStockSchema,
   ProductStockVariantSchema,
-} from "../../schema"
+} from "src/routes/products/product-stock/schema"
 import {
   getDisabledInventoryRows,
   isProductVariantWithInventoryPivot,
-} from "../../utils"
+} from "src/routes/products/product-stock/utils"
 
 type ProductStockFormProps = {
   variants: HttpTypes.AdminProductVariant[]

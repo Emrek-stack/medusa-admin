@@ -1,1 +1,1 @@
-export { StoreEdit as Component } from "./store-edit"
+export { StoreEdit as Component } from "src/routes/store/store-edit/store-edit"

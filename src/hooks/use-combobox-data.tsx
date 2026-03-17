@@ -4,7 +4,7 @@ import {
   useInfiniteQuery,
   useQuery,
 } from "@tanstack/react-query"
-import { useDebouncedSearch } from "./use-debounced-search"
+import { useDebouncedSearch } from "src/hooks/use-debounced-search"
 
 type ComboboxExternalData = {
   offset: number

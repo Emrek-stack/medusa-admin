@@ -5,16 +5,16 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 import { HttpTypes } from "@medusajs/types"
-import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useBatchTranslationSettings } from "../../../../../hooks/api/translations"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useBatchTranslationSettings } from "src/hooks/api/translations"
 import {
   EntitySelectorTree,
   type Entity,
   type EntityField,
   type EntitySelectorTreeRef,
-} from "../entity-selector-tree/entity-selector-tree"
-import { SelectorTreeFilter } from "../selector-tree-filter/selector-tree-filter"
+} from "src/routes/translations/settings/components/entity-selector-tree/entity-selector-tree"
+import { SelectorTreeFilter } from "src/routes/translations/settings/components/selector-tree-filter/selector-tree-filter"
 
 type ViewMode = "full" | "selected"
 type SortOrder = "asc" | "desc"

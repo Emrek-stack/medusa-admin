@@ -1,1 +1,1 @@
-export { UserList as Component } from "./user-list"
+export { UserList as Component } from "src/routes/users/user-list/user-list"

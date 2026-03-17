@@ -2,13 +2,13 @@ import { HttpTypes } from "@medusajs/types"
 import { useEffect } from "react"
 import { UseFormReturn, useWatch } from "react-hook-form"
 
-import { DataGrid } from "../../../../../components/data-grid"
-import { useRouteModal } from "../../../../../components/modals"
-import { useProducts } from "../../../../../hooks/api/products"
-import { usePriceListGridColumns } from "../../../common/hooks/use-price-list-grid-columns"
-import { PriceListCreateProductVariantsSchema } from "../../../common/schemas"
-import { isProductRow } from "../../../common/utils"
-import { PriceListPricesAddSchema } from "./schema"
+import { DataGrid } from "src/components/data-grid"
+import { useRouteModal } from "src/components/modals"
+import { useProducts } from "src/hooks/api/products"
+import { usePriceListGridColumns } from "src/routes/price-lists/common/hooks/use-price-list-grid-columns"
+import { PriceListCreateProductVariantsSchema } from "src/routes/price-lists/common/schemas"
+import { isProductRow } from "src/routes/price-lists/common/utils"
+import { PriceListPricesAddSchema } from "src/routes/price-lists/price-list-prices-add/components/price-list-prices-add-form/schema"
 
 type PriceListPricesAddPricesFormProps = {
   form: UseFormReturn<PriceListPricesAddSchema>

@@ -1,7 +1,7 @@
 import { HttpTypes } from "@medusajs/types"
 import { UIMatch } from "react-router-dom"
 
-import { useProductType } from "../../../hooks/api"
+import { useProductType } from "src/hooks/api"
 
 type ProductTypeDetailBreadcrumbProps =
   UIMatch<HttpTypes.AdminProductTypeResponse>

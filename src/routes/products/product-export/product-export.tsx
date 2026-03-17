@@ -1,9 +1,9 @@
 import { Button, Heading, toast } from "@medusajs/ui"
-import { RouteDrawer, useRouteModal } from "../../../components/modals"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
 import { useTranslation } from "react-i18next"
-import { ExportFilters } from "./components/export-filters"
-import { useExportProducts } from "../../../hooks/api"
-import { useProductTableQuery } from "../../../hooks/table/query"
+import { ExportFilters } from "src/routes/products/product-export/components/export-filters"
+import { useExportProducts } from "src/hooks/api"
+import { useProductTableQuery } from "src/hooks/table/query"
 
 export const ProductExport = () => {
   const { t } = useTranslation()

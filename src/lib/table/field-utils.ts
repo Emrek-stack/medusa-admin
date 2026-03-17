@@ -1,5 +1,5 @@
 import { HttpTypes } from "@medusajs/types"
-import { getEntityDefaultFields } from "./entity-defaults"
+import { getEntityDefaultFields } from "src/lib/table/entity-defaults"
 
 /**
  * Calculates the required fields based on visible columns and entity defaults

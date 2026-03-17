@@ -4,11 +4,11 @@ import { Input, Text } from "@medusajs/ui"
 import { UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { Form } from "../../../../../components/common/form"
-import { Thumbnail } from "../../../../../components/common/thumbnail"
-import { MoneyAmountCell } from "../../../../../components/table/table-cells/common/money-amount-cell"
-import { CreateClaimSchemaType } from "./schema"
+import { ActionMenu } from "src/components/common/action-menu"
+import { Form } from "src/components/common/form"
+import { Thumbnail } from "src/components/common/thumbnail"
+import { MoneyAmountCell } from "src/components/table/table-cells/common/money-amount-cell"
+import { CreateClaimSchemaType } from "src/routes/orders/order-create-claim/components/claim-create-form/schema"
 
 type ClaimOutboundItemProps = {
   previewItem: AdminOrderLineItem

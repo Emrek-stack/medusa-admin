@@ -1,8 +1,8 @@
 import { json, useParams } from "react-router-dom"
 
-import { RouteFocusModal } from "../../../components/modals"
-import { useShippingOption } from "../../../hooks/api/shipping-options"
-import { EditShippingOptionsPricingForm } from "./components/create-shipping-options-form"
+import { RouteFocusModal } from "src/components/modals"
+import { useShippingOption } from "src/hooks/api/shipping-options"
+import { EditShippingOptionsPricingForm } from "src/routes/locations/location-service-zone-shipping-option-pricing/components/create-shipping-options-form"
 
 export function LocationServiceZoneShippingOptionPricing() {
   const { so_id, location_id } = useParams()

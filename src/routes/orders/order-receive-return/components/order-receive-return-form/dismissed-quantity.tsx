@@ -6,13 +6,13 @@ import { useTranslation } from "react-i18next"
 import { AdminOrderLineItem } from "@medusajs/types"
 import { Button, Input, Popover, toast } from "@medusajs/ui"
 
-import { ReceiveReturnSchema } from "./constants"
-import { Form } from "../../../../../components/common/form"
+import { ReceiveReturnSchema } from "src/routes/orders/order-receive-return/components/order-receive-return-form/constants"
+import { Form } from "src/components/common/form"
 import {
   useAddDismissItems,
   useRemoveDismissItem,
   useUpdateDismissItem,
-} from "../../../../../hooks/api/returns"
+} from "src/hooks/api/returns"
 
 type DismissedQuantityProps = {
   returnId: string

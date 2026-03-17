@@ -2,12 +2,12 @@ import { OnChangeFn, RowSelectionState } from "@tanstack/react-table"
 import { useState } from "react"
 
 import { useTranslation } from "react-i18next"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useVariants } from "../../../../../hooks/api"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { useExchangeOutboundItemTableColumns } from "./use-exchange-outbound-item-table-columns"
-import { useExchangeOutboundItemTableFilters } from "./use-exchange-outbound-item-table-filters"
-import { useExchangeOutboundItemTableQuery } from "./use-exchange-outbound-item-table-query"
+import { _DataTable } from "src/components/table/data-table"
+import { useVariants } from "src/hooks/api"
+import { useDataTable } from "src/hooks/use-data-table"
+import { useExchangeOutboundItemTableColumns } from "src/routes/orders/order-create-exchange/components/add-exchange-outbound-items-table/use-exchange-outbound-item-table-columns"
+import { useExchangeOutboundItemTableFilters } from "src/routes/orders/order-create-exchange/components/add-exchange-outbound-items-table/use-exchange-outbound-item-table-filters"
+import { useExchangeOutboundItemTableQuery } from "src/routes/orders/order-create-exchange/components/add-exchange-outbound-items-table/use-exchange-outbound-item-table-query"
 
 const PAGE_SIZE = 50
 const PREFIX = "rit"

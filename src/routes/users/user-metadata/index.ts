@@ -1,1 +1,1 @@
-export { UserMetadata as Component } from "./user-metadata"
+export { UserMetadata as Component } from "src/routes/users/user-metadata/user-metadata"

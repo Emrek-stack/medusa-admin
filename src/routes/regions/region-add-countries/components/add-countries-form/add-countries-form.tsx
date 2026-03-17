@@ -14,15 +14,15 @@ import { Button, Checkbox, toast } from "@medusajs/ui"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useUpdateRegion } from "../../../../../hooks/api/regions"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { countries as staticCountries } from "../../../../../lib/data/countries"
-import { useCountries } from "../../../common/hooks/use-countries"
-import { useCountryTableColumns } from "../../../common/hooks/use-country-table-columns"
-import { useCountryTableQuery } from "../../../common/hooks/use-country-table-query"
+} from "src/components/modals"
+import { _DataTable } from "src/components/table/data-table"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useUpdateRegion } from "src/hooks/api/regions"
+import { useDataTable } from "src/hooks/use-data-table"
+import { countries as staticCountries } from "src/lib/data/countries"
+import { useCountries } from "src/routes/regions/common/hooks/use-countries"
+import { useCountryTableColumns } from "src/routes/regions/common/hooks/use-country-table-columns"
+import { useCountryTableQuery } from "src/routes/regions/common/hooks/use-country-table-query"
 
 type AddCountriesFormProps = {
   region: HttpTypes.AdminRegion

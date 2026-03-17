@@ -2,9 +2,9 @@ import { Badge } from "@medusajs/ui"
 import { ColumnDef, createColumnHelper } from "@tanstack/react-table"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
-import { StatusCell } from "../../../../../components/table/table-cells/common/status-cell"
-import { TransactionStepState } from "../../../types"
-import { getTransactionState, getTransactionStateColor } from "../../../utils"
+import { StatusCell } from "src/components/table/table-cells/common/status-cell"
+import { TransactionStepState } from "src/routes/workflow-executions/types"
+import { getTransactionState, getTransactionStateColor } from "src/routes/workflow-executions/utils"
 import { HttpTypes } from "@medusajs/types"
 
 const columnHelper =

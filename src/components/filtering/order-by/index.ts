@@ -1,1 +1,1 @@
-export * from "./order-by"
+export * from "src/components/filtering/order-by/order-by"

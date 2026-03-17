@@ -2,10 +2,10 @@ import { Input, Label, clx } from "@medusajs/ui"
 import debounce from "lodash.debounce"
 import { Popover as RadixPopover } from "radix-ui"
 import { ChangeEvent, useCallback, useEffect, useState } from "react"
-import { useSelectedParams } from "../hooks"
-import { useDataTableFilterContext } from "./context"
-import FilterChip from "./filter-chip"
-import { IFilter } from "./types"
+import { useSelectedParams } from "src/components/table/data-table/hooks"
+import { useDataTableFilterContext } from "src/components/table/data-table/data-table-filter/context"
+import FilterChip from "src/components/table/data-table/data-table-filter/filter-chip"
+import { IFilter } from "src/components/table/data-table/data-table-filter/types"
 
 type StringFilterProps = IFilter
 

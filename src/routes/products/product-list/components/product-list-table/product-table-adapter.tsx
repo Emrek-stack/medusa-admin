@@ -1,8 +1,8 @@
 import { HttpTypes } from "@medusajs/types"
-import { useProducts } from "../../../../../hooks/api/products"
-import { productColumnAdapter } from "../../../../../lib/table/entity-adapters"
-import { createTableAdapter, TableAdapter } from "../../../../../lib/table/table-adapters"
-import { useProductTableFilters } from "./use-product-table-filters"
+import { useProducts } from "src/hooks/api/products"
+import { productColumnAdapter } from "src/lib/table/entity-adapters"
+import { createTableAdapter, TableAdapter } from "src/lib/table/table-adapters"
+import { useProductTableFilters } from "src/routes/products/product-list/components/product-list-table/use-product-table-filters"
 
 export function createProductTableAdapter(): TableAdapter<HttpTypes.AdminProduct> {
   return createTableAdapter<HttpTypes.AdminProduct>({

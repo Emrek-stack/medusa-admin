@@ -1,5 +1,5 @@
 import { CustomFieldModel } from "@medusajs/admin-shared"
-import { linkModule } from "../../extensions/local-modules"
+import { linkModule } from "src/extensions/local-modules"
 
 function appendLinkableFields(
   fields: string = "",

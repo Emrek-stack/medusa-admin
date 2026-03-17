@@ -2,11 +2,11 @@ import { PencilSquare, SquareTwoStack, Trash, XCircle } from "@medusajs/icons"
 import { AdminApiKeyResponse } from "@medusajs/types"
 import { toast, usePrompt } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
-import { ActionMenu } from "../../../../../components/common/action-menu"
+import { ActionMenu } from "src/components/common/action-menu"
 import {
   useDeleteApiKey,
   useRevokeApiKey,
-} from "../../../../../hooks/api/api-keys"
+} from "src/hooks/api/api-keys"
 
 export const ApiKeyRowActions = ({
   apiKey,

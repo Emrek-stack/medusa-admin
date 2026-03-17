@@ -3,9 +3,9 @@ import { HttpTypes } from "@medusajs/types"
 import { usePrompt } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { useDeleteCollection } from "../../../../../hooks/api/collections"
-import { useFeatureFlag } from "../../../../../providers/feature-flag-provider"
+import { ActionMenu } from "src/components/common/action-menu"
+import { useDeleteCollection } from "src/hooks/api/collections"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 export const CollectionRowActions = ({
   collection,

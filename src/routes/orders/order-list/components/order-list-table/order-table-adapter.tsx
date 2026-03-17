@@ -2,14 +2,14 @@ import { HttpTypes } from "@medusajs/types"
 import {
   createTableAdapter,
   TableAdapter,
-} from "../../../../../lib/table/table-adapters"
-import { useOrders } from "../../../../../hooks/api/orders"
-import { orderColumnAdapter } from "../../../../../lib/table/entity-adapters"
+} from "src/lib/table/table-adapters"
+import { useOrders } from "src/hooks/api/orders"
+import { orderColumnAdapter } from "src/lib/table/entity-adapters"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
-import { useRegions, useSalesChannels } from "../../../../../hooks/api"
+import { useRegions, useSalesChannels } from "src/hooks/api"
 import { createDataTableFilterHelper, DataTableFilter } from "@medusajs/ui"
-import { useDataTableDateFilters } from "../../../../../components/data-table/helpers/general/use-data-table-date-filters"
+import { useDataTableDateFilters } from "src/components/data-table/helpers/general/use-data-table-date-filters"
 
 /**
  * Create the order table adapter with all order-specific logic

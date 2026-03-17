@@ -1,1 +1,1 @@
-export * from "./product-organization-section"
+export * from "src/routes/products/product-detail/components/product-organization-section/product-organization-section"

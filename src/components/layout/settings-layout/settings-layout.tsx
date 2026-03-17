@@ -5,11 +5,11 @@ import { Fragment, useEffect, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Link, useLocation } from "react-router-dom"
 
-import { useExtension } from "../../../providers/extension-provider"
-import { INavItem, NavItem } from "../nav-item"
-import { Shell } from "../shell"
-import { UserMenu } from "../user-menu"
-import { useFeatureFlag } from "../../../providers/feature-flag-provider"
+import { useExtension } from "src/providers/extension-provider"
+import { INavItem, NavItem } from "src/components/layout/nav-item"
+import { Shell } from "src/components/layout/shell"
+import { UserMenu } from "src/components/layout/user-menu"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 export const SettingsLayout = () => {
   return (

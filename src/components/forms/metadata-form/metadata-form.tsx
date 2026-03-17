@@ -20,12 +20,12 @@ import {
 } from "@medusajs/icons"
 import { FetchError } from "@medusajs/js-sdk"
 import { ComponentPropsWithoutRef, forwardRef } from "react"
-import { ConditionalTooltip } from "../../common/conditional-tooltip"
-import { Form } from "../../common/form"
-import { Skeleton } from "../../common/skeleton"
-import { RouteDrawer, useRouteModal } from "../../modals"
-import { KeyboundForm } from "../../utilities/keybound-form"
-import { useDocumentDirection } from "../../../hooks/use-document-direction"
+import { ConditionalTooltip } from "src/components/common/conditional-tooltip"
+import { Form } from "src/components/common/form"
+import { Skeleton } from "src/components/common/skeleton"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 type MetaDataSubmitHook<TRes> = (
   params: { metadata?: Record<string, any> | null },

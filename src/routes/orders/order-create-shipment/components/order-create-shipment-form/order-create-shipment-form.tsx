@@ -6,14 +6,14 @@ import { AdminFulfillment, AdminOrder } from "@medusajs/types"
 import { Button, clx, Heading, Input, Switch, toast } from "@medusajs/ui"
 import { useFieldArray, useForm } from "react-hook-form"
 
-import { Form } from "../../../../../components/common/form"
+import { Form } from "src/components/common/form"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCreateOrderShipment } from "../../../../../hooks/api"
-import { CreateShipmentSchema } from "./constants"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCreateOrderShipment } from "src/hooks/api"
+import { CreateShipmentSchema } from "src/routes/orders/order-create-shipment/components/order-create-shipment-form/constants"
 
 type OrderCreateFulfillmentFormProps = {
   order: AdminOrder

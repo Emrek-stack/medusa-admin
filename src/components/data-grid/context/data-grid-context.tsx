@@ -6,7 +6,7 @@ import {
   Path,
   UseFormRegister,
 } from "react-hook-form"
-import { CellErrorMetadata, CellMetadata, DataGridCoordinates } from "../types"
+import { CellErrorMetadata, CellMetadata, DataGridCoordinates } from "src/components/data-grid/types"
 
 type DataGridContextType<TFieldValues extends FieldValues> = {
   // Grid state

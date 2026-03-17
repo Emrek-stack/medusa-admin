@@ -1,1 +1,1 @@
-export * from "./category-tree"
+export * from "src/routes/categories/common/components/category-tree/category-tree"

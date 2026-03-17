@@ -1,8 +1,8 @@
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { workflowExecutionsQueryKeys } from "../../../hooks/api/workflow-executions"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { workflowExecutionsQueryKeys } from "src/hooks/api/workflow-executions"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const executionDetailQuery = (id: string) => ({
   queryKey: workflowExecutionsQueryKeys.detail(id),

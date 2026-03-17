@@ -7,10 +7,10 @@ import {
   useMutation,
   useQuery,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { taxRegionsQueryKeys } from "./tax-regions"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { taxRegionsQueryKeys } from "src/hooks/api/tax-regions"
 
 const TAX_RATES_QUERY_KEY = "tax_rates" as const
 export const taxRatesQueryKeys = queryKeysFactory(TAX_RATES_QUERY_KEY)

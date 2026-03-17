@@ -32,10 +32,10 @@ import React, {
 import { FieldValues, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { useCommandHistory } from "../../../hooks/use-command-history"
-import { useDocumentDirection } from "../../../hooks/use-document-direction"
-import { ConditionalTooltip } from "../../common/conditional-tooltip"
-import { DataGridContext } from "../context"
+import { useCommandHistory } from "src/hooks/use-command-history"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
+import { ConditionalTooltip } from "src/components/common/conditional-tooltip"
+import { DataGridContext } from "src/components/data-grid/context"
 import {
   useDataGridCellHandlers,
   useDataGridCellMetadata,
@@ -48,11 +48,11 @@ import {
   useDataGridMouseUpEvent,
   useDataGridNavigation,
   useDataGridQueryTool,
-} from "../hooks"
-import { DataGridMatrix } from "../models"
-import { DataGridCoordinates, GridColumnOption } from "../types"
-import { isCellMatch, isSpecialFocusKey } from "../utils"
-import { DataGridKeyboardShortcutModal } from "./data-grid-keyboard-shortcut-modal"
+} from "src/components/data-grid/hooks"
+import { DataGridMatrix } from "src/components/data-grid/models"
+import { DataGridCoordinates, GridColumnOption } from "src/components/data-grid/types"
+import { isCellMatch, isSpecialFocusKey } from "src/components/data-grid/utils"
+import { DataGridKeyboardShortcutModal } from "src/components/data-grid/components/data-grid-keyboard-shortcut-modal"
 export interface DataGridRootProps<
   TData,
   TFieldValues extends FieldValues = FieldValues

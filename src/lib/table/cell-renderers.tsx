@@ -2,21 +2,21 @@ import React from "react"
 import { Badge, StatusBadge, Tooltip } from "@medusajs/ui"
 import { HttpTypes } from "@medusajs/types"
 import ReactCountryFlag from "react-country-flag"
-import { getCountryByIso2 } from "../data/countries"
-import { ProductCell } from "../../components/table/table-cells/product/product-cell"
-import { CollectionCell } from "../../components/table/table-cells/product/collection-cell"
-import { SalesChannelsCell } from "../../components/table/table-cells/product/sales-channels-cell"
-import { VariantCell } from "../../components/table/table-cells/product/variant-cell"
-import { ProductStatusCell } from "../../components/table/table-cells/product/product-status-cell"
-import { DateCell } from "../../components/table/table-cells/common/date-cell"
-import { DisplayIdCell } from "../../components/table/table-cells/order/display-id-cell"
-import { TotalCell } from "../../components/table/table-cells/order/total-cell"
-import { MoneyAmountCell } from "../../components/table/table-cells/common/money-amount-cell"
+import { getCountryByIso2 } from "src/lib/data/countries"
+import { ProductCell } from "src/components/table/table-cells/product/product-cell"
+import { CollectionCell } from "src/components/table/table-cells/product/collection-cell"
+import { SalesChannelsCell } from "src/components/table/table-cells/product/sales-channels-cell"
+import { VariantCell } from "src/components/table/table-cells/product/variant-cell"
+import { ProductStatusCell } from "src/components/table/table-cells/product/product-status-cell"
+import { DateCell } from "src/components/table/table-cells/common/date-cell"
+import { DisplayIdCell } from "src/components/table/table-cells/order/display-id-cell"
+import { TotalCell } from "src/components/table/table-cells/order/total-cell"
+import { MoneyAmountCell } from "src/components/table/table-cells/common/money-amount-cell"
 import { TFunction } from "i18next"
 import {
   getOrderPaymentStatus,
   getOrderFulfillmentStatus,
-} from "../order-helpers"
+} from "src/lib/order-helpers"
 
 export type CellRenderer<TData = any> = (
   value: any,

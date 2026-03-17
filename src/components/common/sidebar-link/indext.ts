@@ -1,1 +1,1 @@
-export * from "./sidebar-link"
+export * from "src/components/common/sidebar-link/sidebar-link"

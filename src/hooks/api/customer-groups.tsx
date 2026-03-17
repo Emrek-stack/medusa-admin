@@ -7,10 +7,10 @@ import {
   useMutation,
   useQuery,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { customersQueryKeys } from "./customers"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { customersQueryKeys } from "src/hooks/api/customers"
 
 const CUSTOMER_GROUPS_QUERY_KEY = "customer_groups" as const
 export const customerGroupsQueryKeys = queryKeysFactory(

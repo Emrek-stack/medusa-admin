@@ -3,8 +3,8 @@ import { HttpTypes } from "@medusajs/types"
 import { Container, Heading, Text, toast, usePrompt } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { useDeleteUser } from "../../../../../hooks/api/users"
+import { ActionMenu } from "src/components/common/action-menu"
+import { useDeleteUser } from "src/hooks/api/users"
 
 type UserGeneralSectionProps = {
   user: HttpTypes.AdminUser

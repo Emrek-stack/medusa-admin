@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 
-import { Thumbnail } from "../../../../common/thumbnail"
+import { Thumbnail } from "src/components/common/thumbnail"
 import { HttpTypes } from "@medusajs/types"
 
 type ProductCellProps = {

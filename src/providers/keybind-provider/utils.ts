@@ -1,4 +1,4 @@
-import { Keys, Platform, Shortcut } from "./types"
+import { Keys, Platform, Shortcut } from "src/providers/keybind-provider/types"
 
 export const findFirstPlatformMatch = (keys: Keys) => {
   const match =

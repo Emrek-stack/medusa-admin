@@ -1,6 +1,6 @@
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
-import { CollectionListTable } from "./components/collection-list-table"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
+import { CollectionListTable } from "src/routes/collections/collection-list/components/collection-list-table"
 
 export const CollectionList = () => {
   const { getWidgets } = useExtension()

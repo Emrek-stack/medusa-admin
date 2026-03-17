@@ -15,16 +15,16 @@ import { useForm } from "react-hook-form"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCurrencies } from "../../../../../hooks/api/currencies"
-import { pricePreferencesQueryKeys } from "../../../../../hooks/api/price-preferences"
-import { useUpdateStore } from "../../../../../hooks/api/store"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { queryClient } from "../../../../../lib/query-client"
-import { useCurrenciesTableColumns } from "../../../common/hooks/use-currencies-table-columns"
-import { useCurrenciesTableQuery } from "../../../common/hooks/use-currencies-table-query"
+} from "src/components/modals"
+import { _DataTable } from "src/components/table/data-table"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCurrencies } from "src/hooks/api/currencies"
+import { pricePreferencesQueryKeys } from "src/hooks/api/price-preferences"
+import { useUpdateStore } from "src/hooks/api/store"
+import { useDataTable } from "src/hooks/use-data-table"
+import { queryClient } from "src/lib/query-client"
+import { useCurrenciesTableColumns } from "src/routes/store/common/hooks/use-currencies-table-columns"
+import { useCurrenciesTableQuery } from "src/routes/store/common/hooks/use-currencies-table-query"
 
 type AddCurrenciesFormProps = {
   store: HttpTypes.AdminStore

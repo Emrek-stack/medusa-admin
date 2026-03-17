@@ -3,12 +3,12 @@ import { OnChangeFn, RowSelectionState } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
 
 import { useTranslation } from "react-i18next"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { getReturnableQuantity } from "../../../../../lib/rma"
-import { useExchangeItemTableColumns } from "./use-exchange-item-table-columns"
-import { useExchangeItemTableFilters } from "./use-exchange-item-table-filters"
-import { useExchangeItemTableQuery } from "./use-exchange-item-table-query"
+import { _DataTable } from "src/components/table/data-table"
+import { useDataTable } from "src/hooks/use-data-table"
+import { getReturnableQuantity } from "src/lib/rma"
+import { useExchangeItemTableColumns } from "src/routes/orders/order-create-exchange/components/add-exchange-inbound-items-table/use-exchange-item-table-columns"
+import { useExchangeItemTableFilters } from "src/routes/orders/order-create-exchange/components/add-exchange-inbound-items-table/use-exchange-item-table-filters"
+import { useExchangeItemTableQuery } from "src/routes/orders/order-create-exchange/components/add-exchange-inbound-items-table/use-exchange-item-table-query"
 
 const PAGE_SIZE = 50
 const PREFIX = "rit"

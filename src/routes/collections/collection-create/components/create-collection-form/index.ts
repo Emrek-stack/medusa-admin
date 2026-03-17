@@ -1,1 +1,1 @@
-export * from "./create-collection-form"
+export * from "src/routes/collections/collection-create/components/create-collection-form/create-collection-form"

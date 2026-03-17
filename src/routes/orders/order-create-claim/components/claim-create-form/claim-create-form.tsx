@@ -26,19 +26,19 @@ import {
   StackedFocusModal,
   useRouteModal,
   useStackedModal,
-} from "../../../../../components/modals"
+} from "src/components/modals"
 
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { useShippingOptions } from "../../../../../hooks/api/shipping-options"
-import { useStockLocations } from "../../../../../hooks/api/stock-locations"
-import { getStylizedAmount } from "../../../../../lib/money-amount-helpers"
-import { AddClaimItemsTable } from "../add-claim-items-table"
-import { ClaimInboundItem } from "./claim-inbound-item.tsx"
-import { ClaimCreateSchema, CreateClaimSchemaType } from "./schema"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
+import { useShippingOptions } from "src/hooks/api/shipping-options"
+import { useStockLocations } from "src/hooks/api/stock-locations"
+import { getStylizedAmount } from "src/lib/money-amount-helpers"
+import { AddClaimItemsTable } from "src/routes/orders/order-create-claim/components/add-claim-items-table"
+import { ClaimInboundItem } from "src/routes/orders/order-create-claim/components/claim-create-form/claim-inbound-item.tsx"
+import { ClaimCreateSchema, CreateClaimSchemaType } from "src/routes/orders/order-create-claim/components/claim-create-form/schema"
 
 import { AdminReturn, HttpTypes } from "@medusajs/types"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form/keybound-form.tsx"
+import { KeyboundForm } from "src/components/utilities/keybound-form/keybound-form.tsx"
 import {
   useAddClaimInboundItems,
   useAddClaimInboundShipping,
@@ -49,13 +49,13 @@ import {
   useUpdateClaimInboundItem,
   useUpdateClaimInboundShipping,
   useUpdateClaimOutboundShipping,
-} from "../../../../../hooks/api/claims"
-import { useUpdateReturn } from "../../../../../hooks/api/returns"
-import { sdk } from "../../../../../lib/client"
-import { currencies } from "../../../../../lib/data/currencies"
-import { ReturnShippingPlaceholder } from "../../../common/placeholders"
-import { ClaimOutboundSection } from "./claim-outbound-section"
-import { ItemPlaceholder } from "./item-placeholder"
+} from "src/hooks/api/claims"
+import { useUpdateReturn } from "src/hooks/api/returns"
+import { sdk } from "src/lib/client"
+import { currencies } from "src/lib/data/currencies"
+import { ReturnShippingPlaceholder } from "src/routes/orders/common/placeholders"
+import { ClaimOutboundSection } from "src/routes/orders/order-create-claim/components/claim-create-form/claim-outbound-section"
+import { ItemPlaceholder } from "src/routes/orders/order-create-claim/components/claim-create-form/item-placeholder"
 
 type ReturnCreateFormProps = {
   order: AdminOrder

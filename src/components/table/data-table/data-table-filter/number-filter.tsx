@@ -9,10 +9,10 @@ import { ChangeEvent, useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { TFunction } from "i18next"
-import { useSelectedParams } from "../hooks"
-import { useDataTableFilterContext } from "./context"
-import FilterChip from "./filter-chip"
-import { IFilter } from "./types"
+import { useSelectedParams } from "src/components/table/data-table/hooks"
+import { useDataTableFilterContext } from "src/components/table/data-table/data-table-filter/context"
+import FilterChip from "src/components/table/data-table/data-table-filter/filter-chip"
+import { IFilter } from "src/components/table/data-table/data-table-filter/types"
 
 type NumberFilterProps = IFilter
 

@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom"
 import { HttpTypes } from "@medusajs/types"
 
-import { RouteFocusModal } from "../../../components/modals"
-import { useProductVariant } from "../../../hooks/api/products"
-import { EditProductVariantMediaForm } from "./components/edit-product-variant-media-form"
+import { RouteFocusModal } from "src/components/modals"
+import { useProductVariant } from "src/hooks/api/products"
+import { EditProductVariantMediaForm } from "src/routes/product-variants/product-variant-media/components/edit-product-variant-media-form"
 
 type ProductMediaVariantsReponse = HttpTypes.AdminProductVariant & {
   images: HttpTypes.AdminProductImage[]

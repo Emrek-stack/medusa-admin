@@ -7,10 +7,10 @@ import {
   useMutation,
   useQuery,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { promotionsQueryKeys } from "./promotions"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { promotionsQueryKeys } from "src/hooks/api/promotions"
 
 const REGIONS_QUERY_KEY = "campaigns" as const
 export const campaignsQueryKeys = queryKeysFactory(REGIONS_QUERY_KEY)

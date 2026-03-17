@@ -1,5 +1,5 @@
 import { PropsWithChildren, useState } from "react"
-import { StackedModalContext } from "./stacked-modal-context"
+import { StackedModalContext } from "src/components/modals/stacked-modal-provider/stacked-modal-context"
 
 type StackedModalProviderProps = PropsWithChildren<{
   onOpenChange: (open: boolean) => void

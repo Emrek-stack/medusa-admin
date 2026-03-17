@@ -3,10 +3,10 @@ import { Container, Heading } from "@medusajs/ui"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useTranslation } from "react-i18next"
 
-import { useTaxRates } from "../../../../../hooks/api/tax-rates"
-import { useTaxRateTableQuery } from "../../../../../hooks/table/query/use-tax-rate-table-query"
-import { TaxOverrideTable } from "../../../common/components/tax-override-table"
-import { useTaxOverrideTable } from "../../../common/hooks/use-tax-override-table"
+import { useTaxRates } from "src/hooks/api/tax-rates"
+import { useTaxRateTableQuery } from "src/hooks/table/query/use-tax-rate-table-query"
+import { TaxOverrideTable } from "src/routes/tax-regions/common/components/tax-override-table"
+import { useTaxOverrideTable } from "src/routes/tax-regions/common/hooks/use-tax-override-table"
 
 type TaxRegionOverrideSectionProps = {
   taxRegion: HttpTypes.AdminTaxRegion

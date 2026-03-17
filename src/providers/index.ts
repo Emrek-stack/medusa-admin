@@ -1,1 +1,1 @@
-export * from "./providers"
+export * from "src/providers/providers"

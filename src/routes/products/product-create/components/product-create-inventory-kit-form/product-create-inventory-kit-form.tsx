@@ -1,7 +1,7 @@
 import { UseFormReturn } from "react-hook-form"
 
-import { ProductCreateSchemaType } from "../../types"
-import { ProductCreateInventoryKitSection } from "./components/product-create-inventory-kit-section/product-create-inventory-kit-section"
+import { ProductCreateSchemaType } from "src/routes/products/product-create/types"
+import { ProductCreateInventoryKitSection } from "src/routes/products/product-create/components/product-create-inventory-kit-form/components/product-create-inventory-kit-section/product-create-inventory-kit-section"
 
 type ProductAttributesProps = {
   form: UseFormReturn<ProductCreateSchemaType>

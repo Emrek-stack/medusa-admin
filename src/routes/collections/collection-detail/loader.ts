@@ -1,8 +1,8 @@
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { collectionsQueryKeys } from "../../../hooks/api/collections"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { collectionsQueryKeys } from "src/hooks/api/collections"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const collectionDetailQuery = (id: string) => ({
   queryKey: collectionsQueryKeys.detail(id),

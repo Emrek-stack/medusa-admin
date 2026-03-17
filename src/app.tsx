@@ -1,5 +1,5 @@
-import { DashboardApp } from "./dashboard-app"
-import { DashboardPlugin } from "./dashboard-app/types"
+import { DashboardApp } from "src/dashboard-app"
+import { DashboardPlugin } from "src/dashboard-app/types"
 
 import {
   displayModule,
@@ -8,7 +8,7 @@ import {
   menuItemModule,
   routeModule,
   widgetModule,
-} from "./extensions/local-modules"
+} from "src/extensions/local-modules"
 
 import "./index.css"
 

@@ -3,17 +3,17 @@ import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
 import { HttpTypes } from "@medusajs/types"
-import { Form } from "../../../../../components/common/form"
-import { SwitchBox } from "../../../../../components/common/switch-box"
-import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
-import { useExtendableForm } from "../../../../../dashboard-app/forms/hooks"
-import { useUpdateProduct } from "../../../../../hooks/api/products"
-import { transformNullableFormData } from "../../../../../lib/form-helpers"
+import { Form } from "src/components/common/form"
+import { SwitchBox } from "src/components/common/switch-box"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
+import { useExtendableForm } from "src/dashboard-app/forms/hooks"
+import { useUpdateProduct } from "src/hooks/api/products"
+import { transformNullableFormData } from "src/lib/form-helpers"
 
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { FormExtensionZone } from "../../../../../dashboard-app"
-import { useExtension } from "../../../../../providers/extension-provider"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { FormExtensionZone } from "src/dashboard-app"
+import { useExtension } from "src/providers/extension-provider"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 type EditProductFormProps = {
   product: HttpTypes.AdminProduct

@@ -1,1 +1,1 @@
-export { StoreMetadata as Component } from "./store-metadata"
+export { StoreMetadata as Component } from "src/routes/store/store-metadata/store-metadata"

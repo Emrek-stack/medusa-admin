@@ -1,1 +1,1 @@
-export * from "./money-amount-cell"
+export * from "src/components/table/table-cells/common/money-amount-cell/money-amount-cell"

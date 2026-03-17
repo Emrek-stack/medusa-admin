@@ -1,1 +1,1 @@
-export { OrderCreateFulfillment as Component } from "./order-create-fulfillments"
+export { OrderCreateFulfillment as Component } from "src/routes/orders/order-create-fulfillment/order-create-fulfillments"

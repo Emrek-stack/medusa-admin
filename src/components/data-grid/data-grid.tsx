@@ -11,7 +11,7 @@ import {
   DataGridTextCell,
   DataGridExpandableTextCell,
   type DataGridRootProps,
-} from "./components"
+} from "src/components/data-grid/components"
 
 interface DataGridProps<TData, TFieldValues extends FieldValues = FieldValues>
   extends DataGridRootProps<TData, TFieldValues> {

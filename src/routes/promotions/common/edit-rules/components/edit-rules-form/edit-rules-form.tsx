@@ -4,11 +4,11 @@ import { Button } from "@medusajs/ui"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
-import { RouteDrawer } from "../../../../../../components/modals"
-import { KeyboundForm } from "../../../../../../components/utilities/keybound-form"
-import { RuleTypeValues } from "../../edit-rules"
-import { RulesFormField } from "../rules-form-field"
-import { EditRules, EditRulesType } from "./form-schema"
+import { RouteDrawer } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { RuleTypeValues } from "src/routes/promotions/common/edit-rules/edit-rules"
+import { RulesFormField } from "src/routes/promotions/common/edit-rules/components/rules-form-field"
+import { EditRules, EditRulesType } from "src/routes/promotions/common/edit-rules/components/edit-rules-form/form-schema"
 
 type EditPromotionFormProps = {
   promotion: PromotionDTO

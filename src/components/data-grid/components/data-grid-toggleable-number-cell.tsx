@@ -2,11 +2,11 @@ import { Switch } from "@medusajs/ui"
 import { useEffect, useRef, useState } from "react"
 import CurrencyInput, { CurrencyInputProps } from "react-currency-input-field"
 import { Controller, ControllerRenderProps } from "react-hook-form"
-import { useCombinedRefs } from "../../../hooks/use-combined-refs"
-import { ConditionalTooltip } from "../../common/conditional-tooltip"
-import { useDataGridCell, useDataGridCellError } from "../hooks"
-import { DataGridCellProps, InputProps } from "../types"
-import { DataGridCellContainer } from "./data-grid-cell-container"
+import { useCombinedRefs } from "src/hooks/use-combined-refs"
+import { ConditionalTooltip } from "src/components/common/conditional-tooltip"
+import { useDataGridCell, useDataGridCellError } from "src/components/data-grid/hooks"
+import { DataGridCellProps, InputProps } from "src/components/data-grid/types"
+import { DataGridCellContainer } from "src/components/data-grid/components/data-grid-cell-container"
 
 export const DataGridTogglableNumberCell = <TData, TValue = any>({
   context,

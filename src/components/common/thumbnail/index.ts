@@ -1,1 +1,1 @@
-export * from "./thumbnail";
+export * from "src/components/common/thumbnail/thumbnail";

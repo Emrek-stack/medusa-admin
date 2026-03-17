@@ -13,8 +13,8 @@ import {
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Link, useNavigate } from "react-router-dom"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { useUpdateProduct } from "../../../../../hooks/api/products"
+import { ActionMenu } from "src/components/common/action-menu"
+import { useUpdateProduct } from "src/hooks/api/products"
 import { HttpTypes } from "@medusajs/types"
 
 type ProductMedisaSectionProps = {

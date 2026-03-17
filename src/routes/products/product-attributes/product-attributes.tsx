@@ -2,9 +2,9 @@ import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
 
-import { RouteDrawer } from "../../../components/modals"
-import { useProduct } from "../../../hooks/api/products"
-import { ProductAttributesForm } from "./components/product-attributes-form"
+import { RouteDrawer } from "src/components/modals"
+import { useProduct } from "src/hooks/api/products"
+import { ProductAttributesForm } from "src/routes/products/product-attributes/components/product-attributes-form"
 
 export const ProductAttributes = () => {
   const { id } = useParams()

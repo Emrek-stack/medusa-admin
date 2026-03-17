@@ -1,7 +1,7 @@
-import { OrderListTable } from "./components/order-list-table"
+import { OrderListTable } from "src/routes/orders/order-list/components/order-list-table"
 
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
 
 export const OrderList = () => {
   const { getWidgets } = useExtension()

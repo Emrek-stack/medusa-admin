@@ -22,9 +22,9 @@ import {
   useState,
 } from "react"
 import { Trans, useTranslation } from "react-i18next"
-import { TextSkeleton } from "../../../../../components/common/skeleton"
-import { useProductCategories } from "../../../../../hooks/api/categories"
-import { useDebouncedSearch } from "../../../../../hooks/use-debounced-search"
+import { TextSkeleton } from "src/components/common/skeleton"
+import { useProductCategories } from "src/hooks/api/categories"
+import { useDebouncedSearch } from "src/hooks/use-debounced-search"
 
 interface CategoryComboboxProps
   extends Omit<

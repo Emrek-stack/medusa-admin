@@ -8,9 +8,9 @@ import {
 
 import { FetchError } from "@medusajs/js-sdk"
 import { HttpTypes } from "@medusajs/types"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
 
 const SHIPPING_PROFILE_QUERY_KEY = "shipping_profile" as const
 export const shippingProfileQueryKeys = queryKeysFactory(

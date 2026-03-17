@@ -1,1 +1,1 @@
-export { LocationList as Component } from "./location-list"
+export { LocationList as Component } from "src/routes/locations/location-list/location-list"

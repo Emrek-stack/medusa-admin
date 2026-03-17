@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
-import { MetadataForm } from "../../../components/forms/metadata-form/metadata-form"
-import { useProductTag, useUpdateProductTag } from "../../../hooks/api"
+import { MetadataForm } from "src/components/forms/metadata-form/metadata-form"
+import { useProductTag, useUpdateProductTag } from "src/hooks/api"
 
 export const ProductTagMetadata = () => {
   const { id } = useParams()

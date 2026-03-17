@@ -1,1 +1,1 @@
-export { CollectionMetadata as Component } from "./collection-metadata"
+export { CollectionMetadata as Component } from "src/routes/collections/collection-metadata/collection-metadata"

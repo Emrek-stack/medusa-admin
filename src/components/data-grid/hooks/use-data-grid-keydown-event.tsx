@@ -11,8 +11,8 @@ import {
   DataGridMatrix,
   DataGridQueryTool,
   DataGridUpdateCommand,
-} from "../models"
-import { DataGridCoordinates } from "../types"
+} from "src/components/data-grid/models"
+import { DataGridCoordinates } from "src/components/data-grid/types"
 
 type UseDataGridKeydownEventOptions<TData, TFieldValues extends FieldValues> = {
   containerRef: React.RefObject<HTMLDivElement>

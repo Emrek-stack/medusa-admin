@@ -2,9 +2,9 @@ import { GlobeEurope, PencilSquare, Trash } from "@medusajs/icons"
 import { HttpTypes } from "@medusajs/types"
 import { Container, Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { useDeleteProductTagAction } from "../../../common/hooks/use-delete-product-tag-action"
-import { useFeatureFlag } from "../../../../../providers/feature-flag-provider"
+import { ActionMenu } from "src/components/common/action-menu"
+import { useDeleteProductTagAction } from "src/routes/product-tags/common/hooks/use-delete-product-tag-action"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 type ProductTagGeneralSectionProps = {
   productTag: HttpTypes.AdminProductTag

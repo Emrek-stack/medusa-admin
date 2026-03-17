@@ -1,5 +1,5 @@
 import { HttpTypes } from "@medusajs/types"
-import { useQueryParams } from "../../../../hooks/use-query-params"
+import { useQueryParams } from "src/hooks/use-query-params"
 
 type UseSalesChannelTableQueryProps = {
   prefix?: string

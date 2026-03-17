@@ -1,16 +1,16 @@
 import * as zod from "zod"
 
 import { Button, Input, toast } from "@medusajs/ui"
-import { RouteDrawer, useRouteModal } from "../../../../../../components/modals"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { InventoryTypes } from "@medusajs/types"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
-import { Form } from "../../../../../../components/common/form"
-import { KeyboundForm } from "../../../../../../components/utilities/keybound-form"
-import { useUpdateInventoryItem } from "../../../../../../hooks/api/inventory"
+import { Form } from "src/components/common/form"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useUpdateInventoryItem } from "src/hooks/api/inventory"
 
 type EditInventoryItemFormProps = {
   item: InventoryTypes.InventoryItemDTO

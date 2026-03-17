@@ -6,7 +6,7 @@ import {
 } from "@tanstack/react-table"
 import { FieldValues } from "react-hook-form"
 
-import { DataGridColumnType, FieldFunction } from "../types"
+import { DataGridColumnType, FieldFunction } from "src/components/data-grid/types"
 
 type DataGridHelperColumnsProps<TData, TFieldValues extends FieldValues> = {
   /**

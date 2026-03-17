@@ -25,16 +25,16 @@ import { CSS } from "@dnd-kit/utilities"
 import { ReactNode, useEffect, useMemo, useRef, useState } from "react"
 import { createPortal } from "react-dom"
 
-import { sortableTreeKeyboardCoordinates } from "./keyboard-coordinates"
-import { SortableTreeItem } from "./sortable-tree-item"
-import type { FlattenedItem, SensorContext, TreeItem } from "./types"
+import { sortableTreeKeyboardCoordinates } from "src/components/common/sortable-tree/keyboard-coordinates"
+import { SortableTreeItem } from "src/components/common/sortable-tree/sortable-tree-item"
+import type { FlattenedItem, SensorContext, TreeItem } from "src/components/common/sortable-tree/types"
 import {
   buildTree,
   flattenTree,
   getChildCount,
   getProjection,
   removeChildrenOf,
-} from "./utils"
+} from "src/components/common/sortable-tree/utils"
 
 const measuring = {
   droppable: {

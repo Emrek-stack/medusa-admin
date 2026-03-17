@@ -1,9 +1,9 @@
 import { clx } from "@medusajs/ui"
 import { Children, ComponentPropsWithoutRef, ComponentType } from "react"
 import { Outlet } from "react-router-dom"
-import { JsonViewSection } from "../../../common/json-view-section"
-import { MetadataSection } from "../../../common/metadata-section"
-import { PageProps, WidgetProps } from "../types"
+import { JsonViewSection } from "src/components/common/json-view-section"
+import { MetadataSection } from "src/components/common/metadata-section"
+import { PageProps, WidgetProps } from "src/components/layout/pages/types"
 
 interface TwoColumnWidgetProps extends WidgetProps {
   sideBefore: ComponentType<any>[]

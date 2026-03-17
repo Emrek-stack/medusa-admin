@@ -7,14 +7,14 @@ import {
   useMutation,
   useQuery,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
+import { sdk } from "src/lib/client"
 import {
   getMockAuthUser,
   isMockAuthEnabled,
   isMockAuthenticated,
-} from "../../lib/mock-auth"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
+} from "src/lib/mock-auth"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
 
 const USERS_QUERY_KEY = "users" as const
 const usersQueryKeys = {

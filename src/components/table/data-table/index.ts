@@ -1,2 +1,2 @@
-export * from "./data-table"
-export type { Filter } from "./data-table-filter"
+export * from "src/components/table/data-table/data-table"
+export type { Filter } from "src/components/table/data-table/data-table-filter"

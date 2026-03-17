@@ -1,1 +1,1 @@
-export * from "./user-link"
+export * from "src/components/common/user-link/user-link"

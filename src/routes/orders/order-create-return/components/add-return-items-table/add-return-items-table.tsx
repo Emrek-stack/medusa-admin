@@ -8,13 +8,13 @@ import {
 } from "@medusajs/types"
 
 import { useTranslation } from "react-i18next"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { getStylizedAmount } from "../../../../../lib/money-amount-helpers"
-import { getReturnableQuantity } from "../../../../../lib/rma"
-import { useReturnItemTableColumns } from "./use-return-item-table-columns"
-import { useReturnItemTableFilters } from "./use-return-item-table-filters"
-import { useReturnItemTableQuery } from "./use-return-item-table-query"
+import { _DataTable } from "src/components/table/data-table"
+import { useDataTable } from "src/hooks/use-data-table"
+import { getStylizedAmount } from "src/lib/money-amount-helpers"
+import { getReturnableQuantity } from "src/lib/rma"
+import { useReturnItemTableColumns } from "src/routes/orders/order-create-return/components/add-return-items-table/use-return-item-table-columns"
+import { useReturnItemTableFilters } from "src/routes/orders/order-create-return/components/add-return-items-table/use-return-item-table-filters"
+import { useReturnItemTableQuery } from "src/routes/orders/order-create-return/components/add-return-items-table/use-return-item-table-query"
 
 const PAGE_SIZE = 50
 const PREFIX = "rit"

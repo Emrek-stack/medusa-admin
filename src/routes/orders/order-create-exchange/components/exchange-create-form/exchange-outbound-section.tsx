@@ -9,28 +9,28 @@ import { useEffect, useMemo, useState } from "react"
 import { useFieldArray, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
 import {
   RouteFocusModal,
   StackedFocusModal,
   useStackedModal,
-} from "../../../../../components/modals"
+} from "src/components/modals"
 import {
   useAddExchangeOutboundItems,
   useAddExchangeOutboundShipping,
   useDeleteExchangeOutboundShipping,
   useRemoveExchangeOutboundItem,
   useUpdateExchangeOutboundItems,
-} from "../../../../../hooks/api/exchanges"
-import { sdk } from "../../../../../lib/client"
-import { OutboundShippingPlaceholder } from "../../../common/placeholders"
-import { ItemPlaceholder } from "../../../order-create-claim/components/claim-create-form/item-placeholder"
-import { AddExchangeOutboundItemsTable } from "../add-exchange-outbound-items-table"
-import { ExchangeOutboundItem } from "./exchange-outbound-item"
-import { useOrderShippingOptions } from "../../../../../hooks/api/orders"
-import { CreateExchangeSchemaType } from "./schema"
-import { getFormattedShippingOptionLocationName } from "../../../../../lib/shipping-options"
+} from "src/hooks/api/exchanges"
+import { sdk } from "src/lib/client"
+import { OutboundShippingPlaceholder } from "src/routes/orders/common/placeholders"
+import { ItemPlaceholder } from "src/routes/orders/order-create-claim/components/claim-create-form/item-placeholder"
+import { AddExchangeOutboundItemsTable } from "src/routes/orders/order-create-exchange/components/add-exchange-outbound-items-table"
+import { ExchangeOutboundItem } from "src/routes/orders/order-create-exchange/components/exchange-create-form/exchange-outbound-item"
+import { useOrderShippingOptions } from "src/hooks/api/orders"
+import { CreateExchangeSchemaType } from "src/routes/orders/order-create-exchange/components/exchange-create-form/schema"
+import { getFormattedShippingOptionLocationName } from "src/lib/shipping-options"
 
 type ExchangeOutboundSectionProps = {
   order: AdminOrder

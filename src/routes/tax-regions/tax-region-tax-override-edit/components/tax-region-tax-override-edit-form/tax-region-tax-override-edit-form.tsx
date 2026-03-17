@@ -17,27 +17,27 @@ import { useFieldArray, useForm, useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
 
-import { Form } from "../../../../../components/common/form"
-import { SwitchBox } from "../../../../../components/common/switch-box"
-import { PercentageInput } from "../../../../../components/inputs/percentage-input"
+import { Form } from "src/components/common/form"
+import { SwitchBox } from "src/components/common/switch-box"
+import { PercentageInput } from "src/components/inputs/percentage-input"
 import {
   RouteDrawer,
   StackedDrawer,
   useRouteModal,
   useStackedModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useUpdateTaxRate } from "../../../../../hooks/api/tax-rates"
-import { TargetForm } from "../../../common/components/target-form/target-form"
-import { TargetItem } from "../../../common/components/target-item/target-item"
-import { TaxRateRuleReferenceType } from "../../../common/constants"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useUpdateTaxRate } from "src/hooks/api/tax-rates"
+import { TargetForm } from "src/routes/tax-regions/common/components/target-form/target-form"
+import { TargetItem } from "src/routes/tax-regions/common/components/target-item/target-item"
+import { TaxRateRuleReferenceType } from "src/routes/tax-regions/common/constants"
 import {
   TaxRateRuleReference,
   TaxRateRuleReferenceSchema,
-} from "../../../common/schemas"
-import { createTaxRulePayload } from "../../../common/utils"
-import { InitialRuleValues } from "../../types"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+} from "src/routes/tax-regions/common/schemas"
+import { createTaxRulePayload } from "src/routes/tax-regions/common/utils"
+import { InitialRuleValues } from "src/routes/tax-regions/tax-region-tax-override-edit/types"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 export const DISPLAY_OVERRIDE_ITEMS_LIMIT = 10
 

@@ -1,1 +1,1 @@
-export { CollectionEdit as Component } from "./collection-edit"
+export { CollectionEdit as Component } from "src/routes/collections/collection-edit/collection-edit"

@@ -13,13 +13,13 @@ import { RowSelectionState, createColumnHelper } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useUpdateStore } from "../../../../../hooks/api/store"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { useLocalesTableColumns } from "../../../common/hooks/use-locales-table-columns"
-import { useLocalesTableQuery } from "../../../common/hooks/use-locales-table-query"
-import { useLocales } from "../../../../../hooks/api"
+import { ActionMenu } from "src/components/common/action-menu"
+import { _DataTable } from "src/components/table/data-table"
+import { useUpdateStore } from "src/hooks/api/store"
+import { useDataTable } from "src/hooks/use-data-table"
+import { useLocalesTableColumns } from "src/routes/store/common/hooks/use-locales-table-columns"
+import { useLocalesTableQuery } from "src/routes/store/common/hooks/use-locales-table-query"
+import { useLocales } from "src/hooks/api"
 
 type StoreLocaleSectionProps = {
   store: HttpTypes.AdminStore

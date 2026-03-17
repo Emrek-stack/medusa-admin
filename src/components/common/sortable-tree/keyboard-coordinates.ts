@@ -6,8 +6,8 @@ import {
   getFirstCollision,
 } from "@dnd-kit/core"
 
-import type { SensorContext } from "./types"
-import { getProjection } from "./utils"
+import type { SensorContext } from "src/components/common/sortable-tree/types"
+import { getProjection } from "src/components/common/sortable-tree/utils"
 
 const directions: string[] = [
   KeyboardCode.Down,

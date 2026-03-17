@@ -3,11 +3,11 @@ import { useCallback, useContext, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
-import { useLogout } from "../../hooks/api/auth"
-import { queryClient } from "../../lib/query-client"
-import { KeybindContext } from "./keybind-context"
-import { Shortcut } from "./types"
-import { findShortcut } from "./utils"
+import { useLogout } from "src/hooks/api/auth"
+import { queryClient } from "src/lib/query-client"
+import { KeybindContext } from "src/providers/keybind-provider/keybind-context"
+import { Shortcut } from "src/providers/keybind-provider/types"
+import { findShortcut } from "src/providers/keybind-provider/utils"
 
 export const useKeybind = () => {
   const context = useContext(KeybindContext)

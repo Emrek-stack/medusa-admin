@@ -1,7 +1,7 @@
 import { PropsWithChildren, useEffect, useState } from "react"
-import { Search } from "../../components/search"
-import { useSidebar } from "../sidebar-provider"
-import { SearchContext } from "./search-context"
+import { Search } from "src/components/search"
+import { useSidebar } from "src/providers/sidebar-provider"
+import { SearchContext } from "src/providers/search-provider/search-context"
 
 export const SearchProvider = ({ children }: PropsWithChildren) => {
   const [open, setOpen] = useState(false)

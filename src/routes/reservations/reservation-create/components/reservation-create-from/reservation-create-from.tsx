@@ -4,19 +4,19 @@ import { Button, Heading, Input, Text, Textarea, toast } from "@medusajs/ui"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
+} from "src/components/modals"
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { HttpTypes } from "@medusajs/types"
 import React from "react"
 import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useInventoryItems } from "../../../../../hooks/api/inventory"
-import { useCreateReservationItem } from "../../../../../hooks/api/reservations"
-import { useStockLocations } from "../../../../../hooks/api/stock-locations"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useInventoryItems } from "src/hooks/api/inventory"
+import { useCreateReservationItem } from "src/hooks/api/reservations"
+import { useStockLocations } from "src/hooks/api/stock-locations"
 
 export const CreateReservationSchema = zod.object({
   inventory_item_id: zod.string().min(1),

@@ -1,1 +1,1 @@
-export * from "./customer-group-section"
+export * from "src/routes/customers/customer-detail/components/customer-group-section/customer-group-section"

@@ -4,11 +4,11 @@ import { Container, Heading, StatusBadge, toast, usePrompt } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { SectionRow } from "../../../../../components/common/section"
-import { useDeleteProduct } from "../../../../../hooks/api/products"
-import { useExtension } from "../../../../../providers/extension-provider"
-import { useFeatureFlag } from "../../../../../providers/feature-flag-provider"
+import { ActionMenu } from "src/components/common/action-menu"
+import { SectionRow } from "src/components/common/section"
+import { useDeleteProduct } from "src/hooks/api/products"
+import { useExtension } from "src/providers/extension-provider"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 const productStatusColor = (status: string) => {
   switch (status) {

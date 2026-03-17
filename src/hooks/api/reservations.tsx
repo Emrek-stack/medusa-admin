@@ -6,13 +6,13 @@ import {
   useQuery,
 } from "@tanstack/react-query"
 import { HttpTypes } from "@medusajs/types"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
 import {
   inventoryItemLevelsQueryKeys,
   inventoryItemsQueryKeys,
-} from "./inventory.tsx"
+} from "src/hooks/api/inventory.tsx"
 import { FetchError } from "@medusajs/js-sdk"
 
 const RESERVATION_ITEMS_QUERY_KEY = "reservation_items" as const

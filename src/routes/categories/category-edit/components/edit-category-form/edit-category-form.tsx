@@ -5,12 +5,12 @@ import { useTranslation } from "react-i18next"
 import { z } from "zod"
 
 import { HttpTypes } from "@medusajs/types"
-import { Form } from "../../../../../components/common/form"
-import { HandleInput } from "../../../../../components/inputs/handle-input"
-import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useUpdateProductCategory } from "../../../../../hooks/api/categories"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+import { Form } from "src/components/common/form"
+import { HandleInput } from "src/components/inputs/handle-input"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useUpdateProductCategory } from "src/hooks/api/categories"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 const EditCategorySchema = z.object({
   name: z.string().min(1),

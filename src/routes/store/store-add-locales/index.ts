@@ -1,1 +1,1 @@
-export { StoreAddLocales as Component } from "./store-add-locales"
+export { StoreAddLocales as Component } from "src/routes/store/store-add-locales/store-add-locales"

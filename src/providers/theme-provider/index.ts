@@ -1,3 +1,3 @@
-export type { ThemeOption as Theme } from "./theme-context"
-export * from "./theme-provider"
-export * from "./use-theme"
+export type { ThemeOption as Theme } from "src/providers/theme-provider/theme-context"
+export * from "src/providers/theme-provider/theme-provider"
+export * from "src/providers/theme-provider/use-theme"

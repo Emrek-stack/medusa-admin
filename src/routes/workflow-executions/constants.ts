@@ -1,5 +1,5 @@
 import { HttpTypes } from "@medusajs/types"
-import { TransactionState, TransactionStepState } from "./types"
+import { TransactionState, TransactionStepState } from "src/routes/workflow-executions/types"
 
 export const STEP_IN_PROGRESS_STATES: HttpTypes.TransactionStepState[] = [
   TransactionStepState.COMPENSATING,

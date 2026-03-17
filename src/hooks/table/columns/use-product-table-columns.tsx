@@ -4,23 +4,23 @@ import { useMemo } from "react"
 import {
   CollectionCell,
   CollectionHeader,
-} from "../../../components/table/table-cells/product/collection-cell/collection-cell"
+} from "src/components/table/table-cells/product/collection-cell/collection-cell"
 import {
   ProductCell,
   ProductHeader,
-} from "../../../components/table/table-cells/product/product-cell"
+} from "src/components/table/table-cells/product/product-cell"
 import {
   ProductStatusCell,
   ProductStatusHeader,
-} from "../../../components/table/table-cells/product/product-status-cell"
+} from "src/components/table/table-cells/product/product-status-cell"
 import {
   SalesChannelHeader,
   SalesChannelsCell,
-} from "../../../components/table/table-cells/product/sales-channels-cell"
+} from "src/components/table/table-cells/product/sales-channels-cell"
 import {
   VariantCell,
   VariantHeader,
-} from "../../../components/table/table-cells/product/variant-cell"
+} from "src/components/table/table-cells/product/variant-cell"
 import { HttpTypes } from "@medusajs/types"
 
 const columnHelper = createColumnHelper<HttpTypes.AdminProduct>()

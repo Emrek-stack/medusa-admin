@@ -18,24 +18,24 @@ import { useTranslation } from "react-i18next"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
+} from "src/components/modals"
 
-import { Form } from "../../../../../components/common/form"
-import { getStylizedAmount } from "../../../../../lib/money-amount-helpers"
-import { CreateExchangeSchemaType, ExchangeCreateSchema } from "./schema"
+import { Form } from "src/components/common/form"
+import { getStylizedAmount } from "src/lib/money-amount-helpers"
+import { CreateExchangeSchemaType, ExchangeCreateSchema } from "src/routes/orders/order-create-exchange/components/exchange-create-form/schema"
 
 import { AdminReturn } from "@medusajs/types"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form/keybound-form.tsx"
+import { KeyboundForm } from "src/components/utilities/keybound-form/keybound-form.tsx"
 import {
   useCancelExchangeRequest,
   useExchangeConfirmRequest,
   useUpdateExchangeInboundShipping,
   useUpdateExchangeOutboundShipping,
-} from "../../../../../hooks/api/exchanges"
-import { useUpdateOrderChange } from "../../../../../hooks/api/orders"
-import { currencies } from "../../../../../lib/data/currencies"
-import { ExchangeInboundSection } from "./exchange-inbound-section.tsx"
-import { ExchangeOutboundSection } from "./exchange-outbound-section"
+} from "src/hooks/api/exchanges"
+import { useUpdateOrderChange } from "src/hooks/api/orders"
+import { currencies } from "src/lib/data/currencies"
+import { ExchangeInboundSection } from "src/routes/orders/order-create-exchange/components/exchange-create-form/exchange-inbound-section.tsx"
+import { ExchangeOutboundSection } from "src/routes/orders/order-create-exchange/components/exchange-create-form/exchange-outbound-section"
 
 type ReturnCreateFormProps = {
   order: AdminOrder

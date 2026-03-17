@@ -6,7 +6,7 @@ import {
   Grid,
   GridCell,
   InternalColumnMeta,
-} from "../types"
+} from "src/components/data-grid/types"
 
 export class DataGridMatrix<TData, TFieldValues extends FieldValues> {
   private multiColumnSelection: boolean

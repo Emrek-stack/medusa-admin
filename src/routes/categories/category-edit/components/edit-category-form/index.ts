@@ -1,1 +1,1 @@
-export * from "./edit-category-form"
+export * from "src/routes/categories/category-edit/components/edit-category-form/edit-category-form"

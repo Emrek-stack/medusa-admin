@@ -1,1 +1,1 @@
-export { InventoryItemMetadata as Component } from "./inventory-metadata"
+export { InventoryItemMetadata as Component } from "src/routes/inventory/inventory-metadata/inventory-metadata"

@@ -1,1 +1,1 @@
-export * from "./variant-prices-section"
+export * from "src/routes/product-variants/product-variant-detail/components/variant-prices-section/variant-prices-section"

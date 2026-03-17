@@ -1,8 +1,8 @@
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { shippingOptionTypesQueryKeys } from "../../../hooks/api/shipping-option-types"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { shippingOptionTypesQueryKeys } from "src/hooks/api/shipping-option-types"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const shippingOptionTypeDetailQuery = (id: string) => ({
   queryKey: shippingOptionTypesQueryKeys.detail(id),

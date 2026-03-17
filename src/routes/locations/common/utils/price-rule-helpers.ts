@@ -1,5 +1,5 @@
-import { castNumber } from "../../../../lib/cast-number"
-import { ITEM_TOTAL_ATTRIBUTE } from "../constants"
+import { castNumber } from "src/lib/cast-number"
+import { ITEM_TOTAL_ATTRIBUTE } from "src/routes/locations/common/constants"
 
 const createPriceRule = (
   attribute: string,

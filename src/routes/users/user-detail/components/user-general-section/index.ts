@@ -1,1 +1,1 @@
-export * from "./user-general-section"
+export * from "src/routes/users/user-detail/components/user-general-section/user-general-section"

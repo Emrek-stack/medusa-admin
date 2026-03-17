@@ -5,22 +5,22 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { Form } from "../../../../../components/common/form"
-import { SwitchBox } from "../../../../../components/common/switch-box"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useUpdateShippingOptions } from "../../../../../hooks/api/shipping-options"
-import { useComboboxData } from "../../../../../hooks/use-combobox-data"
-import { sdk } from "../../../../../lib/client"
-import { pick } from "../../../../../lib/common"
-import { isOptionEnabledInStore } from "../../../../../lib/shipping-options"
+import { Form } from "src/components/common/form"
+import { SwitchBox } from "src/components/common/switch-box"
+import { Combobox } from "src/components/inputs/combobox"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useUpdateShippingOptions } from "src/hooks/api/shipping-options"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { sdk } from "src/lib/client"
+import { pick } from "src/lib/common"
+import { isOptionEnabledInStore } from "src/lib/shipping-options"
 import {
   FulfillmentSetType,
   ShippingOptionPriceType,
-} from "../../../common/constants"
-import { formatProvider } from "../../../../../lib/format-provider"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+} from "src/routes/locations/common/constants"
+import { formatProvider } from "src/lib/format-provider"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 type EditShippingOptionFormProps = {
   locationId: string

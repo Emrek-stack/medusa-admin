@@ -9,13 +9,13 @@ import { z } from "zod"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCreatePriceList } from "../../../../../hooks/api/price-lists"
-import { exctractPricesFromProducts } from "../../../common/utils"
-import { PriceListDetailsForm } from "./price-list-details-form"
-import { PriceListPricesForm } from "./price-list-prices-form"
-import { PriceListProductsForm } from "./price-list-products-form"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCreatePriceList } from "src/hooks/api/price-lists"
+import { exctractPricesFromProducts } from "src/routes/price-lists/common/utils"
+import { PriceListDetailsForm } from "src/routes/price-lists/price-list-create/components/price-list-create-form/price-list-details-form"
+import { PriceListPricesForm } from "src/routes/price-lists/price-list-create/components/price-list-create-form/price-list-prices-form"
+import { PriceListProductsForm } from "src/routes/price-lists/price-list-create/components/price-list-create-form/price-list-products-form"
 import {
   PricingCreateSchema,
   PricingCreateSchemaType,
@@ -24,8 +24,8 @@ import {
   PricingPricesFields,
   PricingProductsFields,
   PricingProductsSchema,
-} from "./schema"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+} from "src/routes/price-lists/price-list-create/components/price-list-create-form/schema"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 enum Tab {
   DETAIL = "detail",

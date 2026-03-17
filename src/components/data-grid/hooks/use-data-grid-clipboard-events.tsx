@@ -1,8 +1,8 @@
 import { useCallback } from "react"
 import { FieldValues, Path, PathValue } from "react-hook-form"
 
-import { DataGridBulkUpdateCommand, DataGridMatrix } from "../models"
-import { DataGridCoordinates } from "../types"
+import { DataGridBulkUpdateCommand, DataGridMatrix } from "src/components/data-grid/models"
+import { DataGridCoordinates } from "src/components/data-grid/types"
 
 type UseDataGridClipboardEventsOptions<
   TData,

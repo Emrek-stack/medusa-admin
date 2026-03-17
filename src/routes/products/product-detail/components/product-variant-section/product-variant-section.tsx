@@ -23,16 +23,16 @@ import { useTranslation } from "react-i18next"
 
 import { CellContext } from "@tanstack/react-table"
 import { useNavigate, useSearchParams } from "react-router-dom"
-import { DataTable } from "../../../../../components/data-table"
-import { useDataTableDateFilters } from "../../../../../components/data-table/helpers/general/use-data-table-date-filters"
+import { DataTable } from "src/components/data-table"
+import { useDataTableDateFilters } from "src/components/data-table/helpers/general/use-data-table-date-filters"
 import {
   useDeleteVariantLazy,
   useProductVariants,
-} from "../../../../../hooks/api/products"
-import { useQueryParams } from "../../../../../hooks/use-query-params"
-import { PRODUCT_VARIANT_IDS_KEY } from "../../../common/constants"
-import { Thumbnail } from "../../../../../components/common/thumbnail"
-import { useFeatureFlag } from "../../../../../providers/feature-flag-provider"
+} from "src/hooks/api/products"
+import { useQueryParams } from "src/hooks/use-query-params"
+import { PRODUCT_VARIANT_IDS_KEY } from "src/routes/products/common/constants"
+import { Thumbnail } from "src/components/common/thumbnail"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 type ProductVariantSectionProps = {
   product: HttpTypes.AdminProduct

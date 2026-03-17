@@ -1,1 +1,1 @@
-export * from "./badge-list-summary"
+export * from "src/components/common/badge-list-summary/badge-list-summary"

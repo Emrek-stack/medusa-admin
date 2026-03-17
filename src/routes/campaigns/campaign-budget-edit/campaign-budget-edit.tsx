@@ -1,9 +1,9 @@
 import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
-import { RouteDrawer } from "../../../components/modals"
-import { useCampaign } from "../../../hooks/api/campaigns"
-import { EditCampaignBudgetForm } from "./components/edit-campaign-budget-form"
+import { RouteDrawer } from "src/components/modals"
+import { useCampaign } from "src/hooks/api/campaigns"
+import { EditCampaignBudgetForm } from "src/routes/campaigns/campaign-budget-edit/components/edit-campaign-budget-form"
 
 export const CampaignBudgetEdit = () => {
   const { t } = useTranslation()

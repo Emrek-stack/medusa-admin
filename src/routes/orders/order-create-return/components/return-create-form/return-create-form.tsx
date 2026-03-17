@@ -26,11 +26,11 @@ import {
   StackedFocusModal,
   useRouteModal,
   useStackedModal,
-} from "../../../../../components/modals"
+} from "src/components/modals"
 
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
 import {
   useAddReturnItem,
   useAddReturnShipping,
@@ -41,16 +41,16 @@ import {
   useUpdateReturn,
   useUpdateReturnItem,
   useUpdateReturnShipping,
-} from "../../../../../hooks/api/returns"
-import { useShippingOptions } from "../../../../../hooks/api/shipping-options"
-import { useStockLocations } from "../../../../../hooks/api/stock-locations"
-import { sdk } from "../../../../../lib/client"
-import { currencies } from "../../../../../lib/data/currencies"
-import { getStylizedAmount } from "../../../../../lib/money-amount-helpers"
-import { ReturnShippingPlaceholder } from "../../../common/placeholders"
-import { AddReturnItemsTable } from "../add-return-items-table"
-import { ReturnItem } from "./return-item"
-import { ReturnCreateSchema, ReturnCreateSchemaType } from "./schema"
+} from "src/hooks/api/returns"
+import { useShippingOptions } from "src/hooks/api/shipping-options"
+import { useStockLocations } from "src/hooks/api/stock-locations"
+import { sdk } from "src/lib/client"
+import { currencies } from "src/lib/data/currencies"
+import { getStylizedAmount } from "src/lib/money-amount-helpers"
+import { ReturnShippingPlaceholder } from "src/routes/orders/common/placeholders"
+import { AddReturnItemsTable } from "src/routes/orders/order-create-return/components/add-return-items-table"
+import { ReturnItem } from "src/routes/orders/order-create-return/components/return-create-form/return-item"
+import { ReturnCreateSchema, ReturnCreateSchemaType } from "src/routes/orders/order-create-return/components/return-create-form/schema"
 
 type ReturnCreateFormProps = {
   order: AdminOrder

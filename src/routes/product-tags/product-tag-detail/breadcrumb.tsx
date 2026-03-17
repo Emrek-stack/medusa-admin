@@ -1,6 +1,6 @@
 import { HttpTypes } from "@medusajs/types"
 import { UIMatch } from "react-router-dom"
-import { useProductTag } from "../../../hooks/api"
+import { useProductTag } from "src/hooks/api"
 
 type ProductTagDetailBreadcrumbProps =
   UIMatch<HttpTypes.AdminProductTagResponse>

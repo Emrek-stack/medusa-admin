@@ -7,20 +7,20 @@ import { AdminOrder, InventoryItemDTO, OrderLineItemDTO } from "@medusajs/types"
 import { Alert, Button, Heading, Input, Select, toast } from "@medusajs/ui"
 import { useForm, useWatch } from "react-hook-form"
 
-import { Form } from "../../../../../components/common/form"
+import { Form } from "src/components/common/form"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { ordersQueryKeys } from "../../../../../hooks/api/orders"
-import { useCreateReservationItem } from "../../../../../hooks/api/reservations"
-import { useStockLocations } from "../../../../../hooks/api/stock-locations"
-import { queryClient } from "../../../../../lib/query-client"
-import { AllocateItemsSchema } from "./constants"
-import { OrderAllocateItemsItem } from "./order-allocate-items-item"
-import { checkInventoryKit } from "./utils"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { ordersQueryKeys } from "src/hooks/api/orders"
+import { useCreateReservationItem } from "src/hooks/api/reservations"
+import { useStockLocations } from "src/hooks/api/stock-locations"
+import { queryClient } from "src/lib/query-client"
+import { AllocateItemsSchema } from "src/routes/orders/order-allocate-items/components/order-create-fulfillment-form/constants"
+import { OrderAllocateItemsItem } from "src/routes/orders/order-allocate-items/components/order-create-fulfillment-form/order-allocate-items-item"
+import { checkInventoryKit } from "src/routes/orders/order-allocate-items/components/order-create-fulfillment-form/utils"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 type OrderAllocateItemsFormProps = {
   order: AdminOrder

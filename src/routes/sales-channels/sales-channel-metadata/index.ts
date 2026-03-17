@@ -1,1 +1,1 @@
-export { SalesChannelMetadata as Component } from "./sales-channel-metadata"
+export { SalesChannelMetadata as Component } from "src/routes/sales-channels/sales-channel-metadata/sales-channel-metadata"

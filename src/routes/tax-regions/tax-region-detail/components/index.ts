@@ -1,2 +1,2 @@
-export * from "./tax-region-general-detail"
-export * from "./tax-region-province-section"
+export * from "src/routes/tax-regions/tax-region-detail/components/tax-region-general-detail"
+export * from "src/routes/tax-regions/tax-region-detail/components/tax-region-province-section"

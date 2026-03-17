@@ -14,18 +14,18 @@ import {
 } from "@medusajs/ui"
 import { format } from "date-fns"
 import { Trans, useTranslation } from "react-i18next"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import DisplayId from "../../../../../components/common/display-id/display-id"
-import { useCapturePayment } from "../../../../../hooks/api"
-import { formatCurrency } from "../../../../../lib/format-currency"
+import { ActionMenu } from "src/components/common/action-menu"
+import DisplayId from "src/components/common/display-id/display-id"
+import { useCapturePayment } from "src/hooks/api"
+import { formatCurrency } from "src/lib/format-currency"
 import {
   getLocaleAmount,
   getStylizedAmount,
-} from "../../../../../lib/money-amount-helpers"
-import { getOrderPaymentStatus } from "../../../../../lib/order-helpers"
-import { getPaymentsFromOrder } from "../../../../../lib/orders"
-import { getTotalCaptured, getTotalPending } from "../../../../../lib/payment"
-import { getLoyaltyPlugin } from "../../../../../lib/plugins"
+} from "src/lib/money-amount-helpers"
+import { getOrderPaymentStatus } from "src/lib/order-helpers"
+import { getPaymentsFromOrder } from "src/lib/orders"
+import { getTotalCaptured, getTotalPending } from "src/lib/payment"
+import { getLoyaltyPlugin } from "src/lib/plugins"
 
 type OrderPaymentSectionProps = {
   order: HttpTypes.AdminOrder

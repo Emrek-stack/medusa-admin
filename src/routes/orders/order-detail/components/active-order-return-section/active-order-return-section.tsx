@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import { HttpTypes } from "@medusajs/types"
 import { useNavigate } from "react-router-dom"
-import { useCancelReturnRequest } from "../../../../../hooks/api/returns"
+import { useCancelReturnRequest } from "src/hooks/api/returns"
 
 type ActiveOrderReturnSectionProps = {
   orderPreview: HttpTypes.AdminOrderPreview

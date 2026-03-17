@@ -1,7 +1,7 @@
-import { RouteFocusModal } from "../../../components/modals/route-focus-modal"
-import { useStore } from "../../../hooks/api/store"
-import { currencies } from "../../../lib/data/currencies"
-import { CreateRegionForm } from "./components/create-region-form"
+import { RouteFocusModal } from "src/components/modals/route-focus-modal"
+import { useStore } from "src/hooks/api/store"
+import { currencies } from "src/lib/data/currencies"
+import { CreateRegionForm } from "src/routes/regions/region-create/components/create-region-form"
 
 export const RegionCreate = () => {
   const { store, isPending: isLoading, isError, error } = useStore()

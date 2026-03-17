@@ -7,11 +7,11 @@ import {
   useQuery,
   UseQueryOptions,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { ordersQueryKeys } from "./orders"
-import { returnsQueryKeys } from "./returns"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { ordersQueryKeys } from "src/hooks/api/orders"
+import { returnsQueryKeys } from "src/hooks/api/returns"
 
 const EXCHANGES_QUERY_KEY = "exchanges" as const
 export const exchangesQueryKeys = queryKeysFactory(EXCHANGES_QUERY_KEY)

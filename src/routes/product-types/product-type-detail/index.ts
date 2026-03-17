@@ -1,3 +1,3 @@
-export { ProductTypeDetailBreadcrumb as Breadcrumb } from "./breadcrumb"
-export { productTypeLoader as loader } from "./loader"
-export { ProductTypeDetail as Component } from "./product-type-detail"
+export { ProductTypeDetailBreadcrumb as Breadcrumb } from "src/routes/product-types/product-type-detail/breadcrumb"
+export { productTypeLoader as loader } from "src/routes/product-types/product-type-detail/loader"
+export { ProductTypeDetail as Component } from "src/routes/product-types/product-type-detail/product-type-detail"

@@ -14,15 +14,15 @@ import { HttpTypes } from "@medusajs/types"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useAddCustomersToGroup } from "../../../../../hooks/api/customer-groups"
-import { useCustomers } from "../../../../../hooks/api/customers"
-import { useCustomerTableColumns } from "../../../../../hooks/table/columns/use-customer-table-columns"
-import { useCustomerTableFilters } from "../../../../../hooks/table/filters/use-customer-table-filters"
-import { useCustomerTableQuery } from "../../../../../hooks/table/query/use-customer-table-query"
-import { useDataTable } from "../../../../../hooks/use-data-table"
+} from "src/components/modals"
+import { _DataTable } from "src/components/table/data-table"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useAddCustomersToGroup } from "src/hooks/api/customer-groups"
+import { useCustomers } from "src/hooks/api/customers"
+import { useCustomerTableColumns } from "src/hooks/table/columns/use-customer-table-columns"
+import { useCustomerTableFilters } from "src/hooks/table/filters/use-customer-table-filters"
+import { useCustomerTableQuery } from "src/hooks/table/query/use-customer-table-query"
+import { useDataTable } from "src/hooks/use-data-table"
 
 type AddCustomersFormProps = {
   customerGroupId: string

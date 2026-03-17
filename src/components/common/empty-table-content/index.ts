@@ -1,1 +1,1 @@
-export * from "./empty-table-content"
+export * from "src/components/common/empty-table-content/empty-table-content"

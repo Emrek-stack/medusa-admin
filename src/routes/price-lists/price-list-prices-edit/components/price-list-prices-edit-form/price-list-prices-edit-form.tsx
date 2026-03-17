@@ -6,20 +6,20 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
 
-import { DataGrid } from "../../../../../components/data-grid"
+import { DataGrid } from "src/components/data-grid"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useBatchPriceListPrices } from "../../../../../hooks/api/price-lists"
-import { castNumber } from "../../../../../lib/cast-number"
-import { usePriceListGridColumns } from "../../../common/hooks/use-price-list-grid-columns"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useBatchPriceListPrices } from "src/hooks/api/price-lists"
+import { castNumber } from "src/lib/cast-number"
+import { usePriceListGridColumns } from "src/routes/price-lists/common/hooks/use-price-list-grid-columns"
 import {
   PriceListUpdateProductVariantsSchema,
   PriceListUpdateProductsSchema,
-} from "../../../common/schemas"
-import { isProductRow } from "../../../common/utils"
+} from "src/routes/price-lists/common/schemas"
+import { isProductRow } from "src/routes/price-lists/common/utils"
 
 type PriceListPricesEditFormProps = {
   priceList: HttpTypes.AdminPriceList

@@ -2,9 +2,9 @@ import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { json, useParams } from "react-router-dom"
 
-import { RouteDrawer } from "../../../components/modals"
-import { VariantsTableForm } from "./components/variants-table-form/variants-table-form"
-import { useProduct } from "../../../hooks/api"
+import { RouteDrawer } from "src/components/modals"
+import { VariantsTableForm } from "src/routes/products/product-image-variants-edit/components/variants-table-form/variants-table-form"
+import { useProduct } from "src/hooks/api"
 
 type VariantImagesPartial = {
   id: string

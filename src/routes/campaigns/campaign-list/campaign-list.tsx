@@ -1,6 +1,6 @@
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
-import { CampaignListTable } from "./components/campaign-list-table"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
+import { CampaignListTable } from "src/routes/campaigns/campaign-list/components/campaign-list-table"
 
 export const CampaignList = () => {
   const { getWidgets } = useExtension()

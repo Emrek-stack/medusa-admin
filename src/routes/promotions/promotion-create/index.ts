@@ -1,1 +1,1 @@
-export { PromotionCreate as Component } from "./promotion-create"
+export { PromotionCreate as Component } from "src/routes/promotions/promotion-create/promotion-create"

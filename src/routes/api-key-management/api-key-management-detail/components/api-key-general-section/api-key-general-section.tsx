@@ -15,20 +15,20 @@ import { useNavigate } from "react-router-dom"
 import {
   Action,
   ActionMenu,
-} from "../../../../../components/common/action-menu"
-import { Skeleton } from "../../../../../components/common/skeleton"
-import { UserLink } from "../../../../../components/common/user-link"
+} from "src/components/common/action-menu"
+import { Skeleton } from "src/components/common/skeleton"
+import { UserLink } from "src/components/common/user-link"
 import {
   useDeleteApiKey,
   useRevokeApiKey,
-} from "../../../../../hooks/api/api-keys"
-import { useUser } from "../../../../../hooks/api/users"
-import { useDate } from "../../../../../hooks/use-date"
+} from "src/hooks/api/api-keys"
+import { useUser } from "src/hooks/api/users"
+import { useDate } from "src/hooks/use-date"
 import {
   getApiKeyStatusProps,
   getApiKeyTypeProps,
   prettifyRedactedToken,
-} from "../../../common/utils"
+} from "src/routes/api-key-management/common/utils"
 
 type ApiKeyGeneralSectionProps = {
   apiKey: ApiKeyDTO

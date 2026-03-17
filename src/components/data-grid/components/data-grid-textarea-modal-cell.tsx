@@ -3,11 +3,11 @@ import { Popover as RadixPopover } from "radix-ui"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { Controller, ControllerRenderProps } from "react-hook-form"
 
-import { useCombinedRefs } from "../../../hooks/use-combined-refs"
-import { useDataGridCell, useDataGridCellError } from "../hooks"
-import { useDataGridContext } from "../context"
-import { DataGridCellProps, InputProps, DataGridCellContext } from "../types"
-import { DataGridCellContainer } from "./data-grid-cell-container"
+import { useCombinedRefs } from "src/hooks/use-combined-refs"
+import { useDataGridCell, useDataGridCellError } from "src/components/data-grid/hooks"
+import { useDataGridContext } from "src/components/data-grid/context"
+import { DataGridCellProps, InputProps, DataGridCellContext } from "src/components/data-grid/types"
+import { DataGridCellContainer } from "src/components/data-grid/components/data-grid-cell-container"
 
 type DataGridExpandableTextCellProps<TData, TValue = any> = DataGridCellProps<
   TData,

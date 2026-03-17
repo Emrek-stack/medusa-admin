@@ -1,1 +1,1 @@
-export { Invite as Component } from "./invite"
+export { Invite as Component } from "src/routes/invite/invite"

@@ -7,19 +7,19 @@ import { useTranslation } from "react-i18next"
 import { Link, Outlet, useLoaderData, useLocation } from "react-router-dom"
 
 import { HttpTypes } from "@medusajs/types"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { _DataTable } from "../../../../../components/table/data-table"
+import { ActionMenu } from "src/components/common/action-menu"
+import { _DataTable } from "src/components/table/data-table"
 import {
   useDeleteProduct,
   useProducts,
-} from "../../../../../hooks/api/products"
-import { useProductTableColumns } from "../../../../../hooks/table/columns/use-product-table-columns"
-import { useProductTableFilters } from "../../../../../hooks/table/filters/use-product-table-filters"
-import { useProductTableQuery } from "../../../../../hooks/table/query/use-product-table-query"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { productsLoader } from "../../loader"
-import { useFeatureFlag } from "../../../../../providers/feature-flag-provider"
-import { ConfigurableProductListTable } from "./configurable-product-list-table"
+} from "src/hooks/api/products"
+import { useProductTableColumns } from "src/hooks/table/columns/use-product-table-columns"
+import { useProductTableFilters } from "src/hooks/table/filters/use-product-table-filters"
+import { useProductTableQuery } from "src/hooks/table/query/use-product-table-query"
+import { useDataTable } from "src/hooks/use-data-table"
+import { productsLoader } from "src/routes/products/product-list/loader"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
+import { ConfigurableProductListTable } from "src/routes/products/product-list/components/product-list-table/configurable-product-list-table"
 
 const PAGE_SIZE = 20
 

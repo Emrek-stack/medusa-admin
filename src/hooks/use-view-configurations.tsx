@@ -1,7 +1,7 @@
 import { useMemo } from "react"
 import { toast } from "@medusajs/ui"
 import { FetchError } from "@medusajs/js-sdk"
-import { useFeatureFlag } from "../providers/feature-flag-provider"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 import {
   useViewConfigurations as useViewConfigurationsBase,
   useActiveViewConfiguration as useActiveViewConfigurationBase,
@@ -9,7 +9,7 @@ import {
   useUpdateViewConfiguration as useUpdateViewConfigurationBase,
   useDeleteViewConfiguration as useDeleteViewConfigurationBase,
   useSetActiveViewConfiguration as useSetActiveViewConfigurationBase,
-} from "./api/views"
+} from "src/hooks/api/views"
 
 // Common error handler
 const handleError = (error: Error, message?: string) => {

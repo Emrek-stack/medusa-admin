@@ -1,6 +1,6 @@
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
-import { ReservationListTable } from "./components/reservation-list-table"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
+import { ReservationListTable } from "src/routes/reservations/reservation-list/components/reservation-list-table"
 
 export const ReservationList = () => {
   const { getWidgets } = useExtension()

@@ -1,6 +1,6 @@
 import { HttpTypes } from "@medusajs/types"
 import { UIMatch } from "react-router-dom"
-import { usePromotion } from "../../../hooks/api"
+import { usePromotion } from "src/hooks/api"
 
 type PromotionDetailBreadcrumbProps = UIMatch<HttpTypes.AdminPromotionResponse>
 

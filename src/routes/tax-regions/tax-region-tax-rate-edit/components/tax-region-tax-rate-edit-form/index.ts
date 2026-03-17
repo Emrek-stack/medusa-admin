@@ -1,1 +1,1 @@
-export * from "./tax-region-tax-rate-edit-form"
+export * from "src/routes/tax-regions/tax-region-tax-rate-edit/components/tax-region-tax-rate-edit-form/tax-region-tax-rate-edit-form"

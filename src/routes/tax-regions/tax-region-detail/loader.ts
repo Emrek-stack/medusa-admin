@@ -1,7 +1,7 @@
 import { LoaderFunctionArgs } from "react-router-dom"
-import { taxRegionsQueryKeys } from "../../../hooks/api/tax-regions"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { taxRegionsQueryKeys } from "src/hooks/api/tax-regions"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const taxRegionDetailQuery = (id: string) => ({
   queryKey: taxRegionsQueryKeys.detail(id),

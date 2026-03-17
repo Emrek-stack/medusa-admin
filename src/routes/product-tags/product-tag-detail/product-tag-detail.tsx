@@ -1,12 +1,12 @@
 import { useLoaderData, useParams } from "react-router-dom"
 
-import { SingleColumnPageSkeleton } from "../../../components/common/skeleton"
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useProductTag } from "../../../hooks/api"
-import { useExtension } from "../../../providers/extension-provider"
-import { ProductTagGeneralSection } from "./components/product-tag-general-section"
-import { ProductTagProductSection } from "./components/product-tag-product-section"
-import { productTagLoader } from "./loader"
+import { SingleColumnPageSkeleton } from "src/components/common/skeleton"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useProductTag } from "src/hooks/api"
+import { useExtension } from "src/providers/extension-provider"
+import { ProductTagGeneralSection } from "src/routes/product-tags/product-tag-detail/components/product-tag-general-section"
+import { ProductTagProductSection } from "src/routes/product-tags/product-tag-detail/components/product-tag-product-section"
+import { productTagLoader } from "src/routes/product-tags/product-tag-detail/loader"
 
 export const ProductTagDetail = () => {
   const { id } = useParams()

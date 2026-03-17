@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next"
 import {
   DataGrid,
   createDataGridHelper,
-} from "../../../../../components/data-grid"
-import { useRouteModal } from "../../../../../components/modals"
-import { CreateInventoryItemSchema } from "./schema"
+} from "src/components/data-grid"
+import { useRouteModal } from "src/components/modals"
+import { CreateInventoryItemSchema } from "src/routes/inventory/inventory-create/components/inventory-create-form/schema"
 
 type InventoryAvailabilityFormProps = {
   form: UseFormReturn<CreateInventoryItemSchema>

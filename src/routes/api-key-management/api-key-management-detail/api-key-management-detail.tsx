@@ -1,13 +1,13 @@
 import { useLoaderData, useParams } from "react-router-dom"
 
-import { SingleColumnPageSkeleton } from "../../../components/common/skeleton"
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useApiKey } from "../../../hooks/api/api-keys"
-import { useExtension } from "../../../providers/extension-provider"
-import { ApiKeyType } from "../common/constants"
-import { ApiKeyGeneralSection } from "./components/api-key-general-section"
-import { ApiKeySalesChannelSection } from "./components/api-key-sales-channel-section"
-import { apiKeyLoader } from "./loader"
+import { SingleColumnPageSkeleton } from "src/components/common/skeleton"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useApiKey } from "src/hooks/api/api-keys"
+import { useExtension } from "src/providers/extension-provider"
+import { ApiKeyType } from "src/routes/api-key-management/common/constants"
+import { ApiKeyGeneralSection } from "src/routes/api-key-management/api-key-management-detail/components/api-key-general-section"
+import { ApiKeySalesChannelSection } from "src/routes/api-key-management/api-key-management-detail/components/api-key-sales-channel-section"
+import { apiKeyLoader } from "src/routes/api-key-management/api-key-management-detail/loader"
 
 export const ApiKeyManagementDetail = () => {
   const initialData = useLoaderData() as Awaited<

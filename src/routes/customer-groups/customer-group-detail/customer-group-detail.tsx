@@ -1,14 +1,14 @@
 import { useLoaderData, useParams } from "react-router-dom"
 
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useCustomerGroup } from "../../../hooks/api/customer-groups"
-import { CustomerGroupCustomerSection } from "./components/customer-group-customer-section"
-import { CustomerGroupGeneralSection } from "./components/customer-group-general-section"
-import { customerGroupLoader } from "./loader"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useCustomerGroup } from "src/hooks/api/customer-groups"
+import { CustomerGroupCustomerSection } from "src/routes/customer-groups/customer-group-detail/components/customer-group-customer-section"
+import { CustomerGroupGeneralSection } from "src/routes/customer-groups/customer-group-detail/components/customer-group-general-section"
+import { customerGroupLoader } from "src/routes/customer-groups/customer-group-detail/loader"
 
-import { SingleColumnPageSkeleton } from "../../../components/common/skeleton"
-import { useExtension } from "../../../providers/extension-provider"
-import { CUSTOMER_GROUP_DETAIL_FIELDS } from "./constants"
+import { SingleColumnPageSkeleton } from "src/components/common/skeleton"
+import { useExtension } from "src/providers/extension-provider"
+import { CUSTOMER_GROUP_DETAIL_FIELDS } from "src/routes/customer-groups/customer-group-detail/constants"
 
 export const CustomerGroupDetail = () => {
   const initialData = useLoaderData() as Awaited<

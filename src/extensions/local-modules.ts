@@ -6,7 +6,7 @@ import {
   MenuItemModule,
   RouteModule,
   WidgetModule,
-} from "../dashboard-app/types"
+} from "src/dashboard-app/types"
 
 export const formModule: FormModule = {
   customFields: {},

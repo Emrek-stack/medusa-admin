@@ -1,7 +1,7 @@
-import { RouteFocusModal } from "../../../components/modals"
-import { usePricePreferences } from "../../../hooks/api/price-preferences"
-import { useStore } from "../../../hooks/api/store"
-import { AddCurrenciesForm } from "./components/add-currencies-form/add-currencies-form"
+import { RouteFocusModal } from "src/components/modals"
+import { usePricePreferences } from "src/hooks/api/price-preferences"
+import { useStore } from "src/hooks/api/store"
+import { AddCurrenciesForm } from "src/routes/store/store-add-currencies/components/add-currencies-form/add-currencies-form"
 
 export const StoreAddCurrencies = () => {
   const { store, isPending, isError, error } = useStore()

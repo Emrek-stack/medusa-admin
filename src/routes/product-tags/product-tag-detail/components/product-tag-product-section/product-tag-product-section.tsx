@@ -1,12 +1,12 @@
 import { HttpTypes } from "@medusajs/types"
 import { Container, Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useProducts } from "../../../../../hooks/api"
-import { useProductTableColumns } from "../../../../../hooks/table/columns"
-import { useProductTableFilters } from "../../../../../hooks/table/filters"
-import { useProductTableQuery } from "../../../../../hooks/table/query"
-import { useDataTable } from "../../../../../hooks/use-data-table"
+import { _DataTable } from "src/components/table/data-table"
+import { useProducts } from "src/hooks/api"
+import { useProductTableColumns } from "src/hooks/table/columns"
+import { useProductTableFilters } from "src/hooks/table/filters"
+import { useProductTableQuery } from "src/hooks/table/query"
+import { useDataTable } from "src/hooks/use-data-table"
 
 type ProductTagProductSectionProps = {
   productTag: HttpTypes.AdminProductTag

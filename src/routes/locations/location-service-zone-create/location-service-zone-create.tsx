@@ -1,9 +1,9 @@
 import { json, useParams } from "react-router-dom"
 
-import { RouteFocusModal } from "../../../components/modals"
-import { useStockLocation } from "../../../hooks/api/stock-locations"
-import { CreateServiceZoneForm } from "./components/create-service-zone-form"
-import { FulfillmentSetType } from "../common/constants"
+import { RouteFocusModal } from "src/components/modals"
+import { useStockLocation } from "src/hooks/api/stock-locations"
+import { CreateServiceZoneForm } from "src/routes/locations/location-service-zone-create/components/create-service-zone-form"
+import { FulfillmentSetType } from "src/routes/locations/common/constants"
 
 export function LocationCreateServiceZone() {
   const { fset_id, location_id } = useParams()

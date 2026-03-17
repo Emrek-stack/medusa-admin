@@ -1,7 +1,7 @@
 import { I18nProvider as Provider } from "@medusajs/ui"
 import { PropsWithChildren, useEffect } from "react"
 import { useTranslation } from "react-i18next"
-import { languages } from "../../i18n/languages"
+import { languages } from "src/i18n/languages"
 
 type I18nProviderProps = PropsWithChildren
 

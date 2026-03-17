@@ -1,9 +1,9 @@
 import { PropsWithChildren } from "react"
 
 import { clx } from "@medusajs/ui"
-import { useDataGridCellError } from "../hooks"
-import { DataGridCellProps } from "../types"
-import { DataGridRowErrorIndicator } from "./data-grid-row-error-indicator"
+import { useDataGridCellError } from "src/components/data-grid/hooks"
+import { DataGridCellProps } from "src/components/data-grid/types"
+import { DataGridRowErrorIndicator } from "src/components/data-grid/components/data-grid-row-error-indicator"
 
 type DataGridReadonlyCellProps<TData, TValue = any> = PropsWithChildren<
   DataGridCellProps<TData, TValue>

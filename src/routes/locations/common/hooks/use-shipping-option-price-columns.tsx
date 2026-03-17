@@ -4,13 +4,13 @@ import { TFunction } from "i18next"
 import { useMemo } from "react"
 import { FieldPath, FieldValues } from "react-hook-form"
 import { useTranslation } from "react-i18next"
-import { IncludesTaxTooltip } from "../../../../components/common/tax-badge/tax-badge"
+import { IncludesTaxTooltip } from "src/components/common/tax-badge/tax-badge"
 import {
   createDataGridHelper,
   DataGrid,
-} from "../../../../components/data-grid"
-import { FieldContext } from "../../../../components/data-grid/types"
-import { ShippingOptionPriceCell } from "../components/shipping-option-price-cell"
+} from "src/components/data-grid"
+import { FieldContext } from "src/components/data-grid/types"
+import { ShippingOptionPriceCell } from "src/routes/locations/common/components/shipping-option-price-cell"
 
 const columnHelper = createDataGridHelper()
 

@@ -1,7 +1,7 @@
 import { Heading, Text } from "@medusajs/ui"
-import { DataTableFilter } from "../../../../components/table/data-table/data-table-filter"
+import { DataTableFilter } from "src/components/table/data-table/data-table-filter"
 import { useTranslation } from "react-i18next"
-import { useProductTableFilters } from "../../../../hooks/table/filters"
+import { useProductTableFilters } from "src/hooks/table/filters"
 
 export const ExportFilters = () => {
   const { t } = useTranslation()

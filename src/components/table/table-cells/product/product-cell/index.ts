@@ -1,1 +1,1 @@
-export * from "./product-cell"
+export * from "src/components/table/table-cells/product/product-cell/product-cell"

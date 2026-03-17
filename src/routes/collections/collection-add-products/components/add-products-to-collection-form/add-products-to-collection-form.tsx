@@ -14,15 +14,15 @@ import * as zod from "zod"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals/index.ts"
-import { _DataTable } from "../../../../../components/table/data-table/data-table.tsx"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form/keybound-form.tsx"
-import { useUpdateCollectionProducts } from "../../../../../hooks/api/collections.tsx"
-import { useProducts } from "../../../../../hooks/api/products.tsx"
-import { useProductTableColumns } from "../../../../../hooks/table/columns/use-product-table-columns.tsx"
-import { useProductTableFilters } from "../../../../../hooks/table/filters/use-product-table-filters.tsx"
-import { useProductTableQuery } from "../../../../../hooks/table/query/use-product-table-query.tsx"
-import { useDataTable } from "../../../../../hooks/use-data-table.tsx"
+} from "src/components/modals/index.ts"
+import { _DataTable } from "src/components/table/data-table/data-table.tsx"
+import { KeyboundForm } from "src/components/utilities/keybound-form/keybound-form.tsx"
+import { useUpdateCollectionProducts } from "src/hooks/api/collections.tsx"
+import { useProducts } from "src/hooks/api/products.tsx"
+import { useProductTableColumns } from "src/hooks/table/columns/use-product-table-columns.tsx"
+import { useProductTableFilters } from "src/hooks/table/filters/use-product-table-filters.tsx"
+import { useProductTableQuery } from "src/hooks/table/query/use-product-table-query.tsx"
+import { useDataTable } from "src/hooks/use-data-table.tsx"
 
 type AddProductsToCollectionFormProps = {
   collection: HttpTypes.AdminCollection

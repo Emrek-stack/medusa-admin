@@ -2,8 +2,8 @@ import type { Column, Table } from "@tanstack/react-table"
 import { useCallback } from "react"
 import type { FieldValues } from "react-hook-form"
 
-import { DataGridMatrix } from "../models"
-import { GridColumnOption } from "../types"
+import { DataGridMatrix } from "src/components/data-grid/models"
+import { GridColumnOption } from "src/components/data-grid/types"
 
 export function useDataGridColumnVisibility<
   TData,

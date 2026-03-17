@@ -3,14 +3,14 @@ import { z } from "zod"
 import { useFieldArray, UseFormReturn } from "react-hook-form"
 import { Button, Heading, IconButton, Input, Label } from "@medusajs/ui"
 
-import { CreateProductVariantSchema } from "./constants"
+import { CreateProductVariantSchema } from "src/routes/products/product-create-variant/components/create-product-variant-form/constants"
 import { XMarkMini } from "@medusajs/icons"
 import { useTranslation } from "react-i18next"
 
-import { useComboboxData } from "../../../../../hooks/use-combobox-data"
-import { sdk } from "../../../../../lib/client"
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { sdk } from "src/lib/client"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
 
 type InventoryKitTabProps = {
   form: UseFormReturn<z.infer<typeof CreateProductVariantSchema>>

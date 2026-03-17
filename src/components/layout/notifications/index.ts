@@ -1,1 +1,1 @@
-export * from "./notifications"
+export * from "src/components/layout/notifications/notifications"

@@ -1,13 +1,13 @@
 import { useLoaderData, useParams } from "react-router-dom"
 
-import { TwoColumnPageSkeleton } from "../../../components/common/skeleton"
-import { TwoColumnPage } from "../../../components/layout/pages"
-import { usePromotion, usePromotionRules } from "../../../hooks/api/promotions"
-import { useExtension } from "../../../providers/extension-provider"
-import { CampaignSection } from "./components/campaign-section"
-import { PromotionConditionsSection } from "./components/promotion-conditions-section"
-import { PromotionGeneralSection } from "./components/promotion-general-section"
-import { promotionLoader } from "./loader"
+import { TwoColumnPageSkeleton } from "src/components/common/skeleton"
+import { TwoColumnPage } from "src/components/layout/pages"
+import { usePromotion, usePromotionRules } from "src/hooks/api/promotions"
+import { useExtension } from "src/providers/extension-provider"
+import { CampaignSection } from "src/routes/promotions/promotion-detail/components/campaign-section"
+import { PromotionConditionsSection } from "src/routes/promotions/promotion-detail/components/promotion-conditions-section"
+import { PromotionGeneralSection } from "src/routes/promotions/promotion-detail/components/promotion-general-section"
+import { promotionLoader } from "src/routes/promotions/promotion-detail/loader"
 
 export const PromotionDetail = () => {
   const initialData = useLoaderData() as Awaited<

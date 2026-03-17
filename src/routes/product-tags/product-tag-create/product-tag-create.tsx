@@ -1,5 +1,5 @@
-import { RouteFocusModal } from "../../../components/modals"
-import { ProductTagCreateForm } from "./components/product-tag-create-form"
+import { RouteFocusModal } from "src/components/modals"
+import { ProductTagCreateForm } from "src/routes/product-tags/product-tag-create/components/product-tag-create-form"
 
 export const ProductTagCreate = () => {
   return (

@@ -1,10 +1,10 @@
 import { HttpTypes } from "@medusajs/types"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
-import { createDataGridHelper } from "../../../../components/data-grid"
-import { DataGridReadOnlyCell } from "../../../../components/data-grid/components"
-import { DataGridTogglableNumberCell } from "../../../../components/data-grid/components/data-grid-toggleable-number-cell"
-import { InventoryStockSchema } from "../schema"
+import { createDataGridHelper } from "src/components/data-grid"
+import { DataGridReadOnlyCell } from "src/components/data-grid/components"
+import { DataGridTogglableNumberCell } from "src/components/data-grid/components/data-grid-toggleable-number-cell"
+import { InventoryStockSchema } from "src/routes/inventory/inventory-stock/schema"
 
 const helper = createDataGridHelper<
   HttpTypes.AdminInventoryItem,

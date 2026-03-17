@@ -29,10 +29,10 @@ import { IconButton, Text } from "@medusajs/ui"
 import { useState } from "react"
 import { useFieldArray, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
-import { ActionMenu } from "../../../../../../../components/common/action-menu"
-import { formatFileSize } from "../../../../../../../lib/format-file-size"
-import { UploadMediaFormItem } from "../../../../../common/components/upload-media-form-item"
-import { ProductCreateSchemaType } from "../../../../types"
+import { ActionMenu } from "src/components/common/action-menu"
+import { formatFileSize } from "src/lib/format-file-size"
+import { UploadMediaFormItem } from "src/routes/products/common/components/upload-media-form-item"
+import { ProductCreateSchemaType } from "src/routes/products/product-create/types"
 
 type ProductCreateMediaSectionProps = {
   form: UseFormReturn<ProductCreateSchemaType>

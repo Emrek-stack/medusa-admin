@@ -1,7 +1,7 @@
 import { HttpTypes } from "@medusajs/types"
 import { UIMatch } from "react-router-dom"
 
-import { useShippingOptionType } from "../../../hooks/api"
+import { useShippingOptionType } from "src/hooks/api"
 
 type ShippingOptionTypeDetailBreadcrumbProps =
   UIMatch<HttpTypes.AdminShippingOptionTypeResponse>

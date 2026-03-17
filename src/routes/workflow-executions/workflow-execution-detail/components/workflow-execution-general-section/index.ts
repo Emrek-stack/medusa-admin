@@ -1,1 +1,1 @@
-export * from "./workflow-execution-general-section"
+export * from "src/routes/workflow-executions/workflow-execution-detail/components/workflow-execution-general-section/workflow-execution-general-section"

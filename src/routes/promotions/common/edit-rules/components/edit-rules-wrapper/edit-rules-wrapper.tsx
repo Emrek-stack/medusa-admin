@@ -5,16 +5,16 @@ import {
   PromotionRuleOperatorValues,
   PromotionRuleResponse,
 } from "@medusajs/types"
-import { useRouteModal } from "../../../../../../components/modals"
+import { useRouteModal } from "src/components/modals"
 import {
   usePromotionAddRules,
   usePromotionRemoveRules,
   usePromotionUpdateRules,
   useUpdatePromotion,
-} from "../../../../../../hooks/api/promotions"
-import { RuleTypeValues } from "../../edit-rules"
-import { EditRulesForm } from "../edit-rules-form"
-import { getRuleValue } from "./utils"
+} from "src/hooks/api/promotions"
+import { RuleTypeValues } from "src/routes/promotions/common/edit-rules/edit-rules"
+import { EditRulesForm } from "src/routes/promotions/common/edit-rules/components/edit-rules-form"
+import { getRuleValue } from "src/routes/promotions/common/edit-rules/components/edit-rules-wrapper/utils"
 
 type EditPromotionFormProps = {
   promotion: PromotionDTO

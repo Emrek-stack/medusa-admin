@@ -1,9 +1,9 @@
 import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
-import { RouteDrawer } from "../../../components/modals"
-import { useProduct } from "../../../hooks/api/products"
-import { CreateProductOptionForm } from "./components/create-product-option-form"
+import { RouteDrawer } from "src/components/modals"
+import { useProduct } from "src/hooks/api/products"
+import { CreateProductOptionForm } from "src/routes/products/product-create-option/components/create-product-option-form"
 
 export const ProductCreateOption = () => {
   const { id } = useParams()

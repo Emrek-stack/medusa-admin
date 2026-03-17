@@ -1,1 +1,1 @@
-export * from "./edit-campaign-budget-form"
+export * from "src/routes/campaigns/campaign-budget-edit/components/edit-campaign-budget-form/edit-campaign-budget-form"

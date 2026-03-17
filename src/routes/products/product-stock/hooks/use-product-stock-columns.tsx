@@ -4,13 +4,13 @@ import { Switch, Tooltip } from "@medusajs/ui"
 import { useCallback, useMemo } from "react"
 
 import { useTranslation } from "react-i18next"
-import { Thumbnail } from "../../../../components/common/thumbnail"
-import { createDataGridHelper } from "../../../../components/data-grid"
-import { DataGridReadOnlyCell } from "../../../../components/data-grid/components"
-import { DataGridDuplicateCell } from "../../../../components/data-grid/components/data-grid-duplicate-cell"
-import { DataGridTogglableNumberCell } from "../../../../components/data-grid/components/data-grid-toggleable-number-cell"
-import { ProductStockSchema } from "../schema"
-import { isProductVariant } from "../utils"
+import { Thumbnail } from "src/components/common/thumbnail"
+import { createDataGridHelper } from "src/components/data-grid"
+import { DataGridReadOnlyCell } from "src/components/data-grid/components"
+import { DataGridDuplicateCell } from "src/components/data-grid/components/data-grid-duplicate-cell"
+import { DataGridTogglableNumberCell } from "src/components/data-grid/components/data-grid-toggleable-number-cell"
+import { ProductStockSchema } from "src/routes/products/product-stock/schema"
+import { isProductVariant } from "src/routes/products/product-stock/utils"
 
 const helper = createDataGridHelper<
   | HttpTypes.AdminProductVariant

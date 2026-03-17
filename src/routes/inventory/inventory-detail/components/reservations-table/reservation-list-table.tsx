@@ -1,15 +1,15 @@
 import { HttpTypes } from "@medusajs/types"
 import { useMemo } from "react"
 
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useStockLocations } from "../../../../../hooks/api"
-import { useReservationItems } from "../../../../../hooks/api/reservations"
-import { useDataTable } from "../../../../../hooks/use-data-table"
+import { _DataTable } from "src/components/table/data-table"
+import { useStockLocations } from "src/hooks/api"
+import { useReservationItems } from "src/hooks/api/reservations"
+import { useDataTable } from "src/hooks/use-data-table"
 import {
   ExtendedReservationItem,
   useReservationTableColumn,
-} from "./use-reservation-list-table-columns"
-import { useReservationsTableQuery } from "./use-reservation-list-table-query"
+} from "src/routes/inventory/inventory-detail/components/reservations-table/use-reservation-list-table-columns"
+import { useReservationsTableQuery } from "src/routes/inventory/inventory-detail/components/reservations-table/use-reservation-list-table-query"
 
 const PAGE_SIZE = 20
 

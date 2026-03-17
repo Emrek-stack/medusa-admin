@@ -3,7 +3,7 @@ import { ChangeEvent, useCallback, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
 import debounce from "lodash.debounce"
-import { useSelectedParams } from "../hooks"
+import { useSelectedParams } from "src/components/table/data-table/hooks"
 
 type DataTableSearchProps = {
   placeholder?: string

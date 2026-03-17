@@ -34,17 +34,17 @@ import {
 } from "@medusajs/icons"
 import { matchSorter } from "match-sorter"
 
-import { useSearch } from "../../providers/search-provider"
-import { Skeleton } from "../common/skeleton"
-import { Thumbnail } from "../common/thumbnail"
+import { useSearch } from "src/providers/search-provider"
+import { Skeleton } from "src/components/common/skeleton"
+import { Thumbnail } from "src/components/common/thumbnail"
 import {
   DEFAULT_SEARCH_LIMIT,
   SEARCH_AREAS,
   SEARCH_LIMIT_INCREMENT,
-} from "./constants"
-import { SearchArea } from "./types"
-import { useSearchResults } from "./use-search-results"
-import { useDocumentDirection } from "../../hooks/use-document-direction"
+} from "src/components/search/constants"
+import { SearchArea } from "src/components/search/types"
+import { useSearchResults } from "src/components/search/use-search-results"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 export const Search = () => {
   const [area, setArea] = useState<SearchArea>("all")

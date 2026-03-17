@@ -1,9 +1,9 @@
 import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
-import { RouteDrawer } from "../../../components/modals"
-import { useRefundReason } from "../../../hooks/api/refund-reasons"
-import { RefundReasonEditForm } from "./components/refund-reason-edit-form"
+import { RouteDrawer } from "src/components/modals"
+import { useRefundReason } from "src/hooks/api/refund-reasons"
+import { RefundReasonEditForm } from "src/routes/refund-reasons/refund-reason-edit/components/refund-reason-edit-form"
 
 export const RefundReasonEdit = () => {
   const { id } = useParams()

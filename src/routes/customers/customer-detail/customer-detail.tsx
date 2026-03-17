@@ -1,14 +1,14 @@
 import { useLoaderData, useParams } from "react-router-dom"
 
-import { SingleColumnPageSkeleton } from "../../../components/common/skeleton"
-import { TwoColumnPage } from "../../../components/layout/pages"
-import { useCustomer } from "../../../hooks/api/customers"
-import { useExtension } from "../../../providers/extension-provider"
-import { CustomerAddressSection } from "./components/customer-address-section/customer-address-section"
-import { CustomerGeneralSection } from "./components/customer-general-section"
-import { CustomerGroupSection } from "./components/customer-group-section"
-import { CustomerOrderSection } from "./components/customer-order-section"
-import { customerLoader } from "./loader"
+import { SingleColumnPageSkeleton } from "src/components/common/skeleton"
+import { TwoColumnPage } from "src/components/layout/pages"
+import { useCustomer } from "src/hooks/api/customers"
+import { useExtension } from "src/providers/extension-provider"
+import { CustomerAddressSection } from "src/routes/customers/customer-detail/components/customer-address-section/customer-address-section"
+import { CustomerGeneralSection } from "src/routes/customers/customer-detail/components/customer-general-section"
+import { CustomerGroupSection } from "src/routes/customers/customer-detail/components/customer-group-section"
+import { CustomerOrderSection } from "src/routes/customers/customer-detail/components/customer-order-section"
+import { customerLoader } from "src/routes/customers/customer-detail/loader"
 
 export const CustomerDetail = () => {
   const { id } = useParams()

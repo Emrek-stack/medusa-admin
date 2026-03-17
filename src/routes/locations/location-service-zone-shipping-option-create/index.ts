@@ -1,1 +1,1 @@
-export { LocationServiceZoneShippingOptionCreate as Component } from "./location-service-zone-shipping-option-create"
+export { LocationServiceZoneShippingOptionCreate as Component } from "src/routes/locations/location-service-zone-shipping-option-create/location-service-zone-shipping-option-create"

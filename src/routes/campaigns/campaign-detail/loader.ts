@@ -1,9 +1,9 @@
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { campaignsQueryKeys } from "../../../hooks/api/campaigns"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
-import { CAMPAIGN_DETAIL_FIELDS } from "./constants"
+import { campaignsQueryKeys } from "src/hooks/api/campaigns"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { CAMPAIGN_DETAIL_FIELDS } from "src/routes/campaigns/campaign-detail/constants"
 
 const campaignDetailQuery = (id: string) => ({
   queryKey: campaignsQueryKeys.detail(id),

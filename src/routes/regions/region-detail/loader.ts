@@ -1,9 +1,9 @@
 import { HttpTypes } from "@medusajs/types"
 import { LoaderFunctionArgs } from "react-router-dom"
-import { regionsQueryKeys } from "../../../hooks/api/regions"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
-import { REGION_DETAIL_FIELDS } from "./constants"
+import { regionsQueryKeys } from "src/hooks/api/regions"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { REGION_DETAIL_FIELDS } from "src/routes/regions/region-detail/constants"
 
 const regionQuery = (id: string) => ({
   queryKey: regionsQueryKeys.detail(id),

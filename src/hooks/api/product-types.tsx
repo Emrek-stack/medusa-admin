@@ -9,10 +9,10 @@ import {
   useMutation,
   useQuery,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { useInfiniteList } from "../use-infinite-list"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { useInfiniteList } from "src/hooks/use-infinite-list"
 
 const PRODUCT_TYPES_QUERY_KEY = "product_types" as const
 export const productTypesQueryKeys = queryKeysFactory(PRODUCT_TYPES_QUERY_KEY)

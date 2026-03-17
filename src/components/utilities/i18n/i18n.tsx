@@ -2,8 +2,8 @@ import i18n from "i18next"
 import LanguageDetector from "i18next-browser-languagedetector"
 import { initReactI18next } from "react-i18next"
 
-import { defaultI18nOptions } from "../../../i18n/config"
-import { useExtension } from "../../../providers/extension-provider"
+import { defaultI18nOptions } from "src/i18n/config"
+import { useExtension } from "src/providers/extension-provider"
 
 export const I18n = () => {
   const { getI18nResources } = useExtension()

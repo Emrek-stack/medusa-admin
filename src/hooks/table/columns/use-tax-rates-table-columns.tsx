@@ -6,12 +6,12 @@ import { TaxRateResponse } from "@medusajs/types"
 import {
   TextCell,
   TextHeader,
-} from "../../../components/table/table-cells/common/text-cell"
+} from "src/components/table/table-cells/common/text-cell"
 
 import {
   TypeCell,
   TypeHeader,
-} from "../../../components/table/table-cells/taxes/type-cell"
+} from "src/components/table/table-cells/taxes/type-cell"
 
 const columnHelper = createColumnHelper<TaxRateResponse>()
 

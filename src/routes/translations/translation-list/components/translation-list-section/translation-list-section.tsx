@@ -1,6 +1,6 @@
 import { Button, Container, Text } from "@medusajs/ui"
 import { Link } from "react-router-dom"
-import { TranslatableEntity } from "../../translation-list"
+import { TranslatableEntity } from "src/routes/translations/translation-list/translation-list"
 import { useTranslation } from "react-i18next"
 
 type TranslationListSectionProps = {

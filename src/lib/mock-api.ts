@@ -1,5 +1,5 @@
 import type { FetchArgs, FetchInput } from "@medusajs/js-sdk"
-import { getMockAuthUser } from "./mock-auth"
+import { getMockAuthUser } from "src/lib/mock-auth"
 
 export const isMockApiEnabled = __MOCK_API_ENABLED__ ?? false
 

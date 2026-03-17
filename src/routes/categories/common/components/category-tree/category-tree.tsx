@@ -1,8 +1,8 @@
 import { UniqueIdentifier } from "@dnd-kit/core"
 import { ReactNode } from "react"
 
-import { SortableTree } from "../../../../../components/common/sortable-tree"
-import { CategoryTreeItem } from "../../types"
+import { SortableTree } from "src/components/common/sortable-tree"
+import { CategoryTreeItem } from "src/routes/categories/common/types"
 
 type CategoryTreeProps = {
   value: CategoryTreeItem[]

@@ -1,12 +1,12 @@
 import { useCallback } from "react"
 import { FieldValues, Path, PathValue, UseFormReturn } from "react-hook-form"
 
-import { DataGridMatrix } from "../models"
+import { DataGridMatrix } from "src/components/data-grid/models"
 import {
   DataGridColumnType,
   DataGridCoordinates,
   DataGridToggleableNumber,
-} from "../types"
+} from "src/components/data-grid/types"
 
 type UseDataGridFormHandlersOptions<TData, TFieldValues extends FieldValues> = {
   matrix: DataGridMatrix<TData, TFieldValues>

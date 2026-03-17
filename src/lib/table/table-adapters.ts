@@ -3,7 +3,7 @@ import {
   DataTableEmptyStateProps,
   DataTableFilter,
 } from "@medusajs/ui"
-import { ColumnAdapter } from "../../hooks/table/columns/use-configurable-table-columns"
+import { ColumnAdapter } from "src/hooks/table/columns/use-configurable-table-columns"
 
 /**
  * Adapter interface for configurable tables.

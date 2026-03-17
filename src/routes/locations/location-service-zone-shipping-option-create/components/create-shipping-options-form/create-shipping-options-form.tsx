@@ -8,23 +8,23 @@ import { useState } from "react"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCreateShippingOptions } from "../../../../../hooks/api/shipping-options"
-import { castNumber } from "../../../../../lib/cast-number"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCreateShippingOptions } from "src/hooks/api/shipping-options"
+import { castNumber } from "src/lib/cast-number"
 import {
   FulfillmentSetType,
   ShippingOptionPriceType,
-} from "../../../common/constants"
-import { buildShippingOptionPriceRules } from "../../../common/utils/price-rule-helpers"
-import { CreateShippingOptionDetailsForm } from "./create-shipping-option-details-form"
-import { CreateShippingOptionsPricesForm } from "./create-shipping-options-prices-form"
+} from "src/routes/locations/common/constants"
+import { buildShippingOptionPriceRules } from "src/routes/locations/common/utils/price-rule-helpers"
+import { CreateShippingOptionDetailsForm } from "src/routes/locations/location-service-zone-shipping-option-create/components/create-shipping-options-form/create-shipping-option-details-form"
+import { CreateShippingOptionsPricesForm } from "src/routes/locations/location-service-zone-shipping-option-create/components/create-shipping-options-form/create-shipping-options-prices-form"
 import {
   CreateShippingOptionDetailsSchema,
   CreateShippingOptionSchema,
-} from "./schema"
-import { useFulfillmentProviderOptions } from "../../../../../hooks/api"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+} from "src/routes/locations/location-service-zone-shipping-option-create/components/create-shipping-options-form/schema"
+import { useFulfillmentProviderOptions } from "src/hooks/api"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 enum Tab {
   DETAILS = "details",

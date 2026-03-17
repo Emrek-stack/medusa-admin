@@ -8,10 +8,10 @@ import {
 
 import { FetchError } from "@medusajs/js-sdk"
 import { HttpTypes } from "@medusajs/types"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { pricePreferencesQueryKeys } from "./price-preferences"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { pricePreferencesQueryKeys } from "src/hooks/api/price-preferences"
 
 const STORE_QUERY_KEY = "store" as const
 export const storeQueryKeys = queryKeysFactory(STORE_QUERY_KEY)

@@ -4,15 +4,15 @@ import { useTranslation } from "react-i18next"
 
 import { HttpTypes } from "@medusajs/types"
 
-import { Form } from "../../../../../components/common/form"
-import { SwitchBox } from "../../../../../components/common/switch-box"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { useComboboxData } from "../../../../../hooks/use-combobox-data"
-import { sdk } from "../../../../../lib/client"
-import { formatProvider } from "../../../../../lib/format-provider"
-import { FulfillmentSetType, ShippingOptionPriceType, } from "../../../common/constants"
-import { CreateShippingOptionSchema } from "./schema"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+import { Form } from "src/components/common/form"
+import { SwitchBox } from "src/components/common/switch-box"
+import { Combobox } from "src/components/inputs/combobox"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { sdk } from "src/lib/client"
+import { formatProvider } from "src/lib/format-provider"
+import { FulfillmentSetType, ShippingOptionPriceType, } from "src/routes/locations/common/constants"
+import { CreateShippingOptionSchema } from "src/routes/locations/location-service-zone-shipping-option-create/components/create-shipping-options-form/schema"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 type CreateShippingOptionDetailsFormProps = {
   form: UseFormReturn<CreateShippingOptionSchema>

@@ -1,1 +1,1 @@
-export * from "./skeleton"
+export * from "src/components/common/skeleton/skeleton"

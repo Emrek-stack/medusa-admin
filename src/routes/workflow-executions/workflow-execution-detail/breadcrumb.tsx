@@ -1,7 +1,7 @@
 import { HttpTypes } from "@medusajs/types"
 import { UIMatch } from "react-router-dom"
 
-import { useWorkflowExecution } from "../../../hooks/api"
+import { useWorkflowExecution } from "src/hooks/api"
 
 type WorkflowExecutionDetailBreadcrumbProps =
   UIMatch<HttpTypes.AdminWorkflowExecutionResponse>

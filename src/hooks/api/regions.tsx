@@ -6,10 +6,10 @@ import {
   useMutation,
   useQuery,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { pricePreferencesQueryKeys } from "./price-preferences"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { pricePreferencesQueryKeys } from "src/hooks/api/price-preferences"
 import { FetchError } from "@medusajs/js-sdk"
 
 const REGIONS_QUERY_KEY = "regions" as const

@@ -1,1 +1,1 @@
-export * from "./nav-item"
+export * from "src/components/layout/nav-item/nav-item"

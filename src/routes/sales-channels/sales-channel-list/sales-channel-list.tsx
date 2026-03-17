@@ -1,7 +1,7 @@
-import { SalesChannelListTable } from "./components/sales-channel-list-table"
+import { SalesChannelListTable } from "src/routes/sales-channels/sales-channel-list/components/sales-channel-list-table"
 
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
 
 export const SalesChannelList = () => {
   const { getWidgets } = useExtension()

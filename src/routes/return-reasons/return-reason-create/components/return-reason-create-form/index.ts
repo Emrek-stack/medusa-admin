@@ -1,1 +1,1 @@
-export * from "./return-reason-create-form"
+export * from "src/routes/return-reasons/return-reason-create/components/return-reason-create-form/return-reason-create-form"

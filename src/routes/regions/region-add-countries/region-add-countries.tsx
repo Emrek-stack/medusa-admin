@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
-import { RouteFocusModal } from "../../../components/modals"
-import { useRegion } from "../../../hooks/api/regions"
-import { AddCountriesForm } from "./components/add-countries-form"
+import { RouteFocusModal } from "src/components/modals"
+import { useRegion } from "src/hooks/api/regions"
+import { AddCountriesForm } from "src/routes/regions/region-add-countries/components/add-countries-form"
 
 export const RegionAddCountries = () => {
   const { id } = useParams()

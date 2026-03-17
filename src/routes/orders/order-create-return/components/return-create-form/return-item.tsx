@@ -6,12 +6,12 @@ import { UseFormReturn } from "react-hook-form"
 import { HttpTypes, AdminOrderLineItem } from "@medusajs/types"
 import { ChatBubble, DocumentText, XCircle, XMark } from "@medusajs/icons"
 
-import { Thumbnail } from "../../../../../components/common/thumbnail"
-import { MoneyAmountCell } from "../../../../../components/table/table-cells/common/money-amount-cell"
-import { Form } from "../../../../../components/common/form"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { useReturnReasons } from "../../../../../hooks/api/return-reasons"
+import { Thumbnail } from "src/components/common/thumbnail"
+import { MoneyAmountCell } from "src/components/table/table-cells/common/money-amount-cell"
+import { Form } from "src/components/common/form"
+import { ActionMenu } from "src/components/common/action-menu"
+import { Combobox } from "src/components/inputs/combobox"
+import { useReturnReasons } from "src/hooks/api/return-reasons"
 
 type OrderEditItemProps = {
   item: AdminOrderLineItem

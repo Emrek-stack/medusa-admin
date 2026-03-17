@@ -10,13 +10,13 @@ import { z } from "zod"
 import {
   createDataGridHelper,
   DataGrid,
-} from "../../../../../components/data-grid"
+} from "src/components/data-grid"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useBatchTranslations } from "../../../../../hooks/api/translations"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useBatchTranslations } from "src/hooks/api/translations"
 
 const EntityTranslationsSchema = z.object({
   id: z.string().nullish(),

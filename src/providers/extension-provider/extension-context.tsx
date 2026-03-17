@@ -1,5 +1,5 @@
 import { createContext } from "react"
-import { DashboardApp } from "../../dashboard-app"
+import { DashboardApp } from "src/dashboard-app"
 
 type ExtensionContextValue = DashboardApp["api"]
 

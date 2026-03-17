@@ -1,1 +1,1 @@
-export * from "./reservation-create-from"
+export * from "src/routes/reservations/reservation-create/components/reservation-create-from/reservation-create-from"

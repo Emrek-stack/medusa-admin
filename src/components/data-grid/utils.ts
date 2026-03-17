@@ -1,4 +1,4 @@
-import { DataGridCoordinates } from "./types"
+import { DataGridCoordinates } from "src/components/data-grid/types"
 
 export function generateCellId(coords: DataGridCoordinates) {
   return `${coords.row}:${coords.col}`

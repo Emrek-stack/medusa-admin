@@ -5,11 +5,11 @@ import { clx, Input, Text, Tooltip } from "@medusajs/ui"
 import { UseFormReturn } from "react-hook-form"
 import { HttpTypes } from "@medusajs/types"
 
-import { Form } from "../../../../../components/common/form/index"
-import { Thumbnail } from "../../../../../components/common/thumbnail/index"
-import { useProductVariant } from "../../../../../hooks/api/products"
-import { getFulfillableQuantity } from "../../../../../lib/order-item"
-import { CreateFulfillmentSchema } from "./constants"
+import { Form } from "src/components/common/form/index"
+import { Thumbnail } from "src/components/common/thumbnail/index"
+import { useProductVariant } from "src/hooks/api/products"
+import { getFulfillableQuantity } from "src/lib/order-item"
+import { CreateFulfillmentSchema } from "src/routes/orders/order-create-fulfillment/components/order-create-fulfillment-form/constants"
 import { InformationCircleSolid } from "@medusajs/icons"
 
 type OrderEditItemProps = {

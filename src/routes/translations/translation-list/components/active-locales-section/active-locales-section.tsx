@@ -3,8 +3,8 @@ import { HttpTypes } from "@medusajs/types"
 import { Container, Heading, Text, Tooltip } from "@medusajs/ui"
 import { useCallback, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { IconAvatar } from "../../../../../components/common/icon-avatar"
-import { LinkButton } from "../../../../../components/common/link-button"
+import { IconAvatar } from "src/components/common/icon-avatar"
+import { LinkButton } from "src/components/common/link-button"
 
 type ActiveLocalesSectionProps = {
   locales: HttpTypes.AdminLocale[]

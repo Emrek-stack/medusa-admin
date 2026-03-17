@@ -5,17 +5,17 @@ import { Trans, useTranslation } from "react-i18next"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import * as z from "zod"
 
-import { Form } from "../../components/common/form"
-import AvatarBox from "../../components/common/logo-box/avatar-box"
-import { useSignInWithEmailPass } from "../../hooks/api"
-import { isFetchError } from "../../lib/is-fetch-error"
+import { Form } from "src/components/common/form"
+import AvatarBox from "src/components/common/logo-box/avatar-box"
+import { useSignInWithEmailPass } from "src/hooks/api"
+import { isFetchError } from "src/lib/is-fetch-error"
 import {
   isMockAuthEnabled,
   mockAuthEmail,
   mockAuthPassword,
-} from "../../lib/mock-auth"
-import { useExtension } from "../../providers/extension-provider"
-import { CloudAuthLogin } from "./components/cloud-auth-login"
+} from "src/lib/mock-auth"
+import { useExtension } from "src/providers/extension-provider"
+import { CloudAuthLogin } from "src/routes/login/components/cloud-auth-login"
 
 const LoginSchema = z.object({
   email: z.string().email(),

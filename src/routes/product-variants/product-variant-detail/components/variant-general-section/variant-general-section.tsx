@@ -4,10 +4,10 @@ import { Badge, Container, Heading, usePrompt } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { SectionRow } from "../../../../../components/common/section"
-import { useDeleteVariant } from "../../../../../hooks/api/products"
-import { useFeatureFlag } from "../../../../../providers/feature-flag-provider"
+import { ActionMenu } from "src/components/common/action-menu"
+import { SectionRow } from "src/components/common/section"
+import { useDeleteVariant } from "src/hooks/api/products"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 
 type VariantGeneralSectionProps = {
   variant: HttpTypes.AdminProductVariant

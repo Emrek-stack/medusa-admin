@@ -8,10 +8,10 @@ import {
 
 import { FetchError } from "@medusajs/js-sdk"
 import { HttpTypes } from "@medusajs/types"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
-import { fulfillmentProvidersQueryKeys } from "./fulfillment-providers"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
+import { fulfillmentProvidersQueryKeys } from "src/hooks/api/fulfillment-providers"
 
 const STOCK_LOCATIONS_QUERY_KEY = "stock_locations" as const
 export const stockLocationsQueryKeys = queryKeysFactory(

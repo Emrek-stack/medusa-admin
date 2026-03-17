@@ -1,1 +1,1 @@
-export * from "./price-list-list-table"
+export * from "src/routes/price-lists/price-list-list/components/price-list-list-table/price-list-list-table"

@@ -1,8 +1,8 @@
 import { PencilSquare, Trash } from "@medusajs/icons"
 import { HttpTypes } from "@medusajs/types"
 import { useTranslation } from "react-i18next"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { useDeleteShippingOptionTypeAction } from "../../../common/hooks/use-delete-shipping-option-type-action"
+import { ActionMenu } from "src/components/common/action-menu"
+import { useDeleteShippingOptionTypeAction } from "src/routes/shipping-option-types/common/hooks/use-delete-shipping-option-type-action"
 
 type ShippingOptionTypeRowActionsProps = {
   shippingOptionType: HttpTypes.AdminShippingOptionType

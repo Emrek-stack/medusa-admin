@@ -1,1 +1,1 @@
-export * from "./tax-rate-line"
+export * from "src/routes/tax-regions/common/components/tax-rate-line/tax-rate-line"

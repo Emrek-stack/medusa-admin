@@ -1,1 +1,1 @@
-export * from "./create-shipping-profile-form"
+export * from "src/routes/shipping-profiles/shipping-profile-create/components/create-shipping-profile-form/create-shipping-profile-form"

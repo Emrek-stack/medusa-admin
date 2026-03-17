@@ -1,6 +1,6 @@
-import { SingleColumnPage } from "../../../components/layout/pages"
-import { useExtension } from "../../../providers/extension-provider"
-import { ShippingOptionTypeListTable } from "./components/shipping-option-type-list-table"
+import { SingleColumnPage } from "src/components/layout/pages"
+import { useExtension } from "src/providers/extension-provider"
+import { ShippingOptionTypeListTable } from "src/routes/shipping-option-types/shipping-option-type-list/components/shipping-option-type-list-table"
 
 export const ShippingOptionTypeList = () => {
   const { getWidgets } = useExtension()

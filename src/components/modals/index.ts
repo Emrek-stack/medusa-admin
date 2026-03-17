@@ -1,7 +1,7 @@
-export { RouteDrawer } from "./route-drawer"
-export { RouteFocusModal } from "./route-focus-modal"
-export { useRouteModal } from "./route-modal-provider"
+export { RouteDrawer } from "src/components/modals/route-drawer"
+export { RouteFocusModal } from "src/components/modals/route-focus-modal"
+export { useRouteModal } from "src/components/modals/route-modal-provider"
 
-export { StackedDrawer } from "./stacked-drawer"
-export { StackedFocusModal } from "./stacked-focus-modal"
-export { useStackedModal } from "./stacked-modal-provider"
+export { StackedDrawer } from "src/components/modals/stacked-drawer"
+export { StackedFocusModal } from "src/components/modals/stacked-focus-modal"
+export { useStackedModal } from "src/components/modals/stacked-modal-provider"

@@ -24,11 +24,11 @@ import {
   useTaxRegions,
   useUsers,
   useVariants,
-} from "../../hooks/api"
-import { useReturnReasons } from "../../hooks/api/return-reasons"
-import { Shortcut, ShortcutType } from "../../providers/keybind-provider"
-import { useGlobalShortcuts } from "../../providers/keybind-provider/hooks"
-import { DynamicSearchResult, SearchArea } from "./types"
+} from "src/hooks/api"
+import { useReturnReasons } from "src/hooks/api/return-reasons"
+import { Shortcut, ShortcutType } from "src/providers/keybind-provider"
+import { useGlobalShortcuts } from "src/providers/keybind-provider/hooks"
+import { DynamicSearchResult, SearchArea } from "src/components/search/types"
 
 type UseSearchProps = {
   q?: string

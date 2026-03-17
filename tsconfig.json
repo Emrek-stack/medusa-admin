@@ -21,6 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
+      "src/*": ["src/*"],
       "@medusajs/js-sdk": ["src/shims/medusa-js-sdk.ts"],
       "@medusajs/admin-shared": ["src/shims/admin-shared.ts"]
     }

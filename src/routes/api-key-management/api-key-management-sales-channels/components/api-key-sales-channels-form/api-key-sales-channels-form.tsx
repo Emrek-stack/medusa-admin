@@ -15,17 +15,17 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { ConditionalTooltip } from "../../../../../components/common/conditional-tooltip"
-import { DataTable } from "../../../../../components/data-table"
-import * as hooks from "../../../../../components/data-table/helpers/sales-channels"
+import { ConditionalTooltip } from "src/components/common/conditional-tooltip"
+import { DataTable } from "src/components/data-table"
+import * as hooks from "src/components/data-table/helpers/sales-channels"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { VisuallyHidden } from "../../../../../components/utilities/visually-hidden"
-import { useBatchAddSalesChannelsToApiKey } from "../../../../../hooks/api/api-keys"
-import { useSalesChannels } from "../../../../../hooks/api/sales-channels"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { VisuallyHidden } from "src/components/utilities/visually-hidden"
+import { useBatchAddSalesChannelsToApiKey } from "src/hooks/api/api-keys"
+import { useSalesChannels } from "src/hooks/api/sales-channels"
 
 type ApiKeySalesChannelFormProps = {
   apiKey: string

@@ -1,2 +1,2 @@
-export { ReservationCreate as Component } from "./reservation-create";
+export { ReservationCreate as Component } from "src/routes/reservations/reservation-create/reservation-create";
 

@@ -8,9 +8,9 @@ import {
 } from "@tanstack/react-query"
 
 import { FetchError } from "@medusajs/js-sdk"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory } from "../../lib/query-key-factory"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory } from "src/lib/query-key-factory"
 
 const RETURN_REASONS_QUERY_KEY = "return_reasons" as const
 export const returnReasonsQueryKeys = queryKeysFactory(RETURN_REASONS_QUERY_KEY)

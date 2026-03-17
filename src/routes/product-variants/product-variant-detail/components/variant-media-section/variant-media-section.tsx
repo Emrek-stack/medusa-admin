@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import { HttpTypes } from "@medusajs/types"
 import { PencilSquare, ThumbnailBadge } from "@medusajs/icons"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
+import { ActionMenu } from "src/components/common/action-menu"
 
 type VariantMediaSectionProps = {
   variant: HttpTypes.AdminProductVariant

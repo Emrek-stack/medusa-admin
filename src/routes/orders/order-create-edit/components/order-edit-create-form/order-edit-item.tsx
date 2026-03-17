@@ -8,16 +8,16 @@ import { AdminOrderLineItem } from "@medusajs/types"
 import { Badge, Input, Text, toast, Tooltip } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { Thumbnail } from "../../../../../components/common/thumbnail"
-import { MoneyAmountCell } from "../../../../../components/table/table-cells/common/money-amount-cell"
+import { ActionMenu } from "src/components/common/action-menu"
+import { Thumbnail } from "src/components/common/thumbnail"
+import { MoneyAmountCell } from "src/components/table/table-cells/common/money-amount-cell"
 import { useMemo } from "react"
 import {
   useAddOrderEditItems,
   useRemoveOrderEditItem,
   useUpdateOrderEditAddedItem,
   useUpdateOrderEditOriginalItem,
-} from "../../../../../hooks/api/order-edits"
+} from "src/hooks/api/order-edits"
 
 type OrderEditItemProps = {
   item: AdminOrderLineItem

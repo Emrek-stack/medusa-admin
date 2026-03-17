@@ -5,7 +5,7 @@ import {
   useMutation,
   useQuery,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
+import { sdk } from "src/lib/client"
 
 export const cloudQueryKeys = {
   all: ["cloud"] as const,

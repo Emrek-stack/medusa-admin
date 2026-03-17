@@ -2,10 +2,10 @@ import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { json, useParams } from "react-router-dom"
 
-import { RouteDrawer } from "../../../components/modals"
-import { useShippingOptions } from "../../../hooks/api/shipping-options"
-import { EditShippingOptionForm } from "./components/edit-region-form"
-import { FulfillmentSetType } from "../common/constants"
+import { RouteDrawer } from "src/components/modals"
+import { useShippingOptions } from "src/hooks/api/shipping-options"
+import { EditShippingOptionForm } from "src/routes/locations/location-service-zone-shipping-option-edit/components/edit-region-form"
+import { FulfillmentSetType } from "src/routes/locations/common/constants"
 
 export const LocationServiceZoneShippingOptionEdit = () => {
   const { t } = useTranslation()

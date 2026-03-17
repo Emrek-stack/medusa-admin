@@ -10,11 +10,11 @@ import { UseFormReturn, useWatch } from "react-hook-form"
 import { Input, Text, clx } from "@medusajs/ui"
 import * as zod from "zod"
 
-import { Thumbnail } from "../../../../../components/common/thumbnail"
-import { getFulfillableQuantity } from "../../../../../lib/order-item"
-import { Form } from "../../../../../components/common/form"
-import { AllocateItemsSchema } from "./constants"
-import { checkInventoryKit } from "./utils"
+import { Thumbnail } from "src/components/common/thumbnail"
+import { getFulfillableQuantity } from "src/lib/order-item"
+import { Form } from "src/components/common/form"
+import { AllocateItemsSchema } from "src/routes/orders/order-allocate-items/components/order-create-fulfillment-form/constants"
+import { checkInventoryKit } from "src/routes/orders/order-allocate-items/components/order-create-fulfillment-form/utils"
 
 type OrderEditItemProps = {
   item: OrderLineItemDTO

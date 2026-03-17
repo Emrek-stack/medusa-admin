@@ -1,1 +1,1 @@
-export * from "./tax-region-provider-section"
+export * from "src/routes/tax-regions/tax-region-detail/tax-region-provider-section/tax-region-provider-section"

@@ -18,18 +18,18 @@ import { Avatar, Divider, DropdownMenu, Text, clx } from "@medusajs/ui"
 import { Collapsible as RadixCollapsible } from "radix-ui"
 import { useTranslation } from "react-i18next"
 
-import { useStore } from "../../../hooks/api/store"
-import { Skeleton } from "../../common/skeleton"
-import { INavItem, NavItem } from "../../layout/nav-item"
-import { Shell } from "../../layout/shell"
+import { useStore } from "src/hooks/api/store"
+import { Skeleton } from "src/components/common/skeleton"
+import { INavItem, NavItem } from "src/components/layout/nav-item"
+import { Shell } from "src/components/layout/shell"
 
 import { Link, useLocation, useNavigate } from "react-router-dom"
-import { useLogout } from "../../../hooks/api"
-import { queryClient } from "../../../lib/query-client"
-import { useExtension } from "../../../providers/extension-provider"
-import { useSearch } from "../../../providers/search-provider"
-import { UserMenu } from "../user-menu"
-import { useDocumentDirection } from "../../../hooks/use-document-direction"
+import { useLogout } from "src/hooks/api"
+import { queryClient } from "src/lib/query-client"
+import { useExtension } from "src/providers/extension-provider"
+import { useSearch } from "src/providers/search-provider"
+import { UserMenu } from "src/components/layout/user-menu"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 export const MainLayout = () => {
   return (

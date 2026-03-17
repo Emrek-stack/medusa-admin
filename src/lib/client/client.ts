@@ -1,4 +1,4 @@
-import { createMockApiFetch } from "../mock-api"
+import { createMockApiFetch } from "src/lib/mock-api"
 
 export const backendUrl = "/"
 const mockFetch = createMockApiFetch()

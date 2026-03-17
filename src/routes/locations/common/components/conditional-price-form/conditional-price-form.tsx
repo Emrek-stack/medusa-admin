@@ -31,23 +31,23 @@ import {
 import { Trans, useTranslation } from "react-i18next"
 
 import { formatValue } from "react-currency-input-field"
-import { Form } from "../../../../../components/common/form"
-import { StackedFocusModal } from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCombinedRefs } from "../../../../../hooks/use-combined-refs"
-import { castNumber } from "../../../../../lib/cast-number"
-import { CurrencyInfo } from "../../../../../lib/data/currencies"
-import { getLocaleAmount } from "../../../../../lib/money-amount-helpers"
-import { CreateShippingOptionSchemaType } from "../../../location-service-zone-shipping-option-create/components/create-shipping-options-form/schema"
+import { Form } from "src/components/common/form"
+import { StackedFocusModal } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCombinedRefs } from "src/hooks/use-combined-refs"
+import { castNumber } from "src/lib/cast-number"
+import { CurrencyInfo } from "src/lib/data/currencies"
+import { getLocaleAmount } from "src/lib/money-amount-helpers"
+import { CreateShippingOptionSchemaType } from "src/routes/locations/location-service-zone-shipping-option-create/components/create-shipping-options-form/schema"
 import {
   CondtionalPriceRuleSchema,
   CondtionalPriceRuleSchemaType,
   UpdateConditionalPriceRuleSchema,
   UpdateConditionalPriceRuleSchemaType,
-} from "../../schema"
-import { ConditionalPriceInfo } from "../../types"
-import { getCustomShippingOptionPriceFieldName } from "../../utils/get-custom-shipping-option-price-field-info"
-import { useShippingOptionPrice } from "../shipping-option-price-provider"
+} from "src/routes/locations/common/schema"
+import { ConditionalPriceInfo } from "src/routes/locations/common/types"
+import { getCustomShippingOptionPriceFieldName } from "src/routes/locations/common/utils/get-custom-shipping-option-price-field-info"
+import { useShippingOptionPrice } from "src/routes/locations/common/components/shipping-option-price-provider"
 
 const RULE_ITEM_PREFIX = "rule-item"
 

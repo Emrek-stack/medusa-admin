@@ -8,8 +8,8 @@ import {
   Text,
 } from "@medusajs/ui"
 import { useForm } from "react-hook-form"
-import { useViewConfigurations, useViewConfiguration } from "../../../hooks/use-view-configurations"
-import type { ViewConfiguration } from "../../../hooks/use-view-configurations"
+import { useViewConfigurations, useViewConfiguration } from "src/hooks/use-view-configurations"
+import type { ViewConfiguration } from "src/hooks/use-view-configurations"
 
 
 type SaveViewFormData = {

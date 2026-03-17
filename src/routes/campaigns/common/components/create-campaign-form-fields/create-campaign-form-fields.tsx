@@ -12,14 +12,14 @@ import { useEffect } from "react"
 import { useWatch } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { Form } from "../../../../../components/common/form"
-import { useStore } from "../../../../../hooks/api/store"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+import { Form } from "src/components/common/form"
+import { useStore } from "src/hooks/api/store"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 import {
   currencies,
   getCurrencySymbol,
-} from "../../../../../lib/data/currencies"
-import { Combobox } from "../../../../../components/inputs/combobox"
+} from "src/lib/data/currencies"
+import { Combobox } from "src/components/inputs/combobox"
 
 export const CreateCampaignFormFields = ({ form, fieldScope = "" }) => {
   const { t } = useTranslation()

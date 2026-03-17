@@ -8,25 +8,25 @@ import { Alert, Button, Select, Switch, toast } from "@medusajs/ui"
 import { useForm, useWatch } from "react-hook-form"
 
 import { OrderLineItemDTO } from "@medusajs/types"
-import { Form } from "../../../../../components/common/form"
+import { Form } from "src/components/common/form"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCreateOrderFulfillment } from "../../../../../hooks/api/orders"
-import { getFulfillableQuantity } from "../../../../../lib/order-item"
-import { CreateFulfillmentSchema } from "./constants"
-import { OrderCreateFulfillmentItem } from "./order-create-fulfillment-item"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCreateOrderFulfillment } from "src/hooks/api/orders"
+import { getFulfillableQuantity } from "src/lib/order-item"
+import { CreateFulfillmentSchema } from "src/routes/orders/order-create-fulfillment/components/order-create-fulfillment-form/constants"
+import { OrderCreateFulfillmentItem } from "src/routes/orders/order-create-fulfillment/components/order-create-fulfillment-form/order-create-fulfillment-item"
 import {
   useReservationItems,
   useShippingOptions,
-} from "../../../../../hooks/api"
-import { getReservationsLimitCount } from "../../../../../lib/orders"
-import { sdk } from "../../../../../lib/client"
-import { useComboboxData } from "../../../../../hooks/use-combobox-data"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+} from "src/hooks/api"
+import { getReservationsLimitCount } from "src/lib/orders"
+import { sdk } from "src/lib/client"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { Combobox } from "src/components/inputs/combobox"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 type OrderCreateFulfillmentFormProps = {
   order: AdminOrder

@@ -7,8 +7,8 @@ import { useNavigate, useSearchParams } from "react-router-dom"
 import {
   useCloudAuthEnabled,
   useCreateCloudAuthUser,
-} from "../../../hooks/api/cloud"
-import { sdk } from "../../../lib/client"
+} from "src/hooks/api/cloud"
+import { sdk } from "src/lib/client"
 
 const CLOUD_AUTH_PROVIDER = "cloud"
 

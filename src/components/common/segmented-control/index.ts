@@ -1,2 +1,2 @@
-export * from "./segmented-control"
+export * from "src/components/common/segmented-control/segmented-control"
 

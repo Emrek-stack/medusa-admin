@@ -13,10 +13,10 @@ import { RowSelectionState } from "@tanstack/react-table"
 import { useCallback, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
-import { DataTable } from "../../../../../components/data-table"
-import * as hooks from "../../../../../components/data-table/helpers/sales-channels"
-import { useBatchRemoveSalesChannelsFromApiKey } from "../../../../../hooks/api/api-keys"
-import { useSalesChannels } from "../../../../../hooks/api/sales-channels"
+import { DataTable } from "src/components/data-table"
+import * as hooks from "src/components/data-table/helpers/sales-channels"
+import { useBatchRemoveSalesChannelsFromApiKey } from "src/hooks/api/api-keys"
+import { useSalesChannels } from "src/hooks/api/sales-channels"
 
 type ApiKeySalesChannelSectionProps = {
   apiKey: AdminApiKeyResponse["api_key"]

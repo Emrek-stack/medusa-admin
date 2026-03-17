@@ -1,9 +1,9 @@
 import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
-import { RouteDrawer } from "../../../components/modals"
-import { useStockLocation } from "../../../hooks/api/stock-locations"
-import { EditLocationForm } from "./components/edit-location-form"
+import { RouteDrawer } from "src/components/modals"
+import { useStockLocation } from "src/hooks/api/stock-locations"
+import { EditLocationForm } from "src/routes/locations/location-edit/components/edit-location-form"
 
 export const LocationEdit = () => {
   const { t } = useTranslation()

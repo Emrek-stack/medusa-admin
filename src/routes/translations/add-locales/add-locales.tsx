@@ -1,8 +1,8 @@
-import { RouteFocusModal } from "../../../components/modals/route-focus-modal"
-import { useStore } from "../../../hooks/api"
-import { useFeatureFlag } from "../../../providers/feature-flag-provider"
+import { RouteFocusModal } from "src/components/modals/route-focus-modal"
+import { useStore } from "src/hooks/api"
+import { useFeatureFlag } from "src/providers/feature-flag-provider"
 import { useNavigate } from "react-router-dom"
-import { AddLocalesForm } from "../../store/store-add-locales/components/add-locales-form/add-locales-form"
+import { AddLocalesForm } from "src/routes/store/store-add-locales/components/add-locales-form/add-locales-form"
 
 export const TranslationsAddLocales = () => {
   const isEnabled = useFeatureFlag("translation")

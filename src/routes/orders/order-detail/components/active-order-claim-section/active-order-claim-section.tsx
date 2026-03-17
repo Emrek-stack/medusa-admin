@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import { HttpTypes } from "@medusajs/types"
 import { useNavigate } from "react-router-dom"
-import { useCancelClaimRequest } from "../../../../../hooks/api/claims"
+import { useCancelClaimRequest } from "src/hooks/api/claims"
 
 type ActiveOrderClaimSectionProps = {
   orderPreview: HttpTypes.AdminOrderPreview

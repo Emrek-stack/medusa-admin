@@ -1,1 +1,1 @@
-export { SalesChannelList as Component } from "./sales-channel-list";
+export { SalesChannelList as Component } from "src/routes/sales-channels/sales-channel-list/sales-channel-list";

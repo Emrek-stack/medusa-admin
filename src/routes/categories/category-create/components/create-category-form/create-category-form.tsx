@@ -7,14 +7,14 @@ import { useState } from "react"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCreateProductCategory } from "../../../../../hooks/api/categories"
-import { transformNullableFormData } from "../../../../../lib/form-helpers"
-import { CreateCategoryDetails } from "./create-category-details"
-import { CreateCategoryNesting } from "./create-category-nesting"
-import { CreateCategoryDetailsSchema, CreateCategorySchema } from "./schema"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCreateProductCategory } from "src/hooks/api/categories"
+import { transformNullableFormData } from "src/lib/form-helpers"
+import { CreateCategoryDetails } from "src/routes/categories/category-create/components/create-category-form/create-category-details"
+import { CreateCategoryNesting } from "src/routes/categories/category-create/components/create-category-form/create-category-nesting"
+import { CreateCategoryDetailsSchema, CreateCategorySchema } from "src/routes/categories/category-create/components/create-category-form/schema"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
 
 type CreateCategoryFormProps = {
   parentCategoryId: string | null

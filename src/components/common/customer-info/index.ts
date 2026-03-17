@@ -1,1 +1,1 @@
-export * from "./customer-info"
+export * from "src/components/common/customer-info/customer-info"

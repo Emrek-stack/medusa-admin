@@ -1,1 +1,1 @@
-export { ListSummary } from "./list-summary"
+export { ListSummary } from "src/components/common/list-summary/list-summary"

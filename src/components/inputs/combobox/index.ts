@@ -1,1 +1,1 @@
-export * from "./combobox"
+export * from "src/components/inputs/combobox/combobox"

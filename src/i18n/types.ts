@@ -1,5 +1,5 @@
 import type { Locale } from "date-fns"
-import enUS from "./translations/en.json"
+import enUS from "src/i18n/translations/en.json"
 
 const resources = {
   translation: enUS,

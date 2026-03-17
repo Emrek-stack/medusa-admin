@@ -5,7 +5,7 @@ import {
   forwardRef,
   useEffect,
 } from "react"
-import { useStackedModal } from "../stacked-modal-provider"
+import { useStackedModal } from "src/components/modals/stacked-modal-provider"
 
 type StackedDrawerProps = PropsWithChildren<{
   /**

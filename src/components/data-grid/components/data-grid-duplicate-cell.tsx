@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { useDataGridDuplicateCell } from "../hooks"
+import { useDataGridDuplicateCell } from "src/components/data-grid/hooks"
 
 interface DataGridDuplicateCellProps<TValue> {
   duplicateOf: string

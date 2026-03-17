@@ -1,1 +1,1 @@
-export * from "./display-id"
+export * from "src/components/common/display-id/display-id"

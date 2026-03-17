@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next"
-import { RouteFocusModal } from "../../../components/modals"
-import { useRegions } from "../../../hooks/api"
-import { usePricePreferences } from "../../../hooks/api/price-preferences"
-import { useSalesChannel } from "../../../hooks/api/sales-channels"
-import { useStore } from "../../../hooks/api/store"
-import { ProductCreateForm } from "./components/product-create-form/product-create-form"
+import { RouteFocusModal } from "src/components/modals"
+import { useRegions } from "src/hooks/api"
+import { usePricePreferences } from "src/hooks/api/price-preferences"
+import { useSalesChannel } from "src/hooks/api/sales-channels"
+import { useStore } from "src/hooks/api/store"
+import { ProductCreateForm } from "src/routes/products/product-create/components/product-create-form/product-create-form"
 
 export const ProductCreate = () => {
   const { t } = useTranslation()

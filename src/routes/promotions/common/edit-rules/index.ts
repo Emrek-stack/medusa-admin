@@ -1,1 +1,1 @@
-export { EditRules as Component } from "./edit-rules"
+export { EditRules as Component } from "src/routes/promotions/common/edit-rules/edit-rules"

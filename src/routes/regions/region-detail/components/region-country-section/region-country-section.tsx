@@ -8,13 +8,13 @@ import {
 } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useUpdateRegion } from "../../../../../hooks/api/regions"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { useCountries } from "../../../common/hooks/use-countries"
-import { useCountryTableColumns } from "../../../common/hooks/use-country-table-columns"
-import { useCountryTableQuery } from "../../../common/hooks/use-country-table-query"
+import { ActionMenu } from "src/components/common/action-menu"
+import { _DataTable } from "src/components/table/data-table"
+import { useUpdateRegion } from "src/hooks/api/regions"
+import { useDataTable } from "src/hooks/use-data-table"
+import { useCountries } from "src/routes/regions/common/hooks/use-countries"
+import { useCountryTableColumns } from "src/routes/regions/common/hooks/use-country-table-columns"
+import { useCountryTableQuery } from "src/routes/regions/common/hooks/use-country-table-query"
 
 type RegionCountrySectionProps = {
   region: HttpTypes.AdminRegion

@@ -1,1 +1,1 @@
-export * from "./shell"
+export * from "src/components/layout/shell/shell"

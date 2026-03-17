@@ -4,19 +4,19 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { Form } from "../../../../../components/common/form/index.ts"
-import { Combobox } from "../../../../../components/inputs/combobox"
+import { Form } from "src/components/common/form/index.ts"
+import { Combobox } from "src/components/inputs/combobox"
 import {
   RouteDrawer,
   useRouteModal,
-} from "../../../../../components/modals/index.ts"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form/keybound-form.tsx"
-import { useUpdateRegion } from "../../../../../hooks/api/regions.tsx"
-import { CurrencyInfo } from "../../../../../lib/data/currencies.ts"
-import { formatProvider } from "../../../../../lib/format-provider.ts"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
-import { useComboboxData } from "../../../../../hooks/use-combobox-data.tsx"
-import { sdk } from "../../../../../lib/client/index.ts"
+} from "src/components/modals/index.ts"
+import { KeyboundForm } from "src/components/utilities/keybound-form/keybound-form.tsx"
+import { useUpdateRegion } from "src/hooks/api/regions.tsx"
+import { CurrencyInfo } from "src/lib/data/currencies.ts"
+import { formatProvider } from "src/lib/format-provider.ts"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
+import { useComboboxData } from "src/hooks/use-combobox-data.tsx"
+import { sdk } from "src/lib/client/index.ts"
 
 type EditRegionFormProps = {
   region: HttpTypes.AdminRegion

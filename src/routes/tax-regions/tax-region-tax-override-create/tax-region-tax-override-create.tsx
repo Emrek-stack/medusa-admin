@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
-import { RouteFocusModal } from "../../../components/modals"
-import { useTaxRegion } from "../../../hooks/api/tax-regions"
-import { TaxRegionCreateTaxOverrideForm } from "./components/tax-region-override-create-form"
+import { RouteFocusModal } from "src/components/modals"
+import { useTaxRegion } from "src/hooks/api/tax-regions"
+import { TaxRegionCreateTaxOverrideForm } from "src/routes/tax-regions/tax-region-tax-override-create/components/tax-region-override-create-form"
 
 export const TaxRegionCreateTaxOverride = () => {
   const { id, province_id } = useParams()

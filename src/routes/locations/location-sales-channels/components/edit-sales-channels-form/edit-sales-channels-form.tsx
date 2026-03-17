@@ -12,16 +12,16 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { DataTable } from "../../../../../components/data-table"
-import * as hooks from "../../../../../components/data-table/helpers/sales-channels"
+import { DataTable } from "src/components/data-table"
+import * as hooks from "src/components/data-table/helpers/sales-channels"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { VisuallyHidden } from "../../../../../components/utilities/visually-hidden"
-import { useSalesChannels } from "../../../../../hooks/api/sales-channels"
-import { useUpdateStockLocationSalesChannels } from "../../../../../hooks/api/stock-locations"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { VisuallyHidden } from "src/components/utilities/visually-hidden"
+import { useSalesChannels } from "src/hooks/api/sales-channels"
+import { useUpdateStockLocationSalesChannels } from "src/hooks/api/stock-locations"
 
 type EditSalesChannelsFormProps = {
   location: HttpTypes.AdminStockLocation

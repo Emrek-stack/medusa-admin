@@ -8,33 +8,33 @@ import { useMemo } from "react"
 import {
   DateCell,
   DateHeader,
-} from "../../../components/table/table-cells/common/date-cell"
-import { countries } from "../../../lib/data/countries"
-import { CountryCell } from "../../../components/table/table-cells/order/country-cell"
+} from "src/components/table/table-cells/common/date-cell"
+import { countries } from "src/lib/data/countries"
+import { CountryCell } from "src/components/table/table-cells/order/country-cell"
 import {
   CustomerCell,
   CustomerHeader,
-} from "../../../components/table/table-cells/order/customer-cell"
+} from "src/components/table/table-cells/order/customer-cell"
 import {
   DisplayIdCell,
   DisplayIdHeader,
-} from "../../../components/table/table-cells/order/display-id-cell"
+} from "src/components/table/table-cells/order/display-id-cell"
 import {
   FulfillmentStatusCell,
   FulfillmentStatusHeader,
-} from "../../../components/table/table-cells/order/fulfillment-status-cell"
+} from "src/components/table/table-cells/order/fulfillment-status-cell"
 import {
   PaymentStatusCell,
   PaymentStatusHeader,
-} from "../../../components/table/table-cells/order/payment-status-cell"
+} from "src/components/table/table-cells/order/payment-status-cell"
 import {
   SalesChannelCell,
   SalesChannelHeader,
-} from "../../../components/table/table-cells/order/sales-channel-cell"
+} from "src/components/table/table-cells/order/sales-channel-cell"
 import {
   TotalCell,
   TotalHeader,
-} from "../../../components/table/table-cells/order/total-cell"
+} from "src/components/table/table-cells/order/total-cell"
 
 // We have to use any here, as the type of Order is so complex that it lags the TS server
 const columnHelper = createColumnHelper<HttpTypes.AdminOrder>()

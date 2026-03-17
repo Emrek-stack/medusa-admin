@@ -1,4 +1,4 @@
-import { SEARCH_AREAS } from "./constants"
+import { SEARCH_AREAS } from "src/components/search/constants"
 
 export type SearchArea = (typeof SEARCH_AREAS)[number]
 

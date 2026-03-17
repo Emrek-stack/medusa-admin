@@ -1,8 +1,8 @@
 import { Heading } from "@medusajs/ui"
 import { Spinner } from "@medusajs/icons"
-import { RouteDrawer } from "../../../components/modals"
-import { useTranslationSettings } from "../../../hooks/api/translations"
-import { BatchTranslationSettingsForm } from "./components/batch-translation-settings-form/batch-translation-settings-form"
+import { RouteDrawer } from "src/components/modals"
+import { useTranslationSettings } from "src/hooks/api/translations"
+import { BatchTranslationSettingsForm } from "src/routes/translations/settings/components/batch-translation-settings-form/batch-translation-settings-form"
 
 export const Settings = () => {
   const { translation_settings, isPending, isError, error } =

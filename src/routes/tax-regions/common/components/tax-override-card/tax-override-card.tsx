@@ -18,14 +18,14 @@ import { ComponentPropsWithoutRef } from "react"
 import { useTranslation } from "react-i18next"
 
 import { FetchError } from "@medusajs/js-sdk"
-import { ActionMenu } from "../../../../../components/common/action-menu"
-import { useProductTypes } from "../../../../../hooks/api/product-types"
-import { useProducts } from "../../../../../hooks/api/products"
-import { formatPercentage } from "../../../../../lib/percentage-helpers"
-import { TaxRateRuleReferenceType } from "../../constants"
-import { useDeleteTaxRateAction } from "../../hooks"
-import { useShippingOptions } from "../../../../../hooks/api"
-import { DISPLAY_OVERRIDE_ITEMS_LIMIT } from "../../../tax-region-tax-override-edit/components/tax-region-tax-override-edit-form"
+import { ActionMenu } from "src/components/common/action-menu"
+import { useProductTypes } from "src/hooks/api/product-types"
+import { useProducts } from "src/hooks/api/products"
+import { formatPercentage } from "src/lib/percentage-helpers"
+import { TaxRateRuleReferenceType } from "src/routes/tax-regions/common/constants"
+import { useDeleteTaxRateAction } from "src/routes/tax-regions/common/hooks"
+import { useShippingOptions } from "src/hooks/api"
+import { DISPLAY_OVERRIDE_ITEMS_LIMIT } from "src/routes/tax-regions/tax-region-tax-override-edit/components/tax-region-tax-override-edit-form"
 
 interface TaxOverrideCardProps extends ComponentPropsWithoutRef<"div"> {
   taxRate: HttpTypes.AdminTaxRate

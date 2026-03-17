@@ -1,1 +1,1 @@
-export * from "./create-campaign-form-fields"
+export * from "src/routes/campaigns/common/components/create-campaign-form-fields/create-campaign-form-fields"

@@ -11,28 +11,28 @@ import { useFieldArray, UseFormReturn } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
 import { HttpTypes } from "@medusajs/types"
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
 import {
   RouteFocusModal,
   StackedFocusModal,
   useStackedModal,
-} from "../../../../../components/modals"
-import { useShippingOptions, useStockLocations } from "../../../../../hooks/api"
+} from "src/components/modals"
+import { useShippingOptions, useStockLocations } from "src/hooks/api"
 import {
   useAddExchangeInboundItems,
   useAddExchangeInboundShipping,
   useDeleteExchangeInboundShipping,
   useRemoveExchangeInboundItem,
   useUpdateExchangeInboundItem,
-} from "../../../../../hooks/api/exchanges"
-import { useUpdateReturn } from "../../../../../hooks/api/returns"
-import { sdk } from "../../../../../lib/client"
-import { ReturnShippingPlaceholder } from "../../../common/placeholders"
-import { ItemPlaceholder } from "../../../order-create-claim/components/claim-create-form/item-placeholder"
-import { AddExchangeInboundItemsTable } from "../add-exchange-inbound-items-table"
-import { ExchangeInboundItem } from "./exchange-inbound-item"
-import { CreateExchangeSchemaType } from "./schema"
+} from "src/hooks/api/exchanges"
+import { useUpdateReturn } from "src/hooks/api/returns"
+import { sdk } from "src/lib/client"
+import { ReturnShippingPlaceholder } from "src/routes/orders/common/placeholders"
+import { ItemPlaceholder } from "src/routes/orders/order-create-claim/components/claim-create-form/item-placeholder"
+import { AddExchangeInboundItemsTable } from "src/routes/orders/order-create-exchange/components/add-exchange-inbound-items-table"
+import { ExchangeInboundItem } from "src/routes/orders/order-create-exchange/components/exchange-create-form/exchange-inbound-item"
+import { CreateExchangeSchemaType } from "src/routes/orders/order-create-exchange/components/exchange-create-form/schema"
 
 type ExchangeInboundSectionProps = {
   order: AdminOrder

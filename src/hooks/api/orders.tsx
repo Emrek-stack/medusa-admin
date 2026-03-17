@@ -7,11 +7,11 @@ import {
   useQuery,
   UseQueryOptions,
 } from "@tanstack/react-query"
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory, TQueryKey } from "../../lib/query-key-factory"
-import { inventoryItemsQueryKeys } from "./inventory"
-import { reservationItemsQueryKeys } from "./reservations"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory, TQueryKey } from "src/lib/query-key-factory"
+import { inventoryItemsQueryKeys } from "src/hooks/api/inventory"
+import { reservationItemsQueryKeys } from "src/hooks/api/reservations"
 
 const ORDERS_QUERY_KEY = "orders" as const
 const _orderKeys = queryKeysFactory(ORDERS_QUERY_KEY) as TQueryKey<"orders"> & {

@@ -15,14 +15,14 @@ import { Link } from "react-router-dom"
 import {
   Action,
   ActionMenu,
-} from "../../../../../components/common/action-menu"
-import { IconAvatar } from "../../../../../components/common/icon-avatar"
-import { getCountryByIso2 } from "../../../../../lib/data/countries"
+} from "src/components/common/action-menu"
+import { IconAvatar } from "src/components/common/icon-avatar"
+import { getCountryByIso2 } from "src/lib/data/countries"
 import {
   getProvinceByIso2,
   isProvinceInCountry,
-} from "../../../../../lib/data/country-states"
-import { useDeleteTaxRegionAction } from "../../hooks"
+} from "src/lib/data/country-states"
+import { useDeleteTaxRegionAction } from "src/routes/tax-regions/common/hooks"
 
 interface TaxRegionCardProps extends ComponentPropsWithoutRef<"div"> {
   taxRegion: HttpTypes.AdminTaxRegion

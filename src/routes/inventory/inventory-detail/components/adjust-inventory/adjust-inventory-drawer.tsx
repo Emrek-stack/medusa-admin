@@ -2,10 +2,10 @@ import { InventoryTypes } from "@medusajs/types"
 import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
-import { RouteDrawer } from "../../../../../components/modals"
-import { useInventoryItem } from "../../../../../hooks/api/inventory"
-import { useStockLocation } from "../../../../../hooks/api/stock-locations"
-import { AdjustInventoryForm } from "./components/adjust-inventory-form"
+import { RouteDrawer } from "src/components/modals"
+import { useInventoryItem } from "src/hooks/api/inventory"
+import { useStockLocation } from "src/hooks/api/stock-locations"
+import { AdjustInventoryForm } from "src/routes/inventory/inventory-detail/components/adjust-inventory/components/adjust-inventory-form"
 
 export const AdjustInventoryDrawer = () => {
   const { id, location_id } = useParams()

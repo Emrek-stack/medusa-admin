@@ -10,12 +10,12 @@ import { z } from "zod"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
 import {
   useBatchVariantImages,
   useUpdateProductVariant,
-} from "../../../../../hooks/api/products"
+} from "src/hooks/api/products"
 
 /**
  * Schema

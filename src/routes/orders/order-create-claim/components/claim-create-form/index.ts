@@ -1,1 +1,1 @@
-export * from "./claim-create-form"
+export * from "src/routes/orders/order-create-claim/components/claim-create-form/claim-create-form"

@@ -6,14 +6,14 @@ import {
   FileType,
   FileUpload,
   RejectedFile,
-} from "../../../../../components/common/file-upload"
-import { Form } from "../../../../../components/common/form"
-import { formatFileSize } from "../../../../../lib/format-file-size"
-import { MediaSchema } from "../../../product-create/constants"
+} from "src/components/common/file-upload"
+import { Form } from "src/components/common/form"
+import { formatFileSize } from "src/lib/format-file-size"
+import { MediaSchema } from "src/routes/products/product-create/constants"
 import {
   EditProductMediaSchemaType,
   ProductCreateSchemaType,
-} from "../../../product-create/types"
+} from "src/routes/products/product-create/types"
 
 type Media = z.infer<typeof MediaSchema>
 

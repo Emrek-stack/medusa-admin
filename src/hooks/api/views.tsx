@@ -8,9 +8,9 @@ import {
   UseQueryOptions
 } from "@tanstack/react-query"
 
-import { sdk } from "../../lib/client"
-import { queryClient } from "../../lib/query-client"
-import { queryKeysFactory, TQueryKey } from "../../lib/query-key-factory"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { queryKeysFactory, TQueryKey } from "src/lib/query-key-factory"
 
 const VIEWS_QUERY_KEY = "views" as const
 const _viewsKeys = queryKeysFactory(VIEWS_QUERY_KEY) as TQueryKey<"views"> & {

@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect, useState } from "react"
-import { ThemeContext, ThemeOption, ThemeValue } from "./theme-context"
+import { ThemeContext, ThemeOption, ThemeValue } from "src/providers/theme-provider/theme-context"
 
 const THEME_KEY = "medusa_admin_theme"
 

@@ -3,19 +3,19 @@ import { createColumnHelper } from "@tanstack/react-table"
 import { AdminCampaign } from "@medusajs/types"
 import { useMemo } from "react"
 import { useTranslation } from "react-i18next"
-import { DateCell } from "../../../components/table/table-cells/common/date-cell"
+import { DateCell } from "src/components/table/table-cells/common/date-cell"
 import {
   TextCell,
   TextHeader,
-} from "../../../components/table/table-cells/common/text-cell"
+} from "src/components/table/table-cells/common/text-cell"
 import {
   DescriptionCell,
   DescriptionHeader,
-} from "../../../components/table/table-cells/sales-channel/description-cell"
+} from "src/components/table/table-cells/sales-channel/description-cell"
 import {
   NameCell,
   NameHeader,
-} from "../../../components/table/table-cells/sales-channel/name-cell"
+} from "src/components/table/table-cells/sales-channel/name-cell"
 
 const columnHelper = createColumnHelper<AdminCampaign>()
 

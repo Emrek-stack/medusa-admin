@@ -2,16 +2,16 @@ import { Alert, Button, Container, Heading, Text } from "@medusajs/ui"
 import { useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 import { useNavigate } from "react-router-dom"
-import { TwoColumnPageSkeleton } from "../../../components/common/skeleton"
-import { TwoColumnPage } from "../../../components/layout/pages"
+import { TwoColumnPageSkeleton } from "src/components/common/skeleton"
+import { TwoColumnPage } from "src/components/layout/pages"
 import {
   useStore,
   useTranslationSettings,
   useTranslationStatistics,
-} from "../../../hooks/api"
-import { ActiveLocalesSection } from "./components/active-locales-section/active-locales-section"
-import { TranslationListSection } from "./components/translation-list-section/translation-list-section"
-import { TranslationsCompletionSection } from "./components/translations-completion-section/translations-completion-section"
+} from "src/hooks/api"
+import { ActiveLocalesSection } from "src/routes/translations/translation-list/components/active-locales-section/active-locales-section"
+import { TranslationListSection } from "src/routes/translations/translation-list/components/translation-list-section/translation-list-section"
+import { TranslationsCompletionSection } from "src/routes/translations/translation-list/components/translations-completion-section/translations-completion-section"
 import { ListCheckbox } from "@medusajs/icons"
 
 export type TranslatableEntity = {

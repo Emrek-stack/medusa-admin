@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
-import { JsonViewSection } from "../../../common/json-view-section"
-import { MetadataSection } from "../../../common/metadata-section"
-import { PageProps } from "../types"
+import { JsonViewSection } from "src/components/common/json-view-section"
+import { MetadataSection } from "src/components/common/metadata-section"
+import { PageProps } from "src/components/layout/pages/types"
 
 export const SingleColumnPage = <TData,>({
   children,

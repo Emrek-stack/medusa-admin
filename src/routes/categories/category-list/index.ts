@@ -1,1 +1,1 @@
-export { CategoryList as Component } from "./category-list"
+export { CategoryList as Component } from "src/routes/categories/category-list/category-list"

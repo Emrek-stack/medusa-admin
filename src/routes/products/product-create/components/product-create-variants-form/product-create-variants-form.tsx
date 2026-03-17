@@ -7,13 +7,13 @@ import {
   createDataGridHelper,
   createDataGridPriceColumns,
   DataGrid,
-} from "../../../../../components/data-grid"
-import { useRouteModal } from "../../../../../components/modals"
+} from "src/components/data-grid"
+import { useRouteModal } from "src/components/modals"
 import {
   ProductCreateOptionSchema,
   ProductCreateVariantSchema,
-} from "../../constants"
-import { ProductCreateSchemaType } from "../../types"
+} from "src/routes/products/product-create/constants"
+import { ProductCreateSchemaType } from "src/routes/products/product-create/types"
 
 type ProductCreateVariantsFormProps = {
   form: UseFormReturn<ProductCreateSchemaType>

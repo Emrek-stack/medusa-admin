@@ -12,12 +12,12 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 import { z } from "zod"
 
-import { Form } from "../../../../../components/common/form"
-import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useUpdatePriceList } from "../../../../../hooks/api/price-lists"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
-import { PriceListStatus, PriceListType } from "../../../common/constants"
+import { Form } from "src/components/common/form"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useUpdatePriceList } from "src/hooks/api/price-lists"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
+import { PriceListStatus, PriceListType } from "src/routes/price-lists/common/constants"
 
 type PriceListEditFormProps = {
   priceList: HttpTypes.AdminPriceList

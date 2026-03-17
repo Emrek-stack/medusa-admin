@@ -3,19 +3,19 @@ import { Button, toast } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
-import { RouteDrawer, useRouteModal } from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
+import { RouteDrawer, useRouteModal } from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
 import {
   FormExtensionZone,
   useExtendableForm,
-} from "../../../../../dashboard-app"
-import { useUpdateProduct } from "../../../../../hooks/api/products"
-import { useComboboxData } from "../../../../../hooks/use-combobox-data"
-import { sdk } from "../../../../../lib/client"
-import { useExtension } from "../../../../../providers/extension-provider"
-import { CategoryCombobox } from "../../../common/components/category-combobox"
+} from "src/dashboard-app"
+import { useUpdateProduct } from "src/hooks/api/products"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { sdk } from "src/lib/client"
+import { useExtension } from "src/providers/extension-provider"
+import { CategoryCombobox } from "src/routes/products/common/components/category-combobox"
 
 type ProductOrganizationFormProps = {
   product: HttpTypes.AdminProduct

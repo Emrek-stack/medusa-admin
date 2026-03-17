@@ -1,6 +1,6 @@
 import { HttpTypes } from "@medusajs/types"
 import { UIMatch } from "react-router-dom"
-import { useCollection } from "../../../hooks/api"
+import { useCollection } from "src/hooks/api"
 
 type CollectionDetailBreadcrumbProps =
   UIMatch<HttpTypes.AdminCollectionResponse>

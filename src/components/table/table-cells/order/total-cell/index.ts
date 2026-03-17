@@ -1,1 +1,1 @@
-export * from "./total-cell"
+export * from "src/components/table/table-cells/order/total-cell/total-cell"

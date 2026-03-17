@@ -1,2 +1,2 @@
-export * from "./sidebar-provider"
-export * from "./use-sidebar"
+export * from "src/providers/sidebar-provider/sidebar-provider"
+export * from "src/providers/sidebar-provider/use-sidebar"

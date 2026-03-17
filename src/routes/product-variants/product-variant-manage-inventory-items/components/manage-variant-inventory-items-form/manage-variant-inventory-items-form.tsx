@@ -12,17 +12,17 @@ import {
 import { useTranslation } from "react-i18next"
 import * as zod from "zod"
 
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useProductVariantsInventoryItemsBatch } from "../../../../../hooks/api/products"
-import { useComboboxData } from "../../../../../hooks/use-combobox-data"
-import { castNumber } from "../../../../../lib/cast-number"
-import { sdk } from "../../../../../lib/client"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useProductVariantsInventoryItemsBatch } from "src/hooks/api/products"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { castNumber } from "src/lib/cast-number"
+import { sdk } from "src/lib/client"
 
 type ManageVariantInventoryItemsFormProps = {
   variant: AdminProductVariant & {

@@ -1,9 +1,9 @@
 import { HttpTypes } from "@medusajs/types"
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { productTagsQueryKeys } from "../../../hooks/api"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { productTagsQueryKeys } from "src/hooks/api"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const productTagListQuery = (query?: HttpTypes.AdminProductTagListParams) => ({
   queryKey: productTagsQueryKeys.list(query),

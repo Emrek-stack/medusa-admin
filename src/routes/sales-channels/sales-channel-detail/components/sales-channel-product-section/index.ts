@@ -1,1 +1,1 @@
-export * from "./sales-channel-product-section"
+export * from "src/routes/sales-channels/sales-channel-detail/components/sales-channel-product-section/sales-channel-product-section"

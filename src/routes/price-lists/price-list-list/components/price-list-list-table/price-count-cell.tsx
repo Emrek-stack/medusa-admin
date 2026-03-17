@@ -1,6 +1,6 @@
-import { usePriceListPrices } from "../../../../../hooks/api/price-lists"
-import { PlaceholderCell } from "../../../../../components/table/table-cells/common/placeholder-cell"
-import { TextCell } from "../../../../../components/table/table-cells/common/text-cell"
+import { usePriceListPrices } from "src/hooks/api/price-lists"
+import { PlaceholderCell } from "src/components/table/table-cells/common/placeholder-cell"
+import { TextCell } from "src/components/table/table-cells/common/text-cell"
 
 type PriceCountCellProps = {
   priceListId: string

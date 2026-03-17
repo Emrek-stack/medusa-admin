@@ -3,9 +3,9 @@ import {
   AdminReturnReasonListResponse,
 } from "@medusajs/types"
 
-import { returnReasonsQueryKeys } from "../../../hooks/api/return-reasons"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { returnReasonsQueryKeys } from "src/hooks/api/return-reasons"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const returnReasonListQuery = (query?: AdminReturnReasonListParams) => ({
   queryKey: returnReasonsQueryKeys.list(query),

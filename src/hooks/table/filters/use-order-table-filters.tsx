@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next"
 
-import type { Filter } from "../../../components/table/data-table"
-import { useRegions } from "../../api/regions"
-import { useSalesChannels } from "../../api/sales-channels"
+import type { Filter } from "src/components/table/data-table"
+import { useRegions } from "src/hooks/api/regions"
+import { useSalesChannels } from "src/hooks/api/sales-channels"
 import { useMemo } from "react"
 
 /**

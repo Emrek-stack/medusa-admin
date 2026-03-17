@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { FieldValues, useForm, UseFormProps } from "react-hook-form"
 import { z, ZodEffects, ZodObject } from "zod"
 
-import { ConfigField } from "../types"
+import { ConfigField } from "src/dashboard-app/types"
 
 interface UseExtendableFormProps<
   TSchema extends ZodObject<any> | ZodEffects<ZodObject<any>>,

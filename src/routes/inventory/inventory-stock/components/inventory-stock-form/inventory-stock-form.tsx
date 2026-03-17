@@ -4,20 +4,20 @@ import { Button, toast } from "@medusajs/ui"
 import { useRef } from "react"
 import { DefaultValues, useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
-import { DataGrid } from "../../../../../components/data-grid"
+import { DataGrid } from "src/components/data-grid"
 import {
   RouteFocusModal,
   useRouteModal,
-} from "../../../../../components/modals"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useBatchInventoryItemsLocationLevels } from "../../../../../hooks/api"
-import { castNumber } from "../../../../../lib/cast-number"
-import { useInventoryStockColumns } from "../../hooks/use-inventory-stock-columns"
+} from "src/components/modals"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useBatchInventoryItemsLocationLevels } from "src/hooks/api"
+import { castNumber } from "src/lib/cast-number"
+import { useInventoryStockColumns } from "src/routes/inventory/inventory-stock/hooks/use-inventory-stock-columns"
 import {
   InventoryItemSchema,
   InventoryLocationsSchema,
   InventoryStockSchema,
-} from "../../schema"
+} from "src/routes/inventory/inventory-stock/schema"
 
 type InventoryStockFormProps = {
   items: HttpTypes.AdminInventoryItem[]

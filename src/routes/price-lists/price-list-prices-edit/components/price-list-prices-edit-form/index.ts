@@ -1,1 +1,1 @@
-export * from "./price-list-prices-edit-form"
+export * from "src/routes/price-lists/price-list-prices-edit/components/price-list-prices-edit-form/price-list-prices-edit-form"

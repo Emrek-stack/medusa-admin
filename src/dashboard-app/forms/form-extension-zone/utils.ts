@@ -9,7 +9,7 @@ import {
   ZodType,
   ZodUndefined,
 } from "zod"
-import { FormFieldType } from "./types"
+import { FormFieldType } from "src/dashboard-app/forms/form-extension-zone/types"
 
 export function getFieldLabel(name: string, label?: string) {
   if (label) {

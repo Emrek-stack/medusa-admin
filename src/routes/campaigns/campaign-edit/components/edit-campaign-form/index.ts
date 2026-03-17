@@ -1,1 +1,1 @@
-export * from "./edit-campaign-form"
+export * from "src/routes/campaigns/campaign-edit/components/edit-campaign-form/edit-campaign-form"

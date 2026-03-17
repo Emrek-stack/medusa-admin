@@ -19,27 +19,27 @@ import * as zod from "zod"
 
 import { RegionCountryDTO } from "@medusajs/types"
 
-import { Form } from "../../../../../components/common/form"
-import { Combobox } from "../../../../../components/inputs/combobox"
+import { Form } from "src/components/common/form"
+import { Combobox } from "src/components/inputs/combobox"
 import {
   RouteFocusModal,
   StackedFocusModal,
   useRouteModal,
   useStackedModal,
-} from "../../../../../components/modals"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { useCreateRegion } from "../../../../../hooks/api/regions"
-import { useDataTable } from "../../../../../hooks/use-data-table"
-import { countries as staticCountries } from "../../../../../lib/data/countries"
-import { CurrencyInfo } from "../../../../../lib/data/currencies"
-import { formatProvider } from "../../../../../lib/format-provider"
-import { useCountries } from "../../../common/hooks/use-countries"
-import { useCountryTableColumns } from "../../../common/hooks/use-country-table-columns"
-import { useCountryTableQuery } from "../../../common/hooks/use-country-table-query"
-import { useDocumentDirection } from "../../../../../hooks/use-document-direction"
-import { useComboboxData } from "../../../../../hooks/use-combobox-data"
-import { sdk } from "../../../../../lib/client"
+} from "src/components/modals"
+import { _DataTable } from "src/components/table/data-table"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { useCreateRegion } from "src/hooks/api/regions"
+import { useDataTable } from "src/hooks/use-data-table"
+import { countries as staticCountries } from "src/lib/data/countries"
+import { CurrencyInfo } from "src/lib/data/currencies"
+import { formatProvider } from "src/lib/format-provider"
+import { useCountries } from "src/routes/regions/common/hooks/use-countries"
+import { useCountryTableColumns } from "src/routes/regions/common/hooks/use-country-table-columns"
+import { useCountryTableQuery } from "src/routes/regions/common/hooks/use-country-table-query"
+import { useDocumentDirection } from "src/hooks/use-document-direction"
+import { useComboboxData } from "src/hooks/use-combobox-data"
+import { sdk } from "src/lib/client"
 
 type CreateRegionFormProps = {
   currencies: CurrencyInfo[]

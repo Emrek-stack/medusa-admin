@@ -1,9 +1,9 @@
 import { HttpTypes } from "@medusajs/types"
 import { z } from "zod"
-import { useLocalesTableQuery } from "../../../common/hooks/use-locales-table-query"
-import { useRouteModal } from "../../../../../components/modals/route-modal-provider"
+import { useLocalesTableQuery } from "src/routes/store/common/hooks/use-locales-table-query"
+import { useRouteModal } from "src/components/modals/route-modal-provider"
 import { useTranslation } from "react-i18next"
-import { useLocales, useUpdateStore } from "../../../../../hooks/api"
+import { useLocales, useUpdateStore } from "src/hooks/api"
 import { keepPreviousData } from "@tanstack/react-query"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -13,12 +13,12 @@ import {
   RowSelectionState,
 } from "@tanstack/react-table"
 import { useMemo, useState } from "react"
-import { useDataTable } from "../../../../../hooks/use-data-table"
+import { useDataTable } from "src/hooks/use-data-table"
 import { Button, Checkbox, Hint, toast, Tooltip } from "@medusajs/ui"
-import { RouteFocusModal } from "../../../../../components/modals/route-focus-modal"
-import { KeyboundForm } from "../../../../../components/utilities/keybound-form"
-import { _DataTable } from "../../../../../components/table/data-table"
-import { useLocalesTableColumns } from "../../../common/hooks/use-locales-table-columns"
+import { RouteFocusModal } from "src/components/modals/route-focus-modal"
+import { KeyboundForm } from "src/components/utilities/keybound-form"
+import { _DataTable } from "src/components/table/data-table"
+import { useLocalesTableColumns } from "src/routes/store/common/hooks/use-locales-table-columns"
 
 type AddLocalesFormProps = {
   store: HttpTypes.AdminStore

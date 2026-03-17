@@ -17,12 +17,12 @@ import {
   useNavigation,
 } from "react-router-dom"
 
-import { KeybindProvider } from "../../../providers/keybind-provider"
-import { useGlobalShortcuts } from "../../../providers/keybind-provider/hooks"
-import { useSidebar } from "../../../providers/sidebar-provider"
-import { useTheme } from "../../../providers/theme-provider"
-import { ProgressBar } from "../../common/progress-bar"
-import { Notifications } from "../notifications"
+import { KeybindProvider } from "src/providers/keybind-provider"
+import { useGlobalShortcuts } from "src/providers/keybind-provider/hooks"
+import { useSidebar } from "src/providers/sidebar-provider"
+import { useTheme } from "src/providers/theme-provider"
+import { ProgressBar } from "src/components/common/progress-bar"
+import { Notifications } from "src/components/layout/notifications"
 
 export const Shell = ({ children }: PropsWithChildren) => {
   const globalShortcuts = useGlobalShortcuts()

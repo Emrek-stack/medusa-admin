@@ -1,10 +1,10 @@
 import { clx } from "@medusajs/ui"
 import { useEffect, useState } from "react"
 import { Controller, ControllerRenderProps } from "react-hook-form"
-import { useCombinedRefs } from "../../../hooks/use-combined-refs"
-import { useDataGridCell, useDataGridCellError } from "../hooks"
-import { DataGridCellProps, InputProps } from "../types"
-import { DataGridCellContainer } from "./data-grid-cell-container"
+import { useCombinedRefs } from "src/hooks/use-combined-refs"
+import { useDataGridCell, useDataGridCellError } from "src/components/data-grid/hooks"
+import { DataGridCellProps, InputProps } from "src/components/data-grid/types"
+import { DataGridCellContainer } from "src/components/data-grid/components/data-grid-cell-container"
 
 export const DataGridNumberCell = <TData, TValue = any>({
   context,

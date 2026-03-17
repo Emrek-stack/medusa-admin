@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import {
   TextCell,
   TextHeader,
-} from "../../../../components/table/table-cells/common/text-cell"
+} from "src/components/table/table-cells/common/text-cell"
 
 const columnHelper = createColumnHelper<HttpTypes.AdminCurrency>()
 

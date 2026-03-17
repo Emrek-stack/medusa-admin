@@ -1,1 +1,1 @@
-export * from "./localized-table-pagination"
+export * from "src/components/localization/localized-table-pagination/localized-table-pagination"

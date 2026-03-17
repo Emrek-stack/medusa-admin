@@ -1,5 +1,5 @@
 import { HttpTypes } from "@medusajs/types"
-import { JsonViewSection } from "../../../../../components/common/json-view-section"
+import { JsonViewSection } from "src/components/common/json-view-section"
 
 type WorkflowExecutionPayloadSectionProps = {
   execution: HttpTypes.AdminWorkflowExecution

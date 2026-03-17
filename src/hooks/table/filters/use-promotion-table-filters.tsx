@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import { Filter } from "../../../components/table/data-table"
+import { Filter } from "src/components/table/data-table"
 
 export const usePromotionTableFilters = () => {
   const { t } = useTranslation()

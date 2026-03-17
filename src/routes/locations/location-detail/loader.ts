@@ -1,9 +1,9 @@
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { stockLocationsQueryKeys } from "../../../hooks/api/stock-locations"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
-import { LOCATION_DETAILS_FIELD } from "./constants"
+import { stockLocationsQueryKeys } from "src/hooks/api/stock-locations"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
+import { LOCATION_DETAILS_FIELD } from "src/routes/locations/location-detail/constants"
 
 const locationQuery = (id: string) => ({
   queryKey: stockLocationsQueryKeys.detail(id, {

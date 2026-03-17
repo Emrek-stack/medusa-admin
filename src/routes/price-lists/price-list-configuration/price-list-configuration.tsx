@@ -1,10 +1,10 @@
 import { Heading } from "@medusajs/ui"
 import { useTranslation } from "react-i18next"
 import { useParams } from "react-router-dom"
-import { RouteDrawer } from "../../../components/modals"
-import { useCustomerGroups } from "../../../hooks/api/customer-groups"
-import { usePriceList } from "../../../hooks/api/price-lists"
-import { PriceListConfigurationForm } from "./components/price-list-configuration-form"
+import { RouteDrawer } from "src/components/modals"
+import { useCustomerGroups } from "src/hooks/api/customer-groups"
+import { usePriceList } from "src/hooks/api/price-lists"
+import { PriceListConfigurationForm } from "src/routes/price-lists/price-list-configuration/components/price-list-configuration-form"
 
 export const PriceListConfiguration = () => {
   const { t } = useTranslation()

@@ -1,8 +1,8 @@
 import { LoaderFunctionArgs } from "react-router-dom"
 
-import { productVariantQueryKeys } from "../../../hooks/api"
-import { sdk } from "../../../lib/client"
-import { queryClient } from "../../../lib/query-client"
+import { productVariantQueryKeys } from "src/hooks/api"
+import { sdk } from "src/lib/client"
+import { queryClient } from "src/lib/query-client"
 
 const queryFn = async (id: string, variantId: string) => {
   return await sdk.admin.product.retrieveVariant(id, variantId)

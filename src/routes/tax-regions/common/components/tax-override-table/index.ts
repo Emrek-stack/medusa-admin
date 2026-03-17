@@ -1,1 +1,1 @@
-export * from "./tax-override-table"
+export * from "src/routes/tax-regions/common/components/tax-override-table/tax-override-table"

@@ -1,1 +1,1 @@
-export * from "./action-menu"
+export * from "src/components/common/action-menu/action-menu"

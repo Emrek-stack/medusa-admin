@@ -1,1 +1,1 @@
-export * from "./product-attributes-form"
+export * from "src/routes/products/product-attributes/components/product-attributes-form/product-attributes-form"
